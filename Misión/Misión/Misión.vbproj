@@ -49,7 +49,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
@@ -73,10 +72,24 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BD\Mision.designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Mision.dbml</DependentUpon>
+    <Compile Include="Formularios\Adopción.Designer.vb">
+      <DependentUpon>Adopción.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Adopción.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Beneficiado.Designer.vb">
+      <DependentUpon>Beneficiado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Beneficiado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Inicio de sesion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Inicio de sesion.Designer.vb">
+      <DependentUpon>Inicio de sesion.vb</DependentUpon>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Menú Principal.Designer.vb">
       <DependentUpon>Menú Principal.vb</DependentUpon>
@@ -84,6 +97,19 @@
     <Compile Include="Formularios\Menú Principal.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formularios\Sponsor.Designer.vb">
+      <DependentUpon>Sponsor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Sponsor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Tutor.Designer.vb">
+      <DependentUpon>Tutor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Tutor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modulos\Iniciar Sesión.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -101,11 +127,23 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="BD\Mision.dbml.layout">
-      <DependentUpon>Mision.dbml</DependentUpon>
-    </None>
+    <EmbeddedResource Include="Formularios\Adopción.resx">
+      <DependentUpon>Adopción.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Beneficiado.resx">
+      <DependentUpon>Beneficiado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Inicio de sesion.resx">
+      <DependentUpon>Inicio de sesion.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Menú Principal.resx">
       <DependentUpon>Menú Principal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Sponsor.resx">
+      <DependentUpon>Sponsor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Tutor.resx">
+      <DependentUpon>Tutor.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -115,11 +153,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="BD\Mision.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>Mision.designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -132,7 +165,91 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <None Include="Resources\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevologuito1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guardar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login_37128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abort-146072_640.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logon_theapplication_2961.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevologuito11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guardar1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actualizar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moderna-forma-ondulada-de-color-azul_1035-6611.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nueva.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descarga.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1captura.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\light-blue-planet.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orig_331374.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\light-blue-planet1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orig_3313741.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orig_3313742.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevologuito12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trns.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevologuito13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orig_3313743.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orig_3313744.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orig_3313745.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orig_3313746.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
