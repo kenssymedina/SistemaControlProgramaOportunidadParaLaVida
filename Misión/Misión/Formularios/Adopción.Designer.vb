@@ -293,6 +293,7 @@ Partial Class FrmAdopción
         '
         Me.DgvInformacion.BackgroundColor = System.Drawing.Color.White
         Me.DgvInformacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvInformacion.ContextMenuStrip = Me.ContextMenuStrip1
         Me.DgvInformacion.Location = New System.Drawing.Point(497, 86)
         Me.DgvInformacion.Name = "DgvInformacion"
         Me.DgvInformacion.Size = New System.Drawing.Size(708, 337)
