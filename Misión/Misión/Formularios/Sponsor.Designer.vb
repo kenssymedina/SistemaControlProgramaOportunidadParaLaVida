@@ -22,50 +22,54 @@ Partial Class FrmSponsor
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
+        Me.CboTipoSponsor = New System.Windows.Forms.ComboBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.CboPais = New System.Windows.Forms.ComboBox()
+        Me.CboSexo = New System.Windows.Forms.ComboBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TxtCorreoE = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TxtNumeAdopcion = New System.Windows.Forms.TextBox()
+        Me.TxtNombreSponsor = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TxtDireccion = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.BtnActualizar = New System.Windows.Forms.Button()
+        Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.TxtIdPais = New System.Windows.Forms.TextBox()
+        Me.TxtIdTipoSponsor = New System.Windows.Forms.TextBox()
+        Me.TxtIdSexo = New System.Windows.Forms.TextBox()
+        Me.TxtId = New System.Windows.Forms.TextBox()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.Transparent
         Me.Panel2.Controls.Add(Me.CheckBox1)
-        Me.Panel2.Controls.Add(Me.ComboBox4)
+        Me.Panel2.Controls.Add(Me.CboTipoSponsor)
         Me.Panel2.Controls.Add(Me.Label13)
         Me.Panel2.Controls.Add(Me.Label12)
-        Me.Panel2.Controls.Add(Me.ComboBox3)
-        Me.Panel2.Controls.Add(Me.ComboBox1)
+        Me.Panel2.Controls.Add(Me.CboPais)
+        Me.Panel2.Controls.Add(Me.CboSexo)
         Me.Panel2.Controls.Add(Me.Label11)
-        Me.Panel2.Controls.Add(Me.TextBox2)
+        Me.Panel2.Controls.Add(Me.TxtCorreoE)
         Me.Panel2.Controls.Add(Me.Label4)
-        Me.Panel2.Controls.Add(Me.TextBox1)
-        Me.Panel2.Controls.Add(Me.TxtNumeAdopcion)
+        Me.Panel2.Controls.Add(Me.TxtNombreSponsor)
         Me.Panel2.Controls.Add(Me.Label5)
-        Me.Panel2.Controls.Add(Me.TextBox3)
+        Me.Panel2.Controls.Add(Me.TxtDireccion)
         Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Location = New System.Drawing.Point(18, 62)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(510, 292)
@@ -75,27 +79,27 @@ Partial Class FrmSponsor
         '
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox1.Location = New System.Drawing.Point(392, 263)
+        Me.CheckBox1.Location = New System.Drawing.Point(393, 243)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(97, 23)
         Me.CheckBox1.TabIndex = 162
         Me.CheckBox1.Text = "Ver datos"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
-        'ComboBox4
+        'CboTipoSponsor
         '
-        Me.ComboBox4.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Location = New System.Drawing.Point(170, 226)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(319, 27)
-        Me.ComboBox4.TabIndex = 161
+        Me.CboTipoSponsor.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CboTipoSponsor.FormattingEnabled = True
+        Me.CboTipoSponsor.Location = New System.Drawing.Point(171, 206)
+        Me.CboTipoSponsor.Name = "CboTipoSponsor"
+        Me.CboTipoSponsor.Size = New System.Drawing.Size(319, 27)
+        Me.CboTipoSponsor.TabIndex = 161
         '
         'Label13
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(35, 234)
+        Me.Label13.Location = New System.Drawing.Point(36, 214)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(129, 19)
         Me.Label13.TabIndex = 160
@@ -105,113 +109,94 @@ Partial Class FrmSponsor
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(124, 201)
+        Me.Label12.Location = New System.Drawing.Point(125, 181)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(40, 19)
         Me.Label12.TabIndex = 159
         Me.Label12.Text = "País"
         '
-        'ComboBox3
+        'CboPais
         '
-        Me.ComboBox3.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(170, 193)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(319, 27)
-        Me.ComboBox3.TabIndex = 158
+        Me.CboPais.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CboPais.FormattingEnabled = True
+        Me.CboPais.Location = New System.Drawing.Point(171, 173)
+        Me.CboPais.Name = "CboPais"
+        Me.CboPais.Size = New System.Drawing.Size(319, 27)
+        Me.CboPais.TabIndex = 158
         '
-        'ComboBox1
+        'CboSexo
         '
-        Me.ComboBox1.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(170, 160)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(319, 27)
-        Me.ComboBox1.TabIndex = 157
+        Me.CboSexo.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CboSexo.FormattingEnabled = True
+        Me.CboSexo.Location = New System.Drawing.Point(171, 140)
+        Me.CboSexo.Name = "CboSexo"
+        Me.CboSexo.Size = New System.Drawing.Size(319, 27)
+        Me.CboSexo.TabIndex = 157
         '
         'Label11
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(122, 168)
+        Me.Label11.Location = New System.Drawing.Point(123, 148)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(42, 19)
         Me.Label11.TabIndex = 156
         Me.Label11.Text = "Sexo"
         '
-        'TextBox2
+        'TxtCorreoE
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(170, 128)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(319, 26)
-        Me.TextBox2.TabIndex = 140
+        Me.TxtCorreoE.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCorreoE.Location = New System.Drawing.Point(171, 108)
+        Me.TxtCorreoE.Name = "TxtCorreoE"
+        Me.TxtCorreoE.Size = New System.Drawing.Size(319, 26)
+        Me.TxtCorreoE.TabIndex = 140
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(18, 135)
+        Me.Label4.Location = New System.Drawing.Point(19, 115)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(146, 19)
         Me.Label4.TabIndex = 141
         Me.Label4.Text = "Correo Eléctronico"
         '
-        'TextBox1
+        'TxtNombreSponsor
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(170, 62)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(319, 26)
-        Me.TextBox1.TabIndex = 139
-        '
-        'TxtNumeAdopcion
-        '
-        Me.TxtNumeAdopcion.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtNumeAdopcion.Location = New System.Drawing.Point(170, 30)
-        Me.TxtNumeAdopcion.Name = "TxtNumeAdopcion"
-        Me.TxtNumeAdopcion.Size = New System.Drawing.Size(319, 26)
-        Me.TxtNumeAdopcion.TabIndex = 138
+        Me.TxtNombreSponsor.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtNombreSponsor.Location = New System.Drawing.Point(171, 43)
+        Me.TxtNombreSponsor.Name = "TxtNombreSponsor"
+        Me.TxtNombreSponsor.Size = New System.Drawing.Size(319, 26)
+        Me.TxtNombreSponsor.TabIndex = 138
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(6, 70)
+        Me.Label5.Location = New System.Drawing.Point(7, 50)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(158, 19)
         Me.Label5.TabIndex = 134
         Me.Label5.Text = "Nombre del Sponsor"
         '
-        'TextBox3
+        'TxtDireccion
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(170, 96)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(319, 26)
-        Me.TextBox3.TabIndex = 136
+        Me.TxtDireccion.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtDireccion.Location = New System.Drawing.Point(171, 76)
+        Me.TxtDireccion.Name = "TxtDireccion"
+        Me.TxtDireccion.Size = New System.Drawing.Size(319, 26)
+        Me.TxtDireccion.TabIndex = 136
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(84, 103)
+        Me.Label2.Location = New System.Drawing.Point(85, 83)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(80, 19)
         Me.Label2.TabIndex = 137
         Me.Label2.Text = "Dirección"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(5, 37)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(159, 19)
-        Me.Label1.TabIndex = 135
-        Me.Label1.Text = "Número del Sponsor"
         '
         'Label3
         '
@@ -228,36 +213,37 @@ Partial Class FrmSponsor
         '
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.ContextMenuStrip = Me.ContextMenuStrip1
         Me.DataGridView1.Location = New System.Drawing.Point(547, 63)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(554, 287)
         Me.DataGridView1.TabIndex = 139
         '
-        'Button1
+        'BtnActualizar
         '
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.BackgroundImage = Global.Misión.My.Resources.Resources.actualizar
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(306, 369)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(53, 41)
-        Me.Button1.TabIndex = 141
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.BtnActualizar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnActualizar.BackgroundImage = Global.Misión.My.Resources.Resources.actualizar
+        Me.BtnActualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.BtnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnActualizar.ForeColor = System.Drawing.Color.Black
+        Me.BtnActualizar.Location = New System.Drawing.Point(306, 369)
+        Me.BtnActualizar.Name = "BtnActualizar"
+        Me.BtnActualizar.Size = New System.Drawing.Size(53, 41)
+        Me.BtnActualizar.TabIndex = 141
+        Me.BtnActualizar.UseVisualStyleBackColor = False
         '
-        'Button2
+        'BtnGuardar
         '
-        Me.Button2.BackColor = System.Drawing.Color.Transparent
-        Me.Button2.BackgroundImage = Global.Misión.My.Resources.Resources.guardar1
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.ForeColor = System.Drawing.Color.Black
-        Me.Button2.Location = New System.Drawing.Point(211, 369)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(53, 41)
-        Me.Button2.TabIndex = 140
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.BtnGuardar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnGuardar.BackgroundImage = Global.Misión.My.Resources.Resources.guardar1
+        Me.BtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnGuardar.ForeColor = System.Drawing.Color.Black
+        Me.BtnGuardar.Location = New System.Drawing.Point(211, 369)
+        Me.BtnGuardar.Name = "BtnGuardar"
+        Me.BtnGuardar.Size = New System.Drawing.Size(53, 41)
+        Me.BtnGuardar.TabIndex = 140
+        Me.BtnGuardar.UseVisualStyleBackColor = False
         '
         'Panel1
         '
@@ -268,6 +254,50 @@ Partial Class FrmSponsor
         Me.Panel1.Size = New System.Drawing.Size(1226, 45)
         Me.Panel1.TabIndex = 142
         '
+        'TxtIdPais
+        '
+        Me.TxtIdPais.Location = New System.Drawing.Point(624, 369)
+        Me.TxtIdPais.Name = "TxtIdPais"
+        Me.TxtIdPais.Size = New System.Drawing.Size(121, 20)
+        Me.TxtIdPais.TabIndex = 146
+        Me.TxtIdPais.Visible = False
+        '
+        'TxtIdTipoSponsor
+        '
+        Me.TxtIdTipoSponsor.Location = New System.Drawing.Point(435, 369)
+        Me.TxtIdTipoSponsor.Name = "TxtIdTipoSponsor"
+        Me.TxtIdTipoSponsor.Size = New System.Drawing.Size(121, 20)
+        Me.TxtIdTipoSponsor.TabIndex = 145
+        Me.TxtIdTipoSponsor.Visible = False
+        '
+        'TxtIdSexo
+        '
+        Me.TxtIdSexo.Location = New System.Drawing.Point(624, 403)
+        Me.TxtIdSexo.Name = "TxtIdSexo"
+        Me.TxtIdSexo.Size = New System.Drawing.Size(121, 20)
+        Me.TxtIdSexo.TabIndex = 144
+        Me.TxtIdSexo.Visible = False
+        '
+        'TxtId
+        '
+        Me.TxtId.Location = New System.Drawing.Point(435, 403)
+        Me.TxtId.Name = "TxtId"
+        Me.TxtId.Size = New System.Drawing.Size(121, 20)
+        Me.TxtId.TabIndex = 143
+        Me.TxtId.Visible = False
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(105, 26)
+        '
+        'EditarToolStripMenuItem
+        '
+        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(104, 22)
+        Me.EditarToolStripMenuItem.Text = "Editar"
+        '
         'FrmSponsor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -275,9 +305,13 @@ Partial Class FrmSponsor
         Me.BackColor = System.Drawing.Color.LightSkyBlue
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1137, 422)
+        Me.Controls.Add(Me.TxtIdPais)
+        Me.Controls.Add(Me.TxtIdTipoSponsor)
+        Me.Controls.Add(Me.TxtIdSexo)
+        Me.Controls.Add(Me.TxtId)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.BtnActualizar)
+        Me.Controls.Add(Me.BtnGuardar)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Panel2)
         Me.MaximizeBox = False
@@ -288,28 +322,34 @@ Partial Class FrmSponsor
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TxtCorreoE As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TxtNumeAdopcion As TextBox
+    Friend WithEvents TxtNombreSponsor As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TxtDireccion As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents ComboBox4 As ComboBox
+    Friend WithEvents CboTipoSponsor As ComboBox
     Friend WithEvents Label13 As Label
     Friend WithEvents Label12 As Label
-    Friend WithEvents ComboBox3 As ComboBox
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents CboPais As ComboBox
+    Friend WithEvents CboSexo As ComboBox
     Friend WithEvents Label11 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents BtnActualizar As Button
+    Friend WithEvents BtnGuardar As Button
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents TxtIdPais As TextBox
+    Friend WithEvents TxtIdTipoSponsor As TextBox
+    Friend WithEvents TxtIdSexo As TextBox
+    Friend WithEvents TxtId As TextBox
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
+    Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
 End Class
