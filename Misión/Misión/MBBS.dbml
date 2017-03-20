@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MBBS1" Class="MBBSDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=SINDY-PC\SARAI;Initial Catalog=MBBS1;Integrated Security=True" SettingsObjectName="Misión.My.MySettings" SettingsPropertyName="Conexion" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Adopcion" Member="Adopcions">
+    <Type Name="Adopcion">
+      <Column Name="IdAdopcion" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FechaAdopcion" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Observaciones" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaAdopcionPerdida" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Valor" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="IdBeneficiado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdSponsor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdTipoPagoAdopcion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdEstadoAdopcion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Adopcion_AdopcionPago" Member="AdopcionPagos" ThisKey="IdAdopcion" OtherKey="IdAdopcion" Type="AdopcionPago" />
+      <Association Name="Adopcion_Carta" Member="Cartas" ThisKey="IdAdopcion" OtherKey="IdAdopcion" Type="Carta" />
+      <Association Name="Adopcion_Ofrenda" Member="Ofrendas" ThisKey="IdAdopcion" OtherKey="IdAdopcion" Type="Ofrenda" />
+      <Association Name="Beneficiado_Adopcion" Member="Beneficiado" ThisKey="IdBeneficiado" OtherKey="IdBeneficiado" Type="Beneficiado" IsForeignKey="true" />
+      <Association Name="EstadoAdopcion_Adopcion" Member="EstadoAdopcion" ThisKey="IdEstadoAdopcion" OtherKey="IdEstadoAdopcion" Type="EstadoAdopcion" IsForeignKey="true" />
+      <Association Name="Sponsor_Adopcion" Member="Sponsor" ThisKey="IdSponsor" OtherKey="IdSponsor" Type="Sponsor" IsForeignKey="true" />
+      <Association Name="TipoPagoAdopcion_Adopcion" Member="TipoPagoAdopcion" ThisKey="IdTipoPagoAdopcion" OtherKey="IdTipoPagoAdopcion" Type="TipoPagoAdopcion" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AdopcionPago" Member="AdopcionPagos">
+    <Type Name="AdopcionPago">
+      <Column Name="IdAdopcionPago" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FechaPago" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Valor" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="IdAdopcion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Adopcion_AdopcionPago" Member="Adopcion" ThisKey="IdAdopcion" OtherKey="IdAdopcion" Type="Adopcion" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AsistenciaClaseDominical" Member="AsistenciaClaseDominicals">
+    <Type Name="AsistenciaClaseDominical">
+      <Column Name="IdAsistencia" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Asistencia" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="AsistenciaClaseDominical_Beneficiado" Member="Beneficiados" ThisKey="IdAsistencia" OtherKey="IdAsistencia" Type="Beneficiado" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BeneficiadoTutor" Member="BeneficiadoTutors">
+    <Type Name="BeneficiadoTutor">
+      <Column Name="IdBeneficiado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdTutor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdBeneficiadoTutor" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Beneficiado_BeneficiadoTutor" Member="Beneficiado" ThisKey="IdBeneficiado" OtherKey="IdBeneficiado" Type="Beneficiado" IsForeignKey="true" />
+      <Association Name="Tutor_BeneficiadoTutor" Member="Tutor" ThisKey="IdTutor" OtherKey="IdTutor" Type="Tutor" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Beneficiado" Member="Beneficiados">
+    <Type Name="Beneficiado">
+      <Column Name="IdBeneficiado" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NombreBeneficiado" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ApellidoBeneficiado" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaNac" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="CantidadHermanos" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="CantidadHermanas" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="ColorOjos" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ColorPelo" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Nacionalidad" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="IdGradoCursado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdSexo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdIglesia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdLugar" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdEstadoBeneficiado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdInstitucion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaHistoriaEnviada" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="EncuestaRealizada" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="IdAsistencia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdInterno" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EnfermedadPadecimiento" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Beneficiado_Adopcion" Member="Adopcions" ThisKey="IdBeneficiado" OtherKey="IdBeneficiado" Type="Adopcion" />
+      <Association Name="Beneficiado_BeneficiadoTutor" Member="BeneficiadoTutors" ThisKey="IdBeneficiado" OtherKey="IdBeneficiado" Type="BeneficiadoTutor" />
+      <Association Name="Beneficiado_BeneficiadoTutor1" Member="BeneficiadoTutor1s" ThisKey="IdBeneficiado" OtherKey="IdBeneficiado" Type="BeneficiadoTutor1" />
+      <Association Name="Beneficiado_CasaBeneficiado" Member="CasaBeneficiados" ThisKey="IdBeneficiado" OtherKey="IdBeneficiado" Type="CasaBeneficiado" />
+      <Association Name="Beneficiado_HermanosBeneficiado" Member="HermanosBeneficiados" ThisKey="IdBeneficiado" OtherKey="IdBeneficiado" Type="HermanosBeneficiado" />
+      <Association Name="Beneficiado_InteresesBeneficiado" Member="InteresesBeneficiados" ThisKey="IdBeneficiado" OtherKey="IdBeneficiado" Type="InteresesBeneficiado" />
+      <Association Name="AsistenciaClaseDominical_Beneficiado" Member="AsistenciaClaseDominical" ThisKey="IdAsistencia" OtherKey="IdAsistencia" Type="AsistenciaClaseDominical" IsForeignKey="true" />
+      <Association Name="EstadoBeneficiado_Beneficiado" Member="EstadoBeneficiado" ThisKey="IdEstadoBeneficiado" OtherKey="IdEstadoBeneficiado" Type="EstadoBeneficiado" IsForeignKey="true" />
+      <Association Name="GradoCursado_Beneficiado" Member="GradoCursado" ThisKey="IdGradoCursado" OtherKey="IdGradoCursado" Type="GradoCursado" IsForeignKey="true" />
+      <Association Name="Iglesia_Beneficiado" Member="Iglesia" ThisKey="IdIglesia" OtherKey="IdIglesia" Type="Iglesia" IsForeignKey="true" />
+      <Association Name="Institucion_Beneficiado" Member="Institucion" ThisKey="IdInstitucion" OtherKey="IdInstitucion" Type="Institucion" IsForeignKey="true" />
+      <Association Name="Interno_Beneficiado" Member="Interno" ThisKey="IdInterno" OtherKey="IdInterno" Type="Interno" IsForeignKey="true" />
+      <Association Name="Lugar_Beneficiado" Member="Lugar" ThisKey="IdLugar" OtherKey="IdLugar" Type="Lugar" IsForeignKey="true" />
+      <Association Name="Sexo_Beneficiado" Member="Sexo" ThisKey="IdSexo" OtherKey="IdSexo" Type="Sexo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BeneficiadoTutor" Member="BeneficiadoTutor1s">
+    <Type Name="BeneficiadoTutor1">
+      <Column Name="IdBeneficiado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdTutor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdBeneficiadoTutor" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Beneficiado_BeneficiadoTutor1" Member="Beneficiado" ThisKey="IdBeneficiado" OtherKey="IdBeneficiado" Type="Beneficiado" IsForeignKey="true" />
+      <Association Name="Tutor_BeneficiadoTutor1" Member="Tutor" ThisKey="IdTutor" OtherKey="IdTutor" Type="Tutor" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Cartas" Member="Cartas">
+    <Type Name="Carta">
+      <Column Name="IdCarta" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DescripcionCarta" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaEntrega" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="IdTipoCarta" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdTipoCartaEnvio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdAdopcion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Adopcion_Carta" Member="Adopcion" ThisKey="IdAdopcion" OtherKey="IdAdopcion" Type="Adopcion" IsForeignKey="true" />
+      <Association Name="TipoCarta_Carta" Member="TipoCarta" ThisKey="IdTipoCarta" OtherKey="IdTipoCarta" Type="TipoCarta" IsForeignKey="true" />
+      <Association Name="TipoCartaEnvio_Carta" Member="TipoCartaEnvio" ThisKey="IdTipoCartaEnvio" OtherKey="IdTipoCartaEnvio" Type="TipoCartaEnvio" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CasaBeneficiado" Member="CasaBeneficiados">
+    <Type Name="CasaBeneficiado">
+      <Column Name="IdCasaBeneficiado" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CantidadDormitorios" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CantidadCamas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CantidadHamacas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CantidadRopaCama" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CantidadMesas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CantidadSillas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Piso" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IdTipoCasa" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdBeneficiado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Beneficiado_CasaBeneficiado" Member="Beneficiado" ThisKey="IdBeneficiado" OtherKey="IdBeneficiado" Type="Beneficiado" IsForeignKey="true" />
+      <Association Name="TipoCasa_CasaBeneficiado" Member="TipoCasa" ThisKey="IdTipoCasa" OtherKey="IdTipoCasa" Type="TipoCasa" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EstadoAdopcion" Member="EstadoAdopcions">
+    <Type Name="EstadoAdopcion">
+      <Column Name="IdEstadoAdopcion" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="EstadoAdopcion" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="EstadoAdopcion_Adopcion" Member="Adopcions" ThisKey="IdEstadoAdopcion" OtherKey="IdEstadoAdopcion" Type="Adopcion" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EstadoBeneficiado" Member="EstadoBeneficiados">
+    <Type Name="EstadoBeneficiado">
+      <Column Name="IdEstadoBeneficiado" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="EstadoBeneficiado" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="EstadoBeneficiado_Beneficiado" Member="Beneficiados" ThisKey="IdEstadoBeneficiado" OtherKey="IdEstadoBeneficiado" Type="Beneficiado" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GradoCursado" Member="GradoCursados">
+    <Type Name="GradoCursado">
+      <Column Name="IdGradoCursado" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GradoCursado" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="GradoCursado_Beneficiado" Member="Beneficiados" ThisKey="IdGradoCursado" OtherKey="IdGradoCursado" Type="Beneficiado" />
+      <Association Name="GradoCursado_Hermano" Member="Hermanos" ThisKey="IdGradoCursado" OtherKey="IdGradoCursado" Type="Hermano" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Hermanos" Member="Hermanos">
+    <Type Name="Hermano">
+      <Column Name="IdHermano" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NombreHermano" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ApellidoHermano" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FechaNac" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="IdGradoCursado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IdSexo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IdSponsorHermano" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Hermano_HermanosBeneficiado" Member="HermanosBeneficiados" ThisKey="IdHermano" OtherKey="IdHermano" Type="HermanosBeneficiado" />
+      <Association Name="GradoCursado_Hermano" Member="GradoCursado" ThisKey="IdGradoCursado" OtherKey="IdGradoCursado" Type="GradoCursado" IsForeignKey="true" />
+      <Association Name="Sexo_Hermano" Member="Sexo" ThisKey="IdSexo" OtherKey="IdSexo" Type="Sexo" IsForeignKey="true" />
+      <Association Name="SponsorHermano_Hermano" Member="SponsorHermano" ThisKey="IdSponsorHermano" OtherKey="IdSponsorHermano" Type="SponsorHermano" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HermanosBeneficiados" Member="HermanosBeneficiados">
+    <Type Name="HermanosBeneficiado">
+      <Column Name="IdBeneficiadoHermano" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IdHermano" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdBeneficiado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Beneficiado_HermanosBeneficiado" Member="Beneficiado" ThisKey="IdBeneficiado" OtherKey="IdBeneficiado" Type="Beneficiado" IsForeignKey="true" />
+      <Association Name="Hermano_HermanosBeneficiado" Member="Hermano" ThisKey="IdHermano" OtherKey="IdHermano" Type="Hermano" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Iglesia" Member="Iglesias">
+    <Type Name="Iglesia">
+      <Column Name="IdIglesia" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NombreIglesia" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NombrePastor" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="Iglesia_Beneficiado" Member="Beneficiados" ThisKey="IdIglesia" OtherKey="IdIglesia" Type="Beneficiado" />
+      <Association Name="Iglesia_Tutor" Member="Tutors" ThisKey="IdIglesia" OtherKey="IdIglesia" Type="Tutor" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Institucion" Member="Institucions">
+    <Type Name="Institucion">
+      <Column Name="IdInstitucion" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Institucion" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="IdTipoInstitucion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Institucion_Beneficiado" Member="Beneficiados" ThisKey="IdInstitucion" OtherKey="IdInstitucion" Type="Beneficiado" />
+      <Association Name="TipoInstitucion_Institucion" Member="TipoInstitucion" ThisKey="IdTipoInstitucion" OtherKey="IdTipoInstitucion" Type="TipoInstitucion" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.InteresesBeneficiado" Member="InteresesBeneficiados">
+    <Type Name="InteresesBeneficiado">
+      <Column Name="IdIntereseBeneficiado" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GustaComerBeneficiado" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="GustaJugarBeneficiado" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="GustaTenerBeneficiado" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="IdBeneficiado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Beneficiado_InteresesBeneficiado" Member="Beneficiado" ThisKey="IdBeneficiado" OtherKey="IdBeneficiado" Type="Beneficiado" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Interno" Member="Internos">
+    <Type Name="Interno">
+      <Column Name="IdInterno" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Interno" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Interno_Beneficiado" Member="Beneficiados" ThisKey="IdInterno" OtherKey="IdInterno" Type="Beneficiado" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Lugar" Member="Lugars">
+    <Type Name="Lugar">
+      <Column Name="IdLugar" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Lugar" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="IdPais" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Lugar_Beneficiado" Member="Beneficiados" ThisKey="IdLugar" OtherKey="IdLugar" Type="Beneficiado" />
+      <Association Name="Lugar_Tutor" Member="Tutors" ThisKey="IdLugar" OtherKey="IdLugar" Type="Tutor" />
+      <Association Name="Pai_Lugar" Member="Pai" ThisKey="IdPais" OtherKey="IdPais" Type="Pai" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OficioProfesion" Member="OficioProfesions">
+    <Type Name="OficioProfesion">
+      <Column Name="IdOficioProfesion" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OficioProfesion" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="OficioProfesion_Tutor" Member="Tutors" ThisKey="IdOficioProfesion" OtherKey="IdOficioProfesion" Type="Tutor" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Ofrenda" Member="Ofrendas">
+    <Type Name="Ofrenda">
+      <Column Name="IdOfrenda" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FechaOfrenda" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="DescripcionOfrenda" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="IdTipoOfrenda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IdAdopcion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Adopcion_Ofrenda" Member="Adopcion" ThisKey="IdAdopcion" OtherKey="IdAdopcion" Type="Adopcion" IsForeignKey="true" />
+      <Association Name="TipoOfrenda_Ofrenda" Member="TipoOfrenda" ThisKey="IdTipoOfrenda" OtherKey="IdTipoOfrenda" Type="TipoOfrenda" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Pais" Member="Pais">
+    <Type Name="Pai">
+      <Column Name="IdPais" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Pais" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Pai_Lugar" Member="Lugars" ThisKey="IdPais" OtherKey="IdPais" Type="Lugar" />
+      <Association Name="Pai_Sponsor" Member="Sponsors" ThisKey="IdPais" OtherKey="IdPais" Type="Sponsor" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Parentesco" Member="Parentescos">
+    <Type Name="Parentesco">
+      <Column Name="IdParentesco" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Parentesco" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Parentesco_Tutor" Member="Tutors" ThisKey="IdParentesco" OtherKey="IdParentesco" Type="Tutor" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Sexo" Member="Sexos">
+    <Type Name="Sexo">
+      <Column Name="IdSexo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Sexo" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Sexo_Beneficiado" Member="Beneficiados" ThisKey="IdSexo" OtherKey="IdSexo" Type="Beneficiado" />
+      <Association Name="Sexo_Hermano" Member="Hermanos" ThisKey="IdSexo" OtherKey="IdSexo" Type="Hermano" />
+      <Association Name="Sexo_Sponsor" Member="Sponsors" ThisKey="IdSexo" OtherKey="IdSexo" Type="Sponsor" />
+      <Association Name="Sexo_Tutor" Member="Tutors" ThisKey="IdSexo" OtherKey="IdSexo" Type="Tutor" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Sponsor" Member="Sponsors">
+    <Type Name="Sponsor">
+      <Column Name="IdSponsor" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NombreCompletoSponsor" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CorreoElectronico" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IdSexo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IdPais" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdTipoSponsor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Sponsor_Adopcion" Member="Adopcions" ThisKey="IdSponsor" OtherKey="IdSponsor" Type="Adopcion" />
+      <Association Name="Pai_Sponsor" Member="Pai" ThisKey="IdPais" OtherKey="IdPais" Type="Pai" IsForeignKey="true" />
+      <Association Name="Sexo_Sponsor" Member="Sexo" ThisKey="IdSexo" OtherKey="IdSexo" Type="Sexo" IsForeignKey="true" />
+      <Association Name="TipoSponsor_Sponsor" Member="TipoSponsor" ThisKey="IdTipoSponsor" OtherKey="IdTipoSponsor" Type="TipoSponsor" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SponsorHermano" Member="SponsorHermanos">
+    <Type Name="SponsorHermano">
+      <Column Name="IdSponsorHermano" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SponsorHermano" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="SponsorHermano_Hermano" Member="Hermanos" ThisKey="IdSponsorHermano" OtherKey="IdSponsorHermano" Type="Hermano" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TipoCarta" Member="TipoCartas">
+    <Type Name="TipoCarta">
+      <Column Name="IdTipoCarta" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TipoCarta" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="TipoCarta_Carta" Member="Cartas" ThisKey="IdTipoCarta" OtherKey="IdTipoCarta" Type="Carta" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TipoCartaEnvio" Member="TipoCartaEnvios">
+    <Type Name="TipoCartaEnvio">
+      <Column Name="IdTipoCartaEnvio" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TipoCartaEnvio" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="TipoCartaEnvio_Carta" Member="Cartas" ThisKey="IdTipoCartaEnvio" OtherKey="IdTipoCartaEnvio" Type="Carta" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TipoCasa" Member="TipoCasas">
+    <Type Name="TipoCasa">
+      <Column Name="IdTipoCasa" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TipoCasa" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="TipoCasa_CasaBeneficiado" Member="CasaBeneficiados" ThisKey="IdTipoCasa" OtherKey="IdTipoCasa" Type="CasaBeneficiado" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TipoInstitucion" Member="TipoInstitucions">
+    <Type Name="TipoInstitucion">
+      <Column Name="IdTipoInstitucion" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TipoInstitucion" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="TipoInstitucion_Institucion" Member="Institucions" ThisKey="IdTipoInstitucion" OtherKey="IdTipoInstitucion" Type="Institucion" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TipoOfrenda" Member="TipoOfrendas">
+    <Type Name="TipoOfrenda">
+      <Column Name="IdTipoOfrenda" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TipoOfrenda" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="TipoOfrenda_Ofrenda" Member="Ofrendas" ThisKey="IdTipoOfrenda" OtherKey="IdTipoOfrenda" Type="Ofrenda" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TipoPagoAdopcion" Member="TipoPagoAdopcions">
+    <Type Name="TipoPagoAdopcion">
+      <Column Name="IdTipoPagoAdopcion" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TipoPagoAdopcion" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="TipoPagoAdopcion_Adopcion" Member="Adopcions" ThisKey="IdTipoPagoAdopcion" OtherKey="IdTipoPagoAdopcion" Type="Adopcion" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TipoSponsor" Member="TipoSponsors">
+    <Type Name="TipoSponsor">
+      <Column Name="IdTipoSponsor" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TipoSponsor" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="TipoSponsor_Sponsor" Member="Sponsors" ThisKey="IdTipoSponsor" OtherKey="IdTipoSponsor" Type="Sponsor" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tutor" Member="Tutors">
+    <Type Name="Tutor">
+      <Column Name="IdTutor" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NombreTutor" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ApellidoTutor" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Telefono" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Direccion" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaNac" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="SalarioDia" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="IdOficioProfesion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IdSexo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdIglesia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IdLugar" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdParentesco" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Celular" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Tutor_BeneficiadoTutor" Member="BeneficiadoTutors" ThisKey="IdTutor" OtherKey="IdTutor" Type="BeneficiadoTutor" />
+      <Association Name="Tutor_BeneficiadoTutor1" Member="BeneficiadoTutor1s" ThisKey="IdTutor" OtherKey="IdTutor" Type="BeneficiadoTutor1" />
+      <Association Name="Iglesia_Tutor" Member="Iglesia" ThisKey="IdIglesia" OtherKey="IdIglesia" Type="Iglesia" IsForeignKey="true" />
+      <Association Name="Lugar_Tutor" Member="Lugar" ThisKey="IdLugar" OtherKey="IdLugar" Type="Lugar" IsForeignKey="true" />
+      <Association Name="OficioProfesion_Tutor" Member="OficioProfesion" ThisKey="IdOficioProfesion" OtherKey="IdOficioProfesion" Type="OficioProfesion" IsForeignKey="true" />
+      <Association Name="Parentesco_Tutor" Member="Parentesco" ThisKey="IdParentesco" OtherKey="IdParentesco" Type="Parentesco" IsForeignKey="true" />
+      <Association Name="Sexo_Tutor" Member="Sexo" ThisKey="IdSexo" OtherKey="IdSexo" Type="Sexo" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
