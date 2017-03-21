@@ -139,8 +139,17 @@
   <data name="guardar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\guardar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="light-blue-planet2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\light-blue-planet2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Logon_theapplication_2961" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logon_theapplication_2961.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fondo11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondo11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="orig_3313746" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\orig_3313746.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="orig_3313743" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\orig_3313743.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,17 +172,20 @@
   <data name="actualizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\actualizar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="1captura1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1captura1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="nueva" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nueva.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="nuevologuito1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nuevologuito1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="orig_3313747" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\orig_3313747.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="moderna-forma-ondulada-de-color-azul_1035-6611" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\moderna-forma-ondulada-de-color-azul_1035-6611.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="orig_331374" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\orig_331374.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="nuevologuito13" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nuevologuito13.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,8 +202,8 @@
   <data name="orig_3313741" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\orig_3313741.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Captura" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Captura.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="orig_331374" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\orig_331374.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="nuevologuito12" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nuevologuito12.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,10 +211,16 @@
   <data name="orig_3313745" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\orig_3313745.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="nueva1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nueva1.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Captura" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Captura.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="nuevologuito11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nuevologuito11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="orig_3313746" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\orig_3313746.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="orig_3313748" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\orig_3313748.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

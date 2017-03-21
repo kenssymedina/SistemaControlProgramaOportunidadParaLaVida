@@ -47,9 +47,9 @@ Partial Class FrmAdopción
         Me.TxtIdAdopcion = New System.Windows.Forms.TextBox()
         Me.CboIdBeneficiado = New System.Windows.Forms.ComboBox()
         Me.DgvInformacion = New System.Windows.Forms.DataGridView()
-        Me.BtnVolver = New System.Windows.Forms.Button()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BtnVolver = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.DgvInformacion, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -74,7 +74,7 @@ Partial Class FrmAdopción
         Me.BtnActualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.BtnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnActualizar.ForeColor = System.Drawing.Color.Black
-        Me.BtnActualizar.Location = New System.Drawing.Point(564, 463)
+        Me.BtnActualizar.Location = New System.Drawing.Point(350, 413)
         Me.BtnActualizar.Name = "BtnActualizar"
         Me.BtnActualizar.Size = New System.Drawing.Size(53, 41)
         Me.BtnActualizar.TabIndex = 13
@@ -87,7 +87,7 @@ Partial Class FrmAdopción
         Me.BtnEntrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.BtnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnEntrar.ForeColor = System.Drawing.Color.Black
-        Me.BtnEntrar.Location = New System.Drawing.Point(469, 463)
+        Me.BtnEntrar.Location = New System.Drawing.Point(262, 413)
         Me.BtnEntrar.Name = "BtnEntrar"
         Me.BtnEntrar.Size = New System.Drawing.Size(53, 41)
         Me.BtnEntrar.TabIndex = 12
@@ -122,171 +122,181 @@ Partial Class FrmAdopción
         Me.Panel1.Controls.Add(Me.DtpFechaAdopcion)
         Me.Panel1.Controls.Add(Me.TxtIdAdopcion)
         Me.Panel1.Controls.Add(Me.CboIdBeneficiado)
-        Me.Panel1.Location = New System.Drawing.Point(14, 52)
+        Me.Panel1.Location = New System.Drawing.Point(12, 115)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(464, 396)
+        Me.Panel1.Size = New System.Drawing.Size(563, 273)
         Me.Panel1.TabIndex = 147
         '
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Font = New System.Drawing.Font("Cambria", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.Black
-        Me.Label15.Location = New System.Drawing.Point(12, 351)
+        Me.Label15.Location = New System.Drawing.Point(4, 234)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(234, 19)
+        Me.Label15.Size = New System.Drawing.Size(215, 17)
         Me.Label15.TabIndex = 132
         Me.Label15.Text = "Fecha de Perdida de Adopción" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(12, 310)
+        Me.Label17.Font = New System.Drawing.Font("Cambria", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(94, 207)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(134, 19)
+        Me.Label17.Size = New System.Drawing.Size(125, 17)
         Me.Label17.TabIndex = 131
         Me.Label17.Text = "Estado Adopción"
         '
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Font = New System.Drawing.Font("Cambria", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.ForeColor = System.Drawing.Color.Black
-        Me.Label16.Location = New System.Drawing.Point(12, 268)
+        Me.Label16.Location = New System.Drawing.Point(173, 181)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(48, 19)
+        Me.Label16.Size = New System.Drawing.Size(46, 17)
         Me.Label16.TabIndex = 130
         Me.Label16.Text = "Valor"
         '
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Font = New System.Drawing.Font("Cambria", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.Color.Black
-        Me.Label14.Location = New System.Drawing.Point(12, 226)
+        Me.Label14.Location = New System.Drawing.Point(121, 154)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(105, 19)
+        Me.Label14.Size = New System.Drawing.Size(98, 17)
         Me.Label14.TabIndex = 129
         Me.Label14.Text = "Tipo de Pagó"
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Font = New System.Drawing.Font("Cambria", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.Black
-        Me.Label13.Location = New System.Drawing.Point(12, 140)
+        Me.Label13.Location = New System.Drawing.Point(82, 102)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(149, 19)
+        Me.Label13.Size = New System.Drawing.Size(137, 17)
         Me.Label13.TabIndex = 128
         Me.Label13.Text = "Fecha de Adopción"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Font = New System.Drawing.Font("Cambria", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.Black
-        Me.Label11.Location = New System.Drawing.Point(12, 184)
+        Me.Label11.Location = New System.Drawing.Point(124, 128)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(100, 19)
+        Me.Label11.Size = New System.Drawing.Size(95, 17)
         Me.Label11.TabIndex = 127
         Me.Label11.Text = "Observación"
         '
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.Label20.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(12, 98)
+        Me.Label20.Font = New System.Drawing.Font("Cambria", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Location = New System.Drawing.Point(69, 75)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(159, 19)
+        Me.Label20.Size = New System.Drawing.Size(150, 17)
         Me.Label20.TabIndex = 126
         Me.Label20.Text = "Número del Sponsor"
         '
         'Label21
         '
         Me.Label21.AutoSize = True
-        Me.Label21.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Font = New System.Drawing.Font("Cambria", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.ForeColor = System.Drawing.Color.Black
-        Me.Label21.Location = New System.Drawing.Point(12, 61)
+        Me.Label21.Location = New System.Drawing.Point(44, 48)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(186, 19)
+        Me.Label21.Size = New System.Drawing.Size(175, 17)
         Me.Label21.TabIndex = 125
         Me.Label21.Text = "Número del Beneficiado"
         '
         'CboEstado
         '
+        Me.CboEstado.Font = New System.Drawing.Font("Cambria", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CboEstado.FormattingEnabled = True
-        Me.CboEstado.Location = New System.Drawing.Point(252, 308)
+        Me.CboEstado.Location = New System.Drawing.Point(225, 204)
         Me.CboEstado.Name = "CboEstado"
-        Me.CboEstado.Size = New System.Drawing.Size(121, 21)
+        Me.CboEstado.Size = New System.Drawing.Size(317, 20)
         Me.CboEstado.TabIndex = 17
         '
         'CboIdSponsor
         '
+        Me.CboIdSponsor.Font = New System.Drawing.Font("Cambria", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CboIdSponsor.FormattingEnabled = True
-        Me.CboIdSponsor.Location = New System.Drawing.Point(252, 96)
+        Me.CboIdSponsor.Location = New System.Drawing.Point(225, 72)
         Me.CboIdSponsor.Name = "CboIdSponsor"
-        Me.CboIdSponsor.Size = New System.Drawing.Size(121, 21)
+        Me.CboIdSponsor.Size = New System.Drawing.Size(317, 20)
         Me.CboIdSponsor.TabIndex = 0
         '
         'CboTipoPago
         '
+        Me.CboTipoPago.Font = New System.Drawing.Font("Cambria", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CboTipoPago.FormattingEnabled = True
-        Me.CboTipoPago.Location = New System.Drawing.Point(252, 224)
+        Me.CboTipoPago.Location = New System.Drawing.Point(225, 151)
         Me.CboTipoPago.Name = "CboTipoPago"
-        Me.CboTipoPago.Size = New System.Drawing.Size(121, 21)
+        Me.CboTipoPago.Size = New System.Drawing.Size(317, 20)
         Me.CboTipoPago.TabIndex = 1
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(23, 28)
+        Me.Label12.Font = New System.Drawing.Font("Cambria", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(105, 22)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(81, 13)
+        Me.Label12.Size = New System.Drawing.Size(114, 17)
         Me.Label12.TabIndex = 2
         Me.Label12.Text = "ID de Adopcion"
         '
         'TxtValor
         '
-        Me.TxtValor.Location = New System.Drawing.Point(252, 267)
+        Me.TxtValor.Font = New System.Drawing.Font("Cambria", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtValor.Location = New System.Drawing.Point(225, 178)
         Me.TxtValor.Name = "TxtValor"
-        Me.TxtValor.Size = New System.Drawing.Size(100, 20)
+        Me.TxtValor.Size = New System.Drawing.Size(317, 20)
         Me.TxtValor.TabIndex = 16
         '
         'DtpFechaPerdidaAdopcion
         '
-        Me.DtpFechaPerdidaAdopcion.Location = New System.Drawing.Point(252, 350)
+        Me.DtpFechaPerdidaAdopcion.Font = New System.Drawing.Font("Cambria", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DtpFechaPerdidaAdopcion.Location = New System.Drawing.Point(225, 231)
         Me.DtpFechaPerdidaAdopcion.Name = "DtpFechaPerdidaAdopcion"
-        Me.DtpFechaPerdidaAdopcion.Size = New System.Drawing.Size(200, 20)
+        Me.DtpFechaPerdidaAdopcion.Size = New System.Drawing.Size(317, 20)
         Me.DtpFechaPerdidaAdopcion.TabIndex = 15
         '
         'TxtObservaciones
         '
-        Me.TxtObservaciones.Location = New System.Drawing.Point(252, 183)
+        Me.TxtObservaciones.Font = New System.Drawing.Font("Cambria", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtObservaciones.Location = New System.Drawing.Point(225, 125)
         Me.TxtObservaciones.Name = "TxtObservaciones"
-        Me.TxtObservaciones.Size = New System.Drawing.Size(200, 20)
+        Me.TxtObservaciones.Size = New System.Drawing.Size(317, 20)
         Me.TxtObservaciones.TabIndex = 14
         '
         'DtpFechaAdopcion
         '
-        Me.DtpFechaAdopcion.Location = New System.Drawing.Point(252, 138)
+        Me.DtpFechaAdopcion.Font = New System.Drawing.Font("Cambria", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DtpFechaAdopcion.Location = New System.Drawing.Point(225, 99)
         Me.DtpFechaAdopcion.Name = "DtpFechaAdopcion"
-        Me.DtpFechaAdopcion.Size = New System.Drawing.Size(200, 20)
+        Me.DtpFechaAdopcion.Size = New System.Drawing.Size(317, 20)
         Me.DtpFechaAdopcion.TabIndex = 13
         '
         'TxtIdAdopcion
         '
-        Me.TxtIdAdopcion.Location = New System.Drawing.Point(252, 21)
+        Me.TxtIdAdopcion.Font = New System.Drawing.Font("Cambria", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtIdAdopcion.Location = New System.Drawing.Point(225, 19)
         Me.TxtIdAdopcion.Name = "TxtIdAdopcion"
-        Me.TxtIdAdopcion.Size = New System.Drawing.Size(100, 20)
+        Me.TxtIdAdopcion.Size = New System.Drawing.Size(317, 20)
         Me.TxtIdAdopcion.TabIndex = 12
         '
         'CboIdBeneficiado
         '
+        Me.CboIdBeneficiado.Font = New System.Drawing.Font("Cambria", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CboIdBeneficiado.FormattingEnabled = True
-        Me.CboIdBeneficiado.Location = New System.Drawing.Point(252, 59)
+        Me.CboIdBeneficiado.Location = New System.Drawing.Point(225, 45)
         Me.CboIdBeneficiado.Name = "CboIdBeneficiado"
-        Me.CboIdBeneficiado.Size = New System.Drawing.Size(121, 21)
+        Me.CboIdBeneficiado.Size = New System.Drawing.Size(317, 20)
         Me.CboIdBeneficiado.TabIndex = 11
         '
         'DgvInformacion
@@ -294,23 +304,10 @@ Partial Class FrmAdopción
         Me.DgvInformacion.BackgroundColor = System.Drawing.Color.White
         Me.DgvInformacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvInformacion.ContextMenuStrip = Me.ContextMenuStrip1
-        Me.DgvInformacion.Location = New System.Drawing.Point(497, 86)
+        Me.DgvInformacion.Location = New System.Drawing.Point(581, 77)
         Me.DgvInformacion.Name = "DgvInformacion"
-        Me.DgvInformacion.Size = New System.Drawing.Size(708, 337)
+        Me.DgvInformacion.Size = New System.Drawing.Size(691, 337)
         Me.DgvInformacion.TabIndex = 146
-        '
-        'BtnVolver
-        '
-        Me.BtnVolver.BackColor = System.Drawing.Color.Transparent
-        Me.BtnVolver.BackgroundImage = Global.Misión.My.Resources.Resources.abort_146072_640
-        Me.BtnVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.BtnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnVolver.ForeColor = System.Drawing.Color.Black
-        Me.BtnVolver.Location = New System.Drawing.Point(370, 463)
-        Me.BtnVolver.Name = "BtnVolver"
-        Me.BtnVolver.Size = New System.Drawing.Size(53, 41)
-        Me.BtnVolver.TabIndex = 155
-        Me.BtnVolver.UseVisualStyleBackColor = False
         '
         'ContextMenuStrip1
         '
@@ -324,13 +321,26 @@ Partial Class FrmAdopción
         Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(104, 22)
         Me.EditarToolStripMenuItem.Text = "Editar"
         '
+        'BtnVolver
+        '
+        Me.BtnVolver.BackColor = System.Drawing.Color.Transparent
+        Me.BtnVolver.BackgroundImage = Global.Misión.My.Resources.Resources.abort_146072_640
+        Me.BtnVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.BtnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnVolver.ForeColor = System.Drawing.Color.Black
+        Me.BtnVolver.Location = New System.Drawing.Point(167, 413)
+        Me.BtnVolver.Name = "BtnVolver"
+        Me.BtnVolver.Size = New System.Drawing.Size(53, 41)
+        Me.BtnVolver.TabIndex = 155
+        Me.BtnVolver.UseVisualStyleBackColor = False
+        '
         'FrmAdopción
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSkyBlue
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1217, 518)
+        Me.ClientSize = New System.Drawing.Size(1294, 465)
         Me.Controls.Add(Me.BtnVolver)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.DgvInformacion)

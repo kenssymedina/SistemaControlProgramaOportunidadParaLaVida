@@ -299,6 +299,7 @@ Partial Class FrmMenuPrincipal
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.BackgroundImage = Global.Misión.My.Resources.Resources.orig_3313748
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(774, 564)
         Me.Controls.Add(Me.PictureBox1)

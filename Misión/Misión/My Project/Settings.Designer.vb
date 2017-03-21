@@ -57,8 +57,7 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=KENSSYMEDINAE\SQLEXPRESS;Initial Catalog=MBBS1;Integrated Security=Tr"& _ 
-            "ue")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-B22PSJ3;Initial Catalog=MBBS1;Integrated Security=True")>  _
         Public ReadOnly Property Conexion() As String
             Get
                 Return CType(Me("Conexion"),String)

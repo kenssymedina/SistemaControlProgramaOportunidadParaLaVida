@@ -39,6 +39,8 @@ Partial Class FrmSponsor
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BtnActualizar = New System.Windows.Forms.Button()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -46,12 +48,10 @@ Partial Class FrmSponsor
         Me.TxtIdTipoSponsor = New System.Windows.Forms.TextBox()
         Me.TxtIdSexo = New System.Windows.Forms.TextBox()
         Me.TxtId = New System.Windows.Forms.TextBox()
-        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel2
@@ -70,38 +70,38 @@ Partial Class FrmSponsor
         Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Controls.Add(Me.TxtDireccion)
         Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Location = New System.Drawing.Point(18, 62)
+        Me.Panel2.Location = New System.Drawing.Point(12, 81)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(510, 292)
+        Me.Panel2.Size = New System.Drawing.Size(506, 202)
         Me.Panel2.TabIndex = 1
         '
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox1.Location = New System.Drawing.Point(393, 243)
+        Me.CheckBox1.Font = New System.Drawing.Font("Cambria", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox1.Location = New System.Drawing.Point(398, 169)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(97, 23)
+        Me.CheckBox1.Size = New System.Drawing.Size(92, 21)
         Me.CheckBox1.TabIndex = 162
         Me.CheckBox1.Text = "Ver datos"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'CboTipoSponsor
         '
-        Me.CboTipoSponsor.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CboTipoSponsor.Font = New System.Drawing.Font("Cambria", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CboTipoSponsor.FormattingEnabled = True
-        Me.CboTipoSponsor.Location = New System.Drawing.Point(171, 206)
+        Me.CboTipoSponsor.Location = New System.Drawing.Point(171, 143)
         Me.CboTipoSponsor.Name = "CboTipoSponsor"
-        Me.CboTipoSponsor.Size = New System.Drawing.Size(319, 27)
+        Me.CboTipoSponsor.Size = New System.Drawing.Size(319, 20)
         Me.CboTipoSponsor.TabIndex = 161
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(36, 214)
+        Me.Label13.Font = New System.Drawing.Font("Cambria", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(43, 146)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(129, 19)
+        Me.Label13.Size = New System.Drawing.Size(122, 17)
         Me.Label13.TabIndex = 160
         Me.Label13.Text = "Tipo de Sponsor"
         '
@@ -109,7 +109,7 @@ Partial Class FrmSponsor
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(125, 181)
+        Me.Label12.Location = New System.Drawing.Point(125, 118)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(40, 19)
         Me.Label12.TabIndex = 159
@@ -117,27 +117,27 @@ Partial Class FrmSponsor
         '
         'CboPais
         '
-        Me.CboPais.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CboPais.Font = New System.Drawing.Font("Cambria", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CboPais.FormattingEnabled = True
-        Me.CboPais.Location = New System.Drawing.Point(171, 173)
+        Me.CboPais.Location = New System.Drawing.Point(171, 117)
         Me.CboPais.Name = "CboPais"
-        Me.CboPais.Size = New System.Drawing.Size(319, 27)
+        Me.CboPais.Size = New System.Drawing.Size(319, 20)
         Me.CboPais.TabIndex = 158
         '
         'CboSexo
         '
-        Me.CboSexo.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CboSexo.Font = New System.Drawing.Font("Cambria", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CboSexo.FormattingEnabled = True
-        Me.CboSexo.Location = New System.Drawing.Point(171, 140)
+        Me.CboSexo.Location = New System.Drawing.Point(171, 91)
         Me.CboSexo.Name = "CboSexo"
-        Me.CboSexo.Size = New System.Drawing.Size(319, 27)
+        Me.CboSexo.Size = New System.Drawing.Size(319, 20)
         Me.CboSexo.TabIndex = 157
         '
         'Label11
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(123, 148)
+        Me.Label11.Location = New System.Drawing.Point(123, 92)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(42, 19)
         Me.Label11.TabIndex = 156
@@ -145,56 +145,56 @@ Partial Class FrmSponsor
         '
         'TxtCorreoE
         '
-        Me.TxtCorreoE.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCorreoE.Location = New System.Drawing.Point(171, 108)
+        Me.TxtCorreoE.Font = New System.Drawing.Font("Cambria", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCorreoE.Location = New System.Drawing.Point(171, 65)
         Me.TxtCorreoE.Name = "TxtCorreoE"
-        Me.TxtCorreoE.Size = New System.Drawing.Size(319, 26)
+        Me.TxtCorreoE.Size = New System.Drawing.Size(319, 20)
         Me.TxtCorreoE.TabIndex = 140
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(19, 115)
+        Me.Label4.Font = New System.Drawing.Font("Cambria", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(25, 68)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(146, 19)
+        Me.Label4.Size = New System.Drawing.Size(140, 17)
         Me.Label4.TabIndex = 141
         Me.Label4.Text = "Correo Eléctronico"
         '
         'TxtNombreSponsor
         '
-        Me.TxtNombreSponsor.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtNombreSponsor.Location = New System.Drawing.Point(171, 43)
+        Me.TxtNombreSponsor.Font = New System.Drawing.Font("Cambria", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtNombreSponsor.Location = New System.Drawing.Point(171, 13)
         Me.TxtNombreSponsor.Name = "TxtNombreSponsor"
-        Me.TxtNombreSponsor.Size = New System.Drawing.Size(319, 26)
+        Me.TxtNombreSponsor.Size = New System.Drawing.Size(319, 20)
         Me.TxtNombreSponsor.TabIndex = 138
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Font = New System.Drawing.Font("Cambria", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(7, 50)
+        Me.Label5.Location = New System.Drawing.Point(15, 16)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(158, 19)
+        Me.Label5.Size = New System.Drawing.Size(150, 17)
         Me.Label5.TabIndex = 134
         Me.Label5.Text = "Nombre del Sponsor"
         '
         'TxtDireccion
         '
-        Me.TxtDireccion.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtDireccion.Location = New System.Drawing.Point(171, 76)
+        Me.TxtDireccion.Font = New System.Drawing.Font("Cambria", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtDireccion.Location = New System.Drawing.Point(171, 39)
         Me.TxtDireccion.Name = "TxtDireccion"
-        Me.TxtDireccion.Size = New System.Drawing.Size(319, 26)
+        Me.TxtDireccion.Size = New System.Drawing.Size(319, 20)
         Me.TxtDireccion.TabIndex = 136
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(85, 83)
+        Me.Label2.Font = New System.Drawing.Font("Cambria", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(89, 42)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(80, 19)
+        Me.Label2.Size = New System.Drawing.Size(76, 17)
         Me.Label2.TabIndex = 137
         Me.Label2.Text = "Dirección"
         '
@@ -214,10 +214,22 @@ Partial Class FrmSponsor
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.ContextMenuStrip = Me.ContextMenuStrip1
-        Me.DataGridView1.Location = New System.Drawing.Point(547, 63)
+        Me.DataGridView1.Location = New System.Drawing.Point(544, 71)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(554, 287)
         Me.DataGridView1.TabIndex = 139
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(105, 26)
+        '
+        'EditarToolStripMenuItem
+        '
+        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(104, 22)
+        Me.EditarToolStripMenuItem.Text = "Editar"
         '
         'BtnActualizar
         '
@@ -226,7 +238,7 @@ Partial Class FrmSponsor
         Me.BtnActualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.BtnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnActualizar.ForeColor = System.Drawing.Color.Black
-        Me.BtnActualizar.Location = New System.Drawing.Point(306, 369)
+        Me.BtnActualizar.Location = New System.Drawing.Point(262, 303)
         Me.BtnActualizar.Name = "BtnActualizar"
         Me.BtnActualizar.Size = New System.Drawing.Size(53, 41)
         Me.BtnActualizar.TabIndex = 141
@@ -239,7 +251,7 @@ Partial Class FrmSponsor
         Me.BtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnGuardar.ForeColor = System.Drawing.Color.Black
-        Me.BtnGuardar.Location = New System.Drawing.Point(211, 369)
+        Me.BtnGuardar.Location = New System.Drawing.Point(167, 303)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(53, 41)
         Me.BtnGuardar.TabIndex = 140
@@ -256,47 +268,35 @@ Partial Class FrmSponsor
         '
         'TxtIdPais
         '
-        Me.TxtIdPais.Location = New System.Drawing.Point(624, 369)
+        Me.TxtIdPais.Location = New System.Drawing.Point(434, 303)
         Me.TxtIdPais.Name = "TxtIdPais"
-        Me.TxtIdPais.Size = New System.Drawing.Size(121, 20)
+        Me.TxtIdPais.Size = New System.Drawing.Size(89, 20)
         Me.TxtIdPais.TabIndex = 146
         Me.TxtIdPais.Visible = False
         '
         'TxtIdTipoSponsor
         '
-        Me.TxtIdTipoSponsor.Location = New System.Drawing.Point(435, 369)
+        Me.TxtIdTipoSponsor.Location = New System.Drawing.Point(332, 303)
         Me.TxtIdTipoSponsor.Name = "TxtIdTipoSponsor"
-        Me.TxtIdTipoSponsor.Size = New System.Drawing.Size(121, 20)
+        Me.TxtIdTipoSponsor.Size = New System.Drawing.Size(82, 20)
         Me.TxtIdTipoSponsor.TabIndex = 145
         Me.TxtIdTipoSponsor.Visible = False
         '
         'TxtIdSexo
         '
-        Me.TxtIdSexo.Location = New System.Drawing.Point(624, 403)
+        Me.TxtIdSexo.Location = New System.Drawing.Point(434, 329)
         Me.TxtIdSexo.Name = "TxtIdSexo"
-        Me.TxtIdSexo.Size = New System.Drawing.Size(121, 20)
+        Me.TxtIdSexo.Size = New System.Drawing.Size(89, 20)
         Me.TxtIdSexo.TabIndex = 144
         Me.TxtIdSexo.Visible = False
         '
         'TxtId
         '
-        Me.TxtId.Location = New System.Drawing.Point(435, 403)
+        Me.TxtId.Location = New System.Drawing.Point(332, 329)
         Me.TxtId.Name = "TxtId"
-        Me.TxtId.Size = New System.Drawing.Size(121, 20)
+        Me.TxtId.Size = New System.Drawing.Size(82, 20)
         Me.TxtId.TabIndex = 143
         Me.TxtId.Visible = False
-        '
-        'ContextMenuStrip1
-        '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem})
-        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(105, 26)
-        '
-        'EditarToolStripMenuItem
-        '
-        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
-        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(104, 22)
-        Me.EditarToolStripMenuItem.Text = "Editar"
         '
         'FrmSponsor
         '
@@ -304,7 +304,7 @@ Partial Class FrmSponsor
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSkyBlue
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1137, 422)
+        Me.ClientSize = New System.Drawing.Size(1113, 388)
         Me.Controls.Add(Me.TxtIdPais)
         Me.Controls.Add(Me.TxtIdTipoSponsor)
         Me.Controls.Add(Me.TxtIdSexo)
@@ -320,9 +320,9 @@ Partial Class FrmSponsor
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

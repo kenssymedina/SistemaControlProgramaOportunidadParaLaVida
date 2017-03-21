@@ -46,7 +46,7 @@ Partial Class FrmIniciar
         Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.ForeColor = System.Drawing.Color.Black
-        Me.Button2.Location = New System.Drawing.Point(206, 134)
+        Me.Button2.Location = New System.Drawing.Point(230, 132)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(53, 41)
         Me.Button2.TabIndex = 11
@@ -59,7 +59,7 @@ Partial Class FrmIniciar
         Me.BtnEntrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.BtnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnEntrar.ForeColor = System.Drawing.Color.Black
-        Me.BtnEntrar.Location = New System.Drawing.Point(121, 134)
+        Me.BtnEntrar.Location = New System.Drawing.Point(145, 132)
         Me.BtnEntrar.Name = "BtnEntrar"
         Me.BtnEntrar.Size = New System.Drawing.Size(53, 41)
         Me.BtnEntrar.TabIndex = 10
@@ -70,7 +70,7 @@ Partial Class FrmIniciar
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Cambria", 26.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(116, 3)
+        Me.Label3.Location = New System.Drawing.Point(102, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(268, 41)
         Me.Label3.TabIndex = 2
@@ -88,9 +88,9 @@ Partial Class FrmIniciar
         Me.Panel2.Controls.Add(Me.TxtContraseña)
         Me.Panel2.Controls.Add(Me.TxtNombreUsuario)
         Me.Panel2.ForeColor = System.Drawing.Color.Black
-        Me.Panel2.Location = New System.Drawing.Point(55, 62)
+        Me.Panel2.Location = New System.Drawing.Point(38, 51)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(387, 189)
+        Me.Panel2.Size = New System.Drawing.Size(426, 189)
         Me.Panel2.TabIndex = 9
         '
         'PictureBox1
@@ -107,7 +107,7 @@ Partial Class FrmIniciar
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(107, 29)
+        Me.Label1.Location = New System.Drawing.Point(105, 30)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(67, 19)
         Me.Label1.TabIndex = 0
@@ -127,7 +127,7 @@ Partial Class FrmIniciar
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(81, 80)
+        Me.Label2.Location = New System.Drawing.Point(81, 79)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(93, 19)
         Me.Label2.TabIndex = 1
@@ -135,17 +135,19 @@ Partial Class FrmIniciar
         '
         'TxtContraseña
         '
-        Me.TxtContraseña.Location = New System.Drawing.Point(192, 79)
+        Me.TxtContraseña.Font = New System.Drawing.Font("Cambria", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtContraseña.Location = New System.Drawing.Point(178, 78)
         Me.TxtContraseña.Name = "TxtContraseña"
-        Me.TxtContraseña.Size = New System.Drawing.Size(179, 20)
+        Me.TxtContraseña.Size = New System.Drawing.Size(221, 20)
         Me.TxtContraseña.TabIndex = 5
         Me.TxtContraseña.UseSystemPasswordChar = True
         '
         'TxtNombreUsuario
         '
-        Me.TxtNombreUsuario.Location = New System.Drawing.Point(192, 30)
+        Me.TxtNombreUsuario.Font = New System.Drawing.Font("Cambria", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtNombreUsuario.Location = New System.Drawing.Point(178, 29)
         Me.TxtNombreUsuario.Name = "TxtNombreUsuario"
-        Me.TxtNombreUsuario.Size = New System.Drawing.Size(179, 20)
+        Me.TxtNombreUsuario.Size = New System.Drawing.Size(221, 20)
         Me.TxtNombreUsuario.TabIndex = 4
         '
         'Panel1
@@ -154,7 +156,7 @@ Partial Class FrmIniciar
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Location = New System.Drawing.Point(0, -1)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(490, 48)
+        Me.Panel1.Size = New System.Drawing.Size(559, 46)
         Me.Panel1.TabIndex = 10
         '
         'FrmIniciar
@@ -163,7 +165,7 @@ Partial Class FrmIniciar
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSkyBlue
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(488, 265)
+        Me.ClientSize = New System.Drawing.Size(493, 245)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
         Me.DoubleBuffered = True
