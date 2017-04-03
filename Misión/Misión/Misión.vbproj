@@ -51,6 +51,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -85,6 +86,150 @@
     <Compile Include="Formularios\Beneficiado.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formularios\Buscar.Designer.vb">
+      <DependentUpon>Buscar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Buscar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\BuscarAdopcion.Designer.vb">
+      <DependentUpon>BuscarAdopcion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\BuscarAdopcion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\BuscarBeneficiado.Designer.vb">
+      <DependentUpon>BuscarBeneficiado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\BuscarBeneficiado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\BuscarCartas.Designer.vb">
+      <DependentUpon>BuscarCartas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\BuscarCartas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\BuscarOfrenda.Designer.vb">
+      <DependentUpon>BuscarOfrenda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\BuscarOfrenda.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\BuscarSponsor.Designer.vb">
+      <DependentUpon>BuscarSponsor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\BuscarSponsor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\BuscarTutor.Designer.vb">
+      <DependentUpon>BuscarTutor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\BuscarTutor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\BuscarUsuario.Designer.vb">
+      <DependentUpon>BuscarUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\BuscarUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Cargando.Designer.vb">
+      <DependentUpon>Cargando.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Cargando.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmCartas.Designer.vb">
+      <DependentUpon>FrmCartas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmCartas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmEnfermedades.Designer.vb">
+      <DependentUpon>FrmEnfermedades.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmEnfermedades.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmGradoCursado.Designer.vb">
+      <DependentUpon>FrmGradoCursado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmGradoCursado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmHermanos.Designer.vb">
+      <DependentUpon>FrmHermanos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmHermanos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmIglesia.Designer.vb">
+      <DependentUpon>FrmIglesia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmIglesia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmLugar.Designer.vb">
+      <DependentUpon>FrmLugar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmLugar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmMenuPrincipal.Designer.vb">
+      <DependentUpon>FrmMenuPrincipal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmMenuPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\BuscarIglesia.Designer.vb">
+      <DependentUpon>BuscarIglesia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\BuscarIglesia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmNacionalidad.Designer.vb">
+      <DependentUpon>FrmNacionalidad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmNacionalidad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmOficioProfesion.Designer.vb">
+      <DependentUpon>FrmOficioProfesion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmOficioProfesion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmPais.Designer.vb">
+      <DependentUpon>FrmPais.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmPais.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmParentesco.Designer.vb">
+      <DependentUpon>FrmParentesco.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmParentesco.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmRegistrarUsuario.Designer.vb">
+      <DependentUpon>FrmRegistrarUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmRegistrarUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmCatalogo.Designer.vb">
+      <DependentUpon>FrmCatalogo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmCatalogo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrnInstitucion.Designer.vb">
+      <DependentUpon>FrnInstitucion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrnInstitucion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\Inicio de sesion.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -92,16 +237,16 @@
       <DependentUpon>Inicio de sesion.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Menú Principal.Designer.vb">
-      <DependentUpon>Menú Principal.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Menú Principal.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Formularios\Sponsor.Designer.vb">
       <DependentUpon>Sponsor.vb</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Sponsor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Transaccionales.Designer.vb">
+      <DependentUpon>Transaccionales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Transaccionales.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Tutor.Designer.vb">
@@ -140,14 +285,86 @@
     <EmbeddedResource Include="Formularios\Beneficiado.resx">
       <DependentUpon>Beneficiado.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Buscar.resx">
+      <DependentUpon>Buscar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\BuscarAdopcion.resx">
+      <DependentUpon>BuscarAdopcion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\BuscarBeneficiado.resx">
+      <DependentUpon>BuscarBeneficiado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\BuscarCartas.resx">
+      <DependentUpon>BuscarCartas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\BuscarOfrenda.resx">
+      <DependentUpon>BuscarOfrenda.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\BuscarSponsor.resx">
+      <DependentUpon>BuscarSponsor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\BuscarTutor.resx">
+      <DependentUpon>BuscarTutor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\BuscarUsuario.resx">
+      <DependentUpon>BuscarUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Cargando.resx">
+      <DependentUpon>Cargando.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmCartas.resx">
+      <DependentUpon>FrmCartas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmEnfermedades.resx">
+      <DependentUpon>FrmEnfermedades.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmGradoCursado.resx">
+      <DependentUpon>FrmGradoCursado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmHermanos.resx">
+      <DependentUpon>FrmHermanos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmIglesia.resx">
+      <DependentUpon>FrmIglesia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmLugar.resx">
+      <DependentUpon>FrmLugar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmMenuPrincipal.resx">
+      <DependentUpon>FrmMenuPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\BuscarIglesia.resx">
+      <DependentUpon>BuscarIglesia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmNacionalidad.resx">
+      <DependentUpon>FrmNacionalidad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmOficioProfesion.resx">
+      <DependentUpon>FrmOficioProfesion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmPais.resx">
+      <DependentUpon>FrmPais.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmParentesco.resx">
+      <DependentUpon>FrmParentesco.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmRegistrarUsuario.resx">
+      <DependentUpon>FrmRegistrarUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmCatalogo.resx">
+      <DependentUpon>FrmCatalogo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrnInstitucion.resx">
+      <DependentUpon>FrnInstitucion.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Inicio de sesion.resx">
       <DependentUpon>Inicio de sesion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Menú Principal.resx">
-      <DependentUpon>Menú Principal.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Sponsor.resx">
       <DependentUpon>Sponsor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Transaccionales.resx">
+      <DependentUpon>Transaccionales.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Tutor.resx">
       <DependentUpon>Tutor.vb</DependentUpon>
@@ -286,6 +503,342 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\orig_3313748.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coloresazul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevologuito14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inicio de sesión.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar sesion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9kotoj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout_37127.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar sesion1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icono entrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9kotoj1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fonditooo.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transaccionales.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono-catalogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout_371271.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout_371272.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Informessss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9kotoj2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono adopcion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono adopcion1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diskette_save_saveas_1514.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\volver1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actualizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actualizar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9kotoj3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beneficiado.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9kotoj4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beneficiado1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hermanos 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tipo de casa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tipo casa 2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iglesia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tipo de casa1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cartas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cartas2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cartas21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cartas22.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cartas1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\family_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sponsor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iglesia2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tipo casa 21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9kotoj5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\busqueda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\busqueda1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inicio de sesión1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\entrarsistema.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrarsesion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\casabeneficiado2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\interesbeneficiado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\casabeneficiado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hermanitos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hermanos1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hermanitoss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hermanos11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrarsesion1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guardarnuevo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\volver2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevito.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\volververde.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\volververde1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevito1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\volververde2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevito2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\busqueda11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soporte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soporte1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soporte2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iglesia21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9kotoj21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9kotoj31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adoptado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adoptado1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adoptado2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oficioprofesion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\parentezco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\parentesco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pais.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nacionalidad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lugar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\institución.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gradocursado1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enfermedades.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enfermedades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\catalogos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\catalogosss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\catalogosss1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\catalogosss2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\family_2561.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

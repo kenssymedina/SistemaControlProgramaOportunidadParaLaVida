@@ -23,13 +23,9 @@ Partial Class FrmTutor
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.BtnActualizar = New System.Windows.Forms.Button()
-        Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtidiglesia = New System.Windows.Forms.TextBox()
         Me.txtidparen = New System.Windows.Forms.TextBox()
@@ -61,57 +57,32 @@ Partial Class FrmTutor
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.TxtId = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
-        Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Cambria", 26.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(450, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(106, 41)
-        Me.Label3.TabIndex = 3
-        Me.Label3.Text = "Tutor"
-        '
-        'BtnActualizar
-        '
-        Me.BtnActualizar.BackColor = System.Drawing.Color.Transparent
-        Me.BtnActualizar.BackgroundImage = Global.Misión.My.Resources.Resources.actualizar
-        Me.BtnActualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.BtnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnActualizar.ForeColor = System.Drawing.Color.Black
-        Me.BtnActualizar.Location = New System.Drawing.Point(250, 466)
-        Me.BtnActualizar.Name = "BtnActualizar"
-        Me.BtnActualizar.Size = New System.Drawing.Size(53, 41)
-        Me.BtnActualizar.TabIndex = 136
-        Me.BtnActualizar.UseVisualStyleBackColor = False
-        '
-        'BtnGuardar
-        '
-        Me.BtnGuardar.BackColor = System.Drawing.Color.Transparent
-        Me.BtnGuardar.BackgroundImage = Global.Misión.My.Resources.Resources.guardar1
-        Me.BtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnGuardar.ForeColor = System.Drawing.Color.Black
-        Me.BtnGuardar.Location = New System.Drawing.Point(155, 466)
-        Me.BtnGuardar.Name = "BtnGuardar"
-        Me.BtnGuardar.Size = New System.Drawing.Size(53, 41)
-        Me.BtnGuardar.TabIndex = 135
-        Me.BtnGuardar.UseVisualStyleBackColor = False
         '
         'DataGridView1
         '
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.ContextMenuStrip = Me.ContextMenuStrip1
-        Me.DataGridView1.Location = New System.Drawing.Point(491, 112)
+        Me.DataGridView1.Location = New System.Drawing.Point(510, 143)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(554, 287)
+        Me.DataGridView1.Size = New System.Drawing.Size(856, 287)
         Me.DataGridView1.TabIndex = 141
         '
         'ContextMenuStrip1
@@ -126,17 +97,9 @@ Partial Class FrmTutor
         Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(104, 22)
         Me.EditarToolStripMenuItem.Text = "Editar"
         '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Location = New System.Drawing.Point(-4, -1)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1226, 45)
-        Me.Panel1.TabIndex = 142
-        '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox1.Controls.Add(Me.txtidiglesia)
         Me.GroupBox1.Controls.Add(Me.txtidparen)
         Me.GroupBox1.Controls.Add(Me.txtidlu)
@@ -169,7 +132,7 @@ Partial Class FrmTutor
         Me.GroupBox1.Font = New System.Drawing.Font("Cambria", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(8, 66)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(453, 394)
+        Me.GroupBox1.Size = New System.Drawing.Size(477, 368)
         Me.GroupBox1.TabIndex = 143
         Me.GroupBox1.TabStop = False
         '
@@ -183,7 +146,7 @@ Partial Class FrmTutor
         '
         'txtidparen
         '
-        Me.txtidparen.Location = New System.Drawing.Point(6, 355)
+        Me.txtidparen.Location = New System.Drawing.Point(4, 313)
         Me.txtidparen.Name = "txtidparen"
         Me.txtidparen.Size = New System.Drawing.Size(100, 20)
         Me.txtidparen.TabIndex = 104
@@ -216,234 +179,241 @@ Partial Class FrmTutor
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Cambria", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.Black
-        Me.Label12.Location = New System.Drawing.Point(127, 150)
+        Me.Label12.Location = New System.Drawing.Point(130, 152)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(58, 17)
+        Me.Label12.Size = New System.Drawing.Size(55, 18)
         Me.Label12.TabIndex = 99
         Me.Label12.Text = "Salario"
         '
         'TxtSalario
         '
-        Me.TxtSalario.Location = New System.Drawing.Point(191, 147)
+        Me.TxtSalario.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtSalario.Location = New System.Drawing.Point(190, 147)
         Me.TxtSalario.Name = "TxtSalario"
-        Me.TxtSalario.Size = New System.Drawing.Size(249, 20)
+        Me.TxtSalario.Size = New System.Drawing.Size(249, 23)
         Me.TxtSalario.TabIndex = 98
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Cambria", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(144, 228)
+        Me.Label6.Location = New System.Drawing.Point(145, 73)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(41, 17)
+        Me.Label6.Size = New System.Drawing.Size(40, 18)
         Me.Label6.TabIndex = 97
         Me.Label6.Text = "Sexo"
         '
         'CboSexo
         '
-        Me.CboSexo.Font = New System.Drawing.Font("Cambria", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CboSexo.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CboSexo.FormattingEnabled = True
-        Me.CboSexo.Location = New System.Drawing.Point(191, 225)
+        Me.CboSexo.Location = New System.Drawing.Point(191, 68)
         Me.CboSexo.Name = "CboSexo"
-        Me.CboSexo.Size = New System.Drawing.Size(248, 20)
+        Me.CboSexo.Size = New System.Drawing.Size(248, 23)
         Me.CboSexo.TabIndex = 96
         Me.CboSexo.Text = "Sexo"
         '
         'TxtFechaNac
         '
+        Me.TxtFechaNac.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtFechaNac.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.TxtFechaNac.Location = New System.Drawing.Point(191, 121)
+        Me.TxtFechaNac.Location = New System.Drawing.Point(190, 279)
         Me.TxtFechaNac.Name = "TxtFechaNac"
-        Me.TxtFechaNac.Size = New System.Drawing.Size(249, 20)
+        Me.TxtFechaNac.Size = New System.Drawing.Size(249, 23)
         Me.TxtFechaNac.TabIndex = 95
         '
         'TxtNumeroC
         '
-        Me.TxtNumeroC.Location = New System.Drawing.Point(191, 173)
+        Me.TxtNumeroC.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtNumeroC.Location = New System.Drawing.Point(190, 201)
         Me.TxtNumeroC.Name = "TxtNumeroC"
-        Me.TxtNumeroC.Size = New System.Drawing.Size(248, 20)
+        Me.TxtNumeroC.Size = New System.Drawing.Size(250, 23)
         Me.TxtNumeroC.TabIndex = 94
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Cambria", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.Black
-        Me.Label13.Location = New System.Drawing.Point(47, 176)
+        Me.Label13.Location = New System.Drawing.Point(129, 206)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(138, 17)
+        Me.Label13.Size = New System.Drawing.Size(56, 18)
         Me.Label13.TabIndex = 93
-        Me.Label13.Text = "Número de Celular"
+        Me.Label13.Text = "Celular"
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Cambria", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.Black
-        Me.Label10.Location = New System.Drawing.Point(36, 124)
+        Me.Label10.Location = New System.Drawing.Point(37, 284)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(149, 17)
+        Me.Label10.Size = New System.Drawing.Size(146, 18)
         Me.Label10.TabIndex = 89
         Me.Label10.Text = "Fecha de Nacimiento"
         '
         'TxtDireccion
         '
-        Me.TxtDireccion.Location = New System.Drawing.Point(191, 95)
+        Me.TxtDireccion.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtDireccion.Location = New System.Drawing.Point(190, 253)
         Me.TxtDireccion.Name = "TxtDireccion"
-        Me.TxtDireccion.Size = New System.Drawing.Size(249, 20)
+        Me.TxtDireccion.Size = New System.Drawing.Size(249, 23)
         Me.TxtDireccion.TabIndex = 88
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Cambria", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(109, 98)
+        Me.Label8.Location = New System.Drawing.Point(111, 258)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(76, 17)
+        Me.Label8.Size = New System.Drawing.Size(72, 18)
         Me.Label8.TabIndex = 87
         Me.Label8.Text = "Dirección"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Cambria", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.Black
-        Me.Label11.Location = New System.Drawing.Point(100, 306)
+        Me.Label11.Location = New System.Drawing.Point(104, 311)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(85, 17)
+        Me.Label11.Size = New System.Drawing.Size(81, 18)
         Me.Label11.TabIndex = 86
         Me.Label11.Text = "Parentesco"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Cambria", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.Black
-        Me.Label9.Location = New System.Drawing.Point(131, 280)
+        Me.Label9.Location = New System.Drawing.Point(134, 126)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(54, 17)
+        Me.Label9.Size = New System.Drawing.Size(51, 18)
         Me.Label9.TabIndex = 85
         Me.Label9.Text = "Iglesia"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Cambria", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(136, 202)
+        Me.Label2.Location = New System.Drawing.Point(135, 179)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(49, 17)
+        Me.Label2.Size = New System.Drawing.Size(50, 18)
         Me.Label2.TabIndex = 83
         Me.Label2.Text = "Oficio"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Cambria", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(137, 254)
+        Me.Label1.Location = New System.Drawing.Point(137, 100)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(48, 17)
+        Me.Label1.Size = New System.Drawing.Size(48, 18)
         Me.Label1.TabIndex = 82
         Me.Label1.Text = "Lugar"
         '
         'CboParentesco
         '
-        Me.CboParentesco.Font = New System.Drawing.Font("Cambria", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CboParentesco.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CboParentesco.FormattingEnabled = True
-        Me.CboParentesco.Location = New System.Drawing.Point(191, 303)
+        Me.CboParentesco.Location = New System.Drawing.Point(190, 306)
         Me.CboParentesco.Name = "CboParentesco"
-        Me.CboParentesco.Size = New System.Drawing.Size(249, 20)
+        Me.CboParentesco.Size = New System.Drawing.Size(249, 23)
         Me.CboParentesco.TabIndex = 81
         Me.CboParentesco.Text = "Parentesco"
         '
         'CboIglesia
         '
-        Me.CboIglesia.Font = New System.Drawing.Font("Cambria", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CboIglesia.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CboIglesia.FormattingEnabled = True
-        Me.CboIglesia.Location = New System.Drawing.Point(191, 277)
+        Me.CboIglesia.Location = New System.Drawing.Point(190, 121)
         Me.CboIglesia.Name = "CboIglesia"
-        Me.CboIglesia.Size = New System.Drawing.Size(249, 20)
+        Me.CboIglesia.Size = New System.Drawing.Size(249, 23)
         Me.CboIglesia.TabIndex = 3
         Me.CboIglesia.Text = "Iglesia"
         '
         'CboOficio
         '
-        Me.CboOficio.Font = New System.Drawing.Font("Cambria", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CboOficio.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CboOficio.FormattingEnabled = True
-        Me.CboOficio.Location = New System.Drawing.Point(191, 199)
+        Me.CboOficio.Location = New System.Drawing.Point(190, 174)
         Me.CboOficio.Name = "CboOficio"
-        Me.CboOficio.Size = New System.Drawing.Size(249, 20)
+        Me.CboOficio.Size = New System.Drawing.Size(249, 23)
         Me.CboOficio.TabIndex = 79
         Me.CboOficio.Text = "Oficio"
         '
         'CboLugar
         '
-        Me.CboLugar.Font = New System.Drawing.Font("Cambria", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CboLugar.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CboLugar.FormattingEnabled = True
-        Me.CboLugar.Location = New System.Drawing.Point(191, 251)
+        Me.CboLugar.Location = New System.Drawing.Point(190, 94)
         Me.CboLugar.Name = "CboLugar"
-        Me.CboLugar.Size = New System.Drawing.Size(249, 20)
+        Me.CboLugar.Size = New System.Drawing.Size(249, 23)
         Me.CboLugar.TabIndex = 78
         Me.CboLugar.Text = "Lugar"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Cambria", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(36, 72)
+        Me.Label4.Location = New System.Drawing.Point(117, 232)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(149, 17)
+        Me.Label4.Size = New System.Drawing.Size(68, 18)
         Me.Label4.TabIndex = 49
-        Me.Label4.Text = "Número de Teléfono"
+        Me.Label4.Text = "Teléfono"
         '
         'TxtNumeroT
         '
-        Me.TxtNumeroT.Location = New System.Drawing.Point(191, 69)
+        Me.TxtNumeroT.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtNumeroT.Location = New System.Drawing.Point(190, 227)
         Me.TxtNumeroT.Name = "TxtNumeroT"
-        Me.TxtNumeroT.Size = New System.Drawing.Size(249, 20)
+        Me.TxtNumeroT.Size = New System.Drawing.Size(249, 23)
         Me.TxtNumeroT.TabIndex = 50
         '
         'TxtApellido
         '
-        Me.TxtApellido.Location = New System.Drawing.Point(191, 43)
+        Me.TxtApellido.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtApellido.Location = New System.Drawing.Point(191, 42)
         Me.TxtApellido.Name = "TxtApellido"
-        Me.TxtApellido.Size = New System.Drawing.Size(249, 20)
+        Me.TxtApellido.Size = New System.Drawing.Size(249, 23)
         Me.TxtApellido.TabIndex = 44
         '
         'TxtNombre
         '
+        Me.TxtNombre.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtNombre.Location = New System.Drawing.Point(191, 17)
         Me.TxtNombre.Name = "TxtNombre"
-        Me.TxtNombre.Size = New System.Drawing.Size(249, 20)
+        Me.TxtNombre.Size = New System.Drawing.Size(249, 23)
         Me.TxtNombre.TabIndex = 43
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Cambria", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(49, 46)
+        Me.Label5.Location = New System.Drawing.Point(121, 47)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(136, 17)
+        Me.Label5.Size = New System.Drawing.Size(64, 18)
         Me.Label5.TabIndex = 41
-        Me.Label5.Text = "Apellido del Tutor"
+        Me.Label5.Text = "Apellido"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Cambria", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Black
-        Me.Label7.Location = New System.Drawing.Point(53, 20)
+        Me.Label7.Location = New System.Drawing.Point(123, 22)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(132, 17)
+        Me.Label7.Size = New System.Drawing.Size(62, 18)
         Me.Label7.TabIndex = 40
-        Me.Label7.Text = "Nombre del Tutor"
+        Me.Label7.Text = "Nombre"
         '
         'TxtId
         '
@@ -453,36 +423,121 @@ Partial Class FrmTutor
         Me.TxtId.TabIndex = 144
         Me.TxtId.Visible = False
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Calisto MT", 21.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(104, 18)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(83, 34)
+        Me.Label3.TabIndex = 145
+        Me.Label3.Text = "Tutor"
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox6.BackgroundImage = Global.Misión.My.Resources.Resources.family_2561
+        Me.PictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox6.Location = New System.Drawing.Point(35, 8)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(64, 52)
+        Me.PictureBox6.TabIndex = 228
+        Me.PictureBox6.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox3.BackgroundImage = Global.Misión.My.Resources.Resources.cerrarsesion
+        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox3.Location = New System.Drawing.Point(372, 481)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(49, 51)
+        Me.PictureBox3.TabIndex = 233
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox4.BackgroundImage = Global.Misión.My.Resources.Resources.nuevo
+        Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox4.Location = New System.Drawing.Point(65, 481)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(49, 51)
+        Me.PictureBox4.TabIndex = 232
+        Me.PictureBox4.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.BackgroundImage = Global.Misión.My.Resources.Resources.editar
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox2.Location = New System.Drawing.Point(221, 481)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(49, 51)
+        Me.PictureBox2.TabIndex = 231
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImage = Global.Misión.My.Resources.Resources.nuevito
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(142, 481)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(49, 51)
+        Me.PictureBox1.TabIndex = 230
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox5.BackgroundImage = Global.Misión.My.Resources.Resources.volververde
+        Me.PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox5.Location = New System.Drawing.Point(299, 481)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(49, 51)
+        Me.PictureBox5.TabIndex = 229
+        Me.PictureBox5.TabStop = False
+        '
         'FrmTutor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.BackColor = System.Drawing.Color.White
+        Me.BackgroundImage = Global.Misión.My.Resources.Resources.fondo
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1063, 521)
+        Me.ClientSize = New System.Drawing.Size(1378, 570)
+        Me.Controls.Add(Me.PictureBox3)
+        Me.Controls.Add(Me.PictureBox4)
+        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.PictureBox5)
+        Me.Controls.Add(Me.PictureBox6)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.TxtId)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.BtnActualizar)
-        Me.Controls.Add(Me.BtnGuardar)
+        Me.DoubleBuffered = True
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmTutor"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Tutor"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ContextMenuStrip1.ResumeLayout(False)
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Label3 As Label
-    Friend WithEvents BtnActualizar As Button
-    Friend WithEvents BtnGuardar As Button
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Panel1 As Panel
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents txtidiglesia As TextBox
     Friend WithEvents txtidparen As TextBox
@@ -516,4 +571,11 @@ Partial Class FrmTutor
     Friend WithEvents TxtId As TextBox
     Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
     Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Label3 As Label
+    Friend WithEvents PictureBox6 As PictureBox
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox5 As PictureBox
 End Class

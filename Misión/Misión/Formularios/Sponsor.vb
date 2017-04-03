@@ -109,15 +109,69 @@ Public Class FrmSponsor
         Call PasarDatos()
     End Sub
 
-    Private Sub BtnActualizar_Click(sender As Object, e As EventArgs) Handles BtnActualizar.Click
-        Call ActualizarDatos(CInt(TxtId.Text))
-    End Sub
 
-    Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
-        Call GuardarN()
-    End Sub
+
+
 
     Private Sub CboTipoSponsor_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CboTipoSponsor.SelectedIndexChanged
 
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        Call GuardarN()
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        Call ActualizarDatos(CInt(TxtId.Text))
+    End Sub
+
+    Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
+        FrmTransaccionales.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
+        Me.Close()
+
+    End Sub
+
+    Private Sub PictureBox6_MouseMove(sender As Object, e As MouseEventArgs) Handles PictureBox6.MouseMove
+        PictureBox6.Size = New Size(58, 59)
+    End Sub
+
+    Private Sub PictureBox6_MouseLeave(sender As Object, e As EventArgs) Handles PictureBox6.MouseLeave
+        PictureBox6.Size = New Size(49, 51)
+    End Sub
+
+    Private Sub PictureBox5_MouseMove(sender As Object, e As MouseEventArgs) Handles PictureBox5.MouseMove
+        PictureBox5.Size = New Size(58, 59)
+    End Sub
+
+    Private Sub PictureBox5_MouseLeave(sender As Object, e As EventArgs) Handles PictureBox5.MouseLeave
+        PictureBox5.Size = New Size(49, 51)
+    End Sub
+
+    Private Sub PictureBox2_MouseMove(sender As Object, e As MouseEventArgs) Handles PictureBox2.MouseMove
+        PictureBox2.Size = New Size(58, 59)
+    End Sub
+
+    Private Sub PictureBox2_MouseLeave(sender As Object, e As EventArgs) Handles PictureBox2.MouseLeave
+        PictureBox2.Size = New Size(49, 51)
+    End Sub
+
+    Private Sub PictureBox1_MouseMove(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseMove
+        PictureBox1.Size = New Size(58, 59)
+    End Sub
+
+    Private Sub PictureBox1_MouseLeave(sender As Object, e As EventArgs) Handles PictureBox1.MouseLeave
+        PictureBox1.Size = New Size(49, 51)
+    End Sub
+
+    Private Sub PictureBox9_MouseMove(sender As Object, e As MouseEventArgs) Handles PictureBox9.MouseMove
+        PictureBox9.Size = New Size(58, 59)
+    End Sub
+
+    Private Sub PictureBox9_MouseLeave(sender As Object, e As EventArgs) Handles PictureBox9.MouseLeave
+        PictureBox9.Size = New Size(49, 51)
     End Sub
 End Class
