@@ -1,112 +1,129 @@
 ﻿Imports System.Data
 Imports System.Data.SqlClient
-
 Public Class FrmSponsor
-    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Call LlenarSexo()
-        Call LlenarPais()
-        Call LlenarTipoSponsor()
-        Call CargarDatos()
+    Implements IForm
+    Public b As Boolean
 
+    Public Sub ObtenerId(id As String) Implements IForm.ObtenerId
+        TextBox4.Text = id
     End Sub
-    Public Sub LlenarSexo()
-        Dim datos = (From a In cnn.Sexos
-                     Select a.IdSexo, a.Sexo).ToList
-        Me.CboSexo.DataSource = datos
+
+    Private Sub TextBox4_TextChanged(sender As Object, e As EventArgs) Handles TextBox4.TextChanged
+        If b = False Then
+            If TextBox4.Text <> "" Then
+                accesodatos.CargarDatoSponsor(TextBox4.Text, TxtNombre, TxtDireccion, TxtCorreoElectronico, CboSexo, CboPais,
+                                              CboTipoSponsor)
+            End If
+        End If
+    End Sub
+
+    Private Sub llenarComboboxSexo()
+        Dim m = (From s In cnn.Sexos
+                 Select s.IdSexo, s.Sexo
+                      ).ToList
+
+        Me.CboSexo.DataSource = m
 
         Me.CboSexo.ValueMember = "IdSexo"
         Me.CboSexo.DisplayMember = "Sexo"
         Me.CboSexo.SelectedIndex = -1
-        Me.CboSexo.Text = "--seleccione--"
+        Me.CboSexo.Text = "--Seleccione--"
     End Sub
-    Public Sub LlenarPais()
-        Dim datos = (From a In cnn.Pais
-                     Select a.IdPais, a.Pais).ToList
+    Public Sub LlenarComboboxPais()
+        Dim datos = (From p In cnn.Pais
+                     Select p.IdPais, p.Pais).ToList
+
         Me.CboPais.DataSource = datos
 
         Me.CboPais.ValueMember = "IdPais"
         Me.CboPais.DisplayMember = "Pais"
         Me.CboPais.SelectedIndex = -1
-        Me.CboPais.Text = "--seleccione--"
+        Me.CboPais.Text = "--Seleccione--"
+
     End Sub
+
     Public Sub LlenarTipoSponsor()
-        Dim datos = (From a In cnn.TipoSponsors
-                     Select a.IdTipoSponsor, a.TipoSponsor).ToList
+        Dim datos = (From y In cnn.TipoSponsors
+                     Select y.IdTipoSponsor, y.TipoSponsor).ToList
         Me.CboTipoSponsor.DataSource = datos
 
         Me.CboTipoSponsor.ValueMember = "IdTipoSponsor"
         Me.CboTipoSponsor.DisplayMember = "TipoSponsor"
         Me.CboTipoSponsor.SelectedIndex = -1
-        Me.CboTipoSponsor.Text = "--seleccione--"
+        Me.CboTipoSponsor.Text = "--Seleccione--"
+
+
+
     End Sub
 
+
+    Private Sub Sponsor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Call llenarComboboxSexo()
+        Call LlenarComboboxPais()
+        Call LlenarTipoSponsor()
+
+
+    End Sub
     Public Sub GuardarN()
-        Dim sp As New Sponsor With
-            {.NombreCompletoSponsor = TxtNombreSponsor.Text,
+        If validar() = True Then
+            Dim sp As New Sponsor With
+            {.IdSponsor = TextBox4.Text,
+            .NombreCompletoSponsor = TxtNombre.Text,
             .Direccion = TxtDireccion.Text,
-            .CorreoElectronico = TxtCorreoE.Text,
+            .CorreoElectronico = TxtCorreoElectronico.Text,
             .IdSexo = CInt(Me.CboSexo.SelectedValue),
             .IdPais = CInt(Me.CboPais.SelectedValue),
-            .IdTipoSponsor = CInt(Me.CboTipoSponsor.SelectedValue)
-            }
+            .IdTipoSponsor = CInt(Me.CboTipoSponsor.SelectedValue),
+             .IdUsuario = IdUsuarioSistemaActual
+             }
+            Try
+                cnn.Sponsors.InsertOnSubmit(sp)
+                cnn.SubmitChanges()
+                MsgBox("Datos ingresados correctamente", MsgBoxStyle.Information, "Aviso")
 
-        Try
-            cnn.Sponsors.InsertOnSubmit(sp)
-            cnn.SubmitChanges()
+            Catch ex As Exception
+                MsgBox(String.Format("Error: {0}", ex))
+            End Try
+        End If
+    End Sub
+    Private Sub Limpiar()
+        TextBox4.Text = ""
+        TxtNombre.Text = ""
+        TxtDireccion.Text = ""
+        TxtCorreoElectronico.Text = ""
+        CboSexo.Text = ""
+        CboPais.Text = ""
+        CboTipoSponsor.Text = ""
 
-            MsgBox("correcto")
-            CargarDatos()
-        Catch ex As Exception
-            MsgBox("error")
-        End Try
+
     End Sub
 
-    Public Sub CargarDatos()
 
 
-        Dim datos = (From sp In cnn.Sponsors
-                     Join s In cnn.Sexos On s.IdSexo Equals sp.IdSexo
-                     Join P In cnn.Pais On P.IdPais Equals sp.IdPais
-                     Join ti In cnn.TipoSponsors On ti.IdTipoSponsor Equals sp.IdTipoSponsor
-                     Select sp.IdSponsor, sp.NombreCompletoSponsor, sp.Direccion, sp.CorreoElectronico,
-                        s.Sexo, P.Pais, ti.TipoSponsor).ToList()
-        Me.DataGridView1.DataSource = datos
-
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim frm As New BusqueSponsor()
+        frm.Show(Me)
     End Sub
-
-    Private Sub ActualizarDatos(id As Integer)
-        Dim datos As Sponsor = (From sp In cnn.Sponsors
-                                Where sp.IdSponsor = id
-                                Select sp).ToList()(0)
-
-
-        datos.NombreCompletoSponsor = TxtNombreSponsor.Text
+    Public Sub ActualizarDatos(id As Integer)
+        Dim datos As Sponsor = (From s In cnn.Sponsors
+                                Where s.IdSponsor = id
+                                Select s).ToList()(0)
+        datos.NombreCompletoSponsor = TxtNombre.Text
         datos.Direccion = TxtDireccion.Text
-        datos.CorreoElectronico = TxtCorreoE.Text
-        datos.IdSexo = CInt(CboSexo.SelectedValue)
-        datos.IdPais = CInt(CboPais.SelectedValue)
-        datos.IdTipoSponsor = CInt(CboTipoSponsor.SelectedValue)
+        datos.CorreoElectronico = TxtCorreoElectronico.Text
+        datos.IdSexo = CInt(Me.CboSexo.SelectedValue)
+        datos.IdPais = CInt(Me.CboPais.SelectedValue)
+        datos.IdTipoSponsor = CInt(Me.CboTipoSponsor.SelectedValue)
+        datos.IdUsuario = 1
+
+
         Try
             cnn.SubmitChanges()
             MsgBox("correcto")
-            Call CargarDatos()
+
         Catch ex As Exception
             MsgBox("error")
         End Try
-    End Sub
-    Public Sub PasarDatos()
-        Dim fila As DataGridViewRow = DataGridView1.CurrentRow
-        Me.TxtId.Text = fila.Cells(0).Value
-        Me.TxtNombreSponsor.Text = fila.Cells(1).Value
-        Me.TxtDireccion.Text = fila.Cells(2).Value
-        Me.TxtCorreoE.Text = fila.Cells(3).Value
-        Me.CboSexo.SelectedValue = (fila.Cells(4).Value)
-        Me.CboPais.SelectedValue = (fila.Cells(5).Value)
-        Me.CboTipoSponsor.SelectedValue = (fila.Cells(6).Value)
-
-    End Sub
-    Private Sub EditarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditarToolStripMenuItem.Click
-        Call PasarDatos()
     End Sub
 
 
@@ -117,12 +134,12 @@ Public Class FrmSponsor
 
     End Sub
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
         Call GuardarN()
     End Sub
 
-    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
-        Call ActualizarDatos(CInt(TxtId.Text))
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles BtnActualizar.Click
+        Call ActualizarDatos(CInt(TextBox4.Text))
     End Sub
 
     Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
@@ -151,27 +168,69 @@ Public Class FrmSponsor
         PictureBox5.Size = New Size(49, 51)
     End Sub
 
-    Private Sub PictureBox2_MouseMove(sender As Object, e As MouseEventArgs) Handles PictureBox2.MouseMove
-        PictureBox2.Size = New Size(58, 59)
+    Private Sub PictureBox2_MouseMove(sender As Object, e As MouseEventArgs) Handles BtnActualizar.MouseMove
+        BtnActualizar.Size = New Size(58, 59)
     End Sub
 
-    Private Sub PictureBox2_MouseLeave(sender As Object, e As EventArgs) Handles PictureBox2.MouseLeave
-        PictureBox2.Size = New Size(49, 51)
+    Private Sub PictureBox2_MouseLeave(sender As Object, e As EventArgs) Handles BtnActualizar.MouseLeave
+        BtnActualizar.Size = New Size(49, 51)
     End Sub
 
-    Private Sub PictureBox1_MouseMove(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseMove
-        PictureBox1.Size = New Size(58, 59)
+    Private Sub PictureBox1_MouseMove(sender As Object, e As MouseEventArgs) Handles BtnGuardar.MouseMove
+        BtnGuardar.Size = New Size(58, 59)
     End Sub
 
-    Private Sub PictureBox1_MouseLeave(sender As Object, e As EventArgs) Handles PictureBox1.MouseLeave
-        PictureBox1.Size = New Size(49, 51)
+    Private Sub PictureBox1_MouseLeave(sender As Object, e As EventArgs) Handles BtnGuardar.MouseLeave
+        BtnGuardar.Size = New Size(49, 51)
     End Sub
 
-    Private Sub PictureBox9_MouseMove(sender As Object, e As MouseEventArgs) Handles PictureBox9.MouseMove
-        PictureBox9.Size = New Size(58, 59)
+    Private Sub PictureBox9_MouseMove(sender As Object, e As MouseEventArgs) Handles BtnNuevo.MouseMove
+        BtnNuevo.Size = New Size(58, 59)
     End Sub
 
-    Private Sub PictureBox9_MouseLeave(sender As Object, e As EventArgs) Handles PictureBox9.MouseLeave
-        PictureBox9.Size = New Size(49, 51)
+    Private Sub PictureBox9_MouseLeave(sender As Object, e As EventArgs) Handles BtnNuevo.MouseLeave
+        BtnNuevo.Size = New Size(49, 51)
     End Sub
+
+    Private Sub BtnNuevo_Click(sender As Object, e As EventArgs) Handles BtnNuevo.Click
+        Limpiar()
+        b = True
+    End Sub
+
+    Private Function validar() As Boolean
+        Dim estado As Boolean
+
+        If TextBox4.Text = Nothing And TxtNombre.Text = Nothing And TxtDireccion.Text = Nothing And TxtCorreoElectronico.Text = Nothing And CboSexo.SelectedIndex = -1 And CboPais.SelectedIndex = -1 And CboTipoSponsor.SelectedIndex = -1 Then
+            MessageBox.Show("ingrese los datos solicitados")
+            TextBox4.Focus()
+            estado = False
+        ElseIf TxtNombre.Text = Nothing Then
+            MessageBox.Show("ingrese el nombre")
+            TxtNombre.Focus()
+            estado = False
+        ElseIf txtDireccion.Text = Nothing Then
+            MessageBox.Show("ingrese el apellido")
+            TxtDireccion.Focus()
+            estado = False
+        ElseIf TxtCorreoElectronico.Text = Nothing Then
+            MessageBox.Show("ingrese la direccion")
+            TxtCorreoElectronico.Focus()
+            estado = False
+        ElseIf CboSexo.SelectedIndex = -1 Then
+            MessageBox.Show("Seleccione el sexo")
+            CboSexo.Focus()
+            estado = False
+        ElseIf CboPais.SelectedIndex = -1 Then
+            MessageBox.Show("Seleccione el pais")
+            CboPais.Focus()
+            estado = False
+        ElseIf CboTipoSponsor.SelectedIndex = -1 Then
+            MessageBox.Show("Seleccione el tipo sponsor")
+            CboTipoSponsor.Focus()
+            estado = False
+        Else
+            estado = True
+        End If
+        Return estado
+    End Function
 End Class

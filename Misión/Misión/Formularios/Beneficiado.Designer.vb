@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmBeneficiado
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,36 +20,26 @@ Partial Class FrmBeneficiado
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.TxtIdInterno = New System.Windows.Forms.TextBox()
-        Me.CboInterno = New System.Windows.Forms.ComboBox()
-        Me.TxtIdAsistencia = New System.Windows.Forms.TextBox()
-        Me.CboAsistenciaClaseDominical = New System.Windows.Forms.ComboBox()
-        Me.TxtEncuestaRealizada = New System.Windows.Forms.TextBox()
-        Me.Label23 = New System.Windows.Forms.Label()
+        Me.CboNacionalidad = New System.Windows.Forms.ComboBox()
+        Me.CboEnfermedad = New System.Windows.Forms.ComboBox()
+        Me.ckInterno = New System.Windows.Forms.CheckBox()
+        Me.ckAsistencia = New System.Windows.Forms.CheckBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.TxtFechaHistoEnviada = New System.Windows.Forms.DateTimePicker()
-        Me.TxtIdInstitucion = New System.Windows.Forms.TextBox()
-        Me.TxtEnfermedadPadecimiento = New System.Windows.Forms.TextBox()
-        Me.TxtIdEstadoBeneficiado = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.TxtIdLugar = New System.Windows.Forms.TextBox()
-        Me.TxtIglesia = New System.Windows.Forms.TextBox()
-        Me.TxtIdSexo = New System.Windows.Forms.TextBox()
-        Me.TxtIdGradoCursado = New System.Windows.Forms.TextBox()
         Me.CboInstitucion = New System.Windows.Forms.ComboBox()
         Me.CboGradoCursado = New System.Windows.Forms.ComboBox()
         Me.CboEstadoBeneficiado = New System.Windows.Forms.ComboBox()
         Me.CboLugar = New System.Windows.Forms.ComboBox()
         Me.CboIglesia = New System.Windows.Forms.ComboBox()
         Me.CboSexo = New System.Windows.Forms.ComboBox()
-        Me.TxtNacionalidad = New System.Windows.Forms.TextBox()
-        Me.TxtFechaNacBeneficiado = New System.Windows.Forms.DateTimePicker()
+        Me.TxtFechaNac = New System.Windows.Forms.DateTimePicker()
         Me.TxtColorPelo = New System.Windows.Forms.TextBox()
         Me.TxtColorOjos = New System.Windows.Forms.TextBox()
         Me.TxtCantidadHermanas = New System.Windows.Forms.TextBox()
@@ -57,7 +47,7 @@ Partial Class FrmBeneficiado
         Me.TxtDireccionBeneficiado = New System.Windows.Forms.TextBox()
         Me.TxtApellidoBeneficiado = New System.Windows.Forms.TextBox()
         Me.TxtNombreBeneficiado = New System.Windows.Forms.TextBox()
-        Me.TxtIdBeneficiado = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
@@ -74,28 +64,22 @@ Partial Class FrmBeneficiado
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.DgvDetallesBeneficiado = New System.Windows.Forms.DataGridView()
-        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.BtnNuevo = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.BtnActualizar = New System.Windows.Forms.PictureBox()
+        Me.BtnGuardar = New System.Windows.Forms.PictureBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
-        CType(Me.DgvDetallesBeneficiado, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ContextMenuStrip1.SuspendLayout()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BtnNuevo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BtnActualizar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BtnGuardar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -106,33 +90,23 @@ Partial Class FrmBeneficiado
         '
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.CboNacionalidad)
+        Me.Panel1.Controls.Add(Me.CboEnfermedad)
+        Me.Panel1.Controls.Add(Me.ckInterno)
+        Me.Panel1.Controls.Add(Me.ckAsistencia)
         Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Controls.Add(Me.TxtIdInterno)
-        Me.Panel1.Controls.Add(Me.CboInterno)
-        Me.Panel1.Controls.Add(Me.TxtIdAsistencia)
-        Me.Panel1.Controls.Add(Me.CboAsistenciaClaseDominical)
-        Me.Panel1.Controls.Add(Me.TxtEncuestaRealizada)
-        Me.Panel1.Controls.Add(Me.Label23)
         Me.Panel1.Controls.Add(Me.Label24)
         Me.Panel1.Controls.Add(Me.TxtFechaHistoEnviada)
-        Me.Panel1.Controls.Add(Me.TxtIdInstitucion)
-        Me.Panel1.Controls.Add(Me.TxtEnfermedadPadecimiento)
-        Me.Panel1.Controls.Add(Me.TxtIdEstadoBeneficiado)
         Me.Panel1.Controls.Add(Me.Label11)
         Me.Panel1.Controls.Add(Me.Label12)
         Me.Panel1.Controls.Add(Me.Label14)
-        Me.Panel1.Controls.Add(Me.TxtIdLugar)
-        Me.Panel1.Controls.Add(Me.TxtIglesia)
-        Me.Panel1.Controls.Add(Me.TxtIdSexo)
-        Me.Panel1.Controls.Add(Me.TxtIdGradoCursado)
         Me.Panel1.Controls.Add(Me.CboInstitucion)
         Me.Panel1.Controls.Add(Me.CboGradoCursado)
         Me.Panel1.Controls.Add(Me.CboEstadoBeneficiado)
         Me.Panel1.Controls.Add(Me.CboLugar)
         Me.Panel1.Controls.Add(Me.CboIglesia)
         Me.Panel1.Controls.Add(Me.CboSexo)
-        Me.Panel1.Controls.Add(Me.TxtNacionalidad)
-        Me.Panel1.Controls.Add(Me.TxtFechaNacBeneficiado)
+        Me.Panel1.Controls.Add(Me.TxtFechaNac)
         Me.Panel1.Controls.Add(Me.TxtColorPelo)
         Me.Panel1.Controls.Add(Me.TxtColorOjos)
         Me.Panel1.Controls.Add(Me.TxtCantidadHermanas)
@@ -140,7 +114,7 @@ Partial Class FrmBeneficiado
         Me.Panel1.Controls.Add(Me.TxtDireccionBeneficiado)
         Me.Panel1.Controls.Add(Me.TxtApellidoBeneficiado)
         Me.Panel1.Controls.Add(Me.TxtNombreBeneficiado)
-        Me.Panel1.Controls.Add(Me.TxtIdBeneficiado)
+        Me.Panel1.Controls.Add(Me.TextBox1)
         Me.Panel1.Controls.Add(Me.Label19)
         Me.Panel1.Controls.Add(Me.Label20)
         Me.Panel1.Controls.Add(Me.Label17)
@@ -162,59 +136,50 @@ Partial Class FrmBeneficiado
         Me.Panel1.Size = New System.Drawing.Size(596, 567)
         Me.Panel1.TabIndex = 184
         '
-        'TxtIdInterno
+        'CboNacionalidad
         '
-        Me.TxtIdInterno.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtIdInterno.Location = New System.Drawing.Point(549, 457)
-        Me.TxtIdInterno.Name = "TxtIdInterno"
-        Me.TxtIdInterno.Size = New System.Drawing.Size(39, 23)
-        Me.TxtIdInterno.TabIndex = 212
-        Me.TxtIdInterno.Visible = False
+        Me.CboNacionalidad.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CboNacionalidad.FormattingEnabled = True
+        Me.CboNacionalidad.Location = New System.Drawing.Point(227, 249)
+        Me.CboNacionalidad.Name = "CboNacionalidad"
+        Me.CboNacionalidad.Size = New System.Drawing.Size(317, 23)
+        Me.CboNacionalidad.TabIndex = 217
         '
-        'CboInterno
+        'CboEnfermedad
         '
-        Me.CboInterno.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CboInterno.FormattingEnabled = True
-        Me.CboInterno.Location = New System.Drawing.Point(228, 509)
-        Me.CboInterno.Name = "CboInterno"
-        Me.CboInterno.Size = New System.Drawing.Size(317, 23)
-        Me.CboInterno.TabIndex = 211
+        Me.CboEnfermedad.FormattingEnabled = True
+        Me.CboEnfermedad.Location = New System.Drawing.Point(227, 532)
+        Me.CboEnfermedad.Name = "CboEnfermedad"
+        Me.CboEnfermedad.Size = New System.Drawing.Size(317, 21)
+        Me.CboEnfermedad.TabIndex = 216
         '
-        'TxtIdAsistencia
+        'ckInterno
         '
-        Me.TxtIdAsistencia.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtIdAsistencia.Location = New System.Drawing.Point(549, 431)
-        Me.TxtIdAsistencia.Name = "TxtIdAsistencia"
-        Me.TxtIdAsistencia.Size = New System.Drawing.Size(39, 23)
-        Me.TxtIdAsistencia.TabIndex = 210
-        Me.TxtIdAsistencia.Visible = False
+        Me.ckInterno.AutoSize = True
+        Me.ckInterno.Location = New System.Drawing.Point(224, 512)
+        Me.ckInterno.Name = "ckInterno"
+        Me.ckInterno.Size = New System.Drawing.Size(15, 14)
+        Me.ckInterno.TabIndex = 215
+        Me.ckInterno.UseVisualStyleBackColor = True
         '
-        'CboAsistenciaClaseDominical
+        'ckAsistencia
         '
-        Me.CboAsistenciaClaseDominical.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CboAsistenciaClaseDominical.FormattingEnabled = True
-        Me.CboAsistenciaClaseDominical.Location = New System.Drawing.Point(228, 483)
-        Me.CboAsistenciaClaseDominical.Name = "CboAsistenciaClaseDominical"
-        Me.CboAsistenciaClaseDominical.Size = New System.Drawing.Size(316, 23)
-        Me.CboAsistenciaClaseDominical.TabIndex = 209
+        Me.ckAsistencia.AutoSize = True
+        Me.ckAsistencia.Location = New System.Drawing.Point(227, 488)
+        Me.ckAsistencia.Name = "ckAsistencia"
+        Me.ckAsistencia.Size = New System.Drawing.Size(15, 14)
+        Me.ckAsistencia.TabIndex = 214
+        Me.ckAsistencia.UseVisualStyleBackColor = True
         '
-        'TxtEncuestaRealizada
+        'Button1
         '
-        Me.TxtEncuestaRealizada.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtEncuestaRealizada.Location = New System.Drawing.Point(227, 457)
-        Me.TxtEncuestaRealizada.Name = "TxtEncuestaRealizada"
-        Me.TxtEncuestaRealizada.Size = New System.Drawing.Size(317, 23)
-        Me.TxtEncuestaRealizada.TabIndex = 208
-        '
-        'Label23
-        '
-        Me.Label23.AutoSize = True
-        Me.Label23.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(81, 462)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(136, 18)
-        Me.Label23.TabIndex = 207
-        Me.Label23.Text = "Encuesta Realizada"
+        Me.Button1.Font = New System.Drawing.Font("Cambria", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(554, 36)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(37, 23)
+        Me.Button1.TabIndex = 213
+        Me.Button1.Text = ". . . "
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Label24
         '
@@ -234,32 +199,6 @@ Partial Class FrmBeneficiado
         Me.TxtFechaHistoEnviada.Name = "TxtFechaHistoEnviada"
         Me.TxtFechaHistoEnviada.Size = New System.Drawing.Size(317, 23)
         Me.TxtFechaHistoEnviada.TabIndex = 205
-        '
-        'TxtIdInstitucion
-        '
-        Me.TxtIdInstitucion.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtIdInstitucion.Location = New System.Drawing.Point(549, 405)
-        Me.TxtIdInstitucion.Name = "TxtIdInstitucion"
-        Me.TxtIdInstitucion.Size = New System.Drawing.Size(39, 23)
-        Me.TxtIdInstitucion.TabIndex = 204
-        Me.TxtIdInstitucion.Visible = False
-        '
-        'TxtEnfermedadPadecimiento
-        '
-        Me.TxtEnfermedadPadecimiento.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtEnfermedadPadecimiento.Location = New System.Drawing.Point(227, 535)
-        Me.TxtEnfermedadPadecimiento.Name = "TxtEnfermedadPadecimiento"
-        Me.TxtEnfermedadPadecimiento.Size = New System.Drawing.Size(318, 23)
-        Me.TxtEnfermedadPadecimiento.TabIndex = 159
-        '
-        'TxtIdEstadoBeneficiado
-        '
-        Me.TxtIdEstadoBeneficiado.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtIdEstadoBeneficiado.Location = New System.Drawing.Point(549, 379)
-        Me.TxtIdEstadoBeneficiado.Name = "TxtIdEstadoBeneficiado"
-        Me.TxtIdEstadoBeneficiado.Size = New System.Drawing.Size(39, 23)
-        Me.TxtIdEstadoBeneficiado.TabIndex = 203
-        Me.TxtIdEstadoBeneficiado.Visible = False
         '
         'Label11
         '
@@ -296,42 +235,6 @@ Partial Class FrmBeneficiado
         Me.Label14.Size = New System.Drawing.Size(76, 18)
         Me.Label14.TabIndex = 161
         Me.Label14.Text = "Interno(a)"
-        '
-        'TxtIdLugar
-        '
-        Me.TxtIdLugar.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtIdLugar.Location = New System.Drawing.Point(549, 353)
-        Me.TxtIdLugar.Name = "TxtIdLugar"
-        Me.TxtIdLugar.Size = New System.Drawing.Size(39, 23)
-        Me.TxtIdLugar.TabIndex = 202
-        Me.TxtIdLugar.Visible = False
-        '
-        'TxtIglesia
-        '
-        Me.TxtIglesia.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtIglesia.Location = New System.Drawing.Point(549, 327)
-        Me.TxtIglesia.Name = "TxtIglesia"
-        Me.TxtIglesia.Size = New System.Drawing.Size(39, 23)
-        Me.TxtIglesia.TabIndex = 201
-        Me.TxtIglesia.Visible = False
-        '
-        'TxtIdSexo
-        '
-        Me.TxtIdSexo.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtIdSexo.Location = New System.Drawing.Point(549, 301)
-        Me.TxtIdSexo.Name = "TxtIdSexo"
-        Me.TxtIdSexo.Size = New System.Drawing.Size(39, 23)
-        Me.TxtIdSexo.TabIndex = 200
-        Me.TxtIdSexo.Visible = False
-        '
-        'TxtIdGradoCursado
-        '
-        Me.TxtIdGradoCursado.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtIdGradoCursado.Location = New System.Drawing.Point(549, 275)
-        Me.TxtIdGradoCursado.Name = "TxtIdGradoCursado"
-        Me.TxtIdGradoCursado.Size = New System.Drawing.Size(39, 23)
-        Me.TxtIdGradoCursado.TabIndex = 199
-        Me.TxtIdGradoCursado.Visible = False
         '
         'CboInstitucion
         '
@@ -387,22 +290,14 @@ Partial Class FrmBeneficiado
         Me.CboSexo.Size = New System.Drawing.Size(317, 23)
         Me.CboSexo.TabIndex = 193
         '
-        'TxtNacionalidad
+        'TxtFechaNac
         '
-        Me.TxtNacionalidad.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtNacionalidad.Location = New System.Drawing.Point(227, 249)
-        Me.TxtNacionalidad.Name = "TxtNacionalidad"
-        Me.TxtNacionalidad.Size = New System.Drawing.Size(317, 23)
-        Me.TxtNacionalidad.TabIndex = 192
-        '
-        'TxtFechaNacBeneficiado
-        '
-        Me.TxtFechaNacBeneficiado.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtFechaNacBeneficiado.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.TxtFechaNacBeneficiado.Location = New System.Drawing.Point(227, 119)
-        Me.TxtFechaNacBeneficiado.Name = "TxtFechaNacBeneficiado"
-        Me.TxtFechaNacBeneficiado.Size = New System.Drawing.Size(317, 23)
-        Me.TxtFechaNacBeneficiado.TabIndex = 191
+        Me.TxtFechaNac.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtFechaNac.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.TxtFechaNac.Location = New System.Drawing.Point(227, 119)
+        Me.TxtFechaNac.Name = "TxtFechaNac"
+        Me.TxtFechaNac.Size = New System.Drawing.Size(317, 23)
+        Me.TxtFechaNac.TabIndex = 191
         '
         'TxtColorPelo
         '
@@ -460,13 +355,13 @@ Partial Class FrmBeneficiado
         Me.TxtNombreBeneficiado.Size = New System.Drawing.Size(317, 23)
         Me.TxtNombreBeneficiado.TabIndex = 184
         '
-        'TxtIdBeneficiado
+        'TextBox1
         '
-        Me.TxtIdBeneficiado.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtIdBeneficiado.Location = New System.Drawing.Point(227, 12)
-        Me.TxtIdBeneficiado.Name = "TxtIdBeneficiado"
-        Me.TxtIdBeneficiado.Size = New System.Drawing.Size(317, 23)
-        Me.TxtIdBeneficiado.TabIndex = 183
+        Me.TextBox1.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(227, 12)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(317, 23)
+        Me.TextBox1.TabIndex = 183
         '
         'Label19
         '
@@ -655,28 +550,6 @@ Partial Class FrmBeneficiado
         Me.Label5.TabIndex = 134
         Me.Label5.Text = "Nombre"
         '
-        'DgvDetallesBeneficiado
-        '
-        Me.DgvDetallesBeneficiado.BackgroundColor = System.Drawing.Color.White
-        Me.DgvDetallesBeneficiado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvDetallesBeneficiado.ContextMenuStrip = Me.ContextMenuStrip1
-        Me.DgvDetallesBeneficiado.Location = New System.Drawing.Point(625, 125)
-        Me.DgvDetallesBeneficiado.Name = "DgvDetallesBeneficiado"
-        Me.DgvDetallesBeneficiado.Size = New System.Drawing.Size(723, 348)
-        Me.DgvDetallesBeneficiado.TabIndex = 185
-        '
-        'ContextMenuStrip1
-        '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem})
-        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(105, 26)
-        '
-        'EditarToolStripMenuItem
-        '
-        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
-        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(104, 22)
-        Me.EditarToolStripMenuItem.Text = "Editar"
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -688,16 +561,16 @@ Partial Class FrmBeneficiado
         Me.Label3.TabIndex = 141
         Me.Label3.Text = "Beneficiado"
         '
-        'PictureBox4
+        'BtnNuevo
         '
-        Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox4.BackgroundImage = Global.Misión.My.Resources.Resources.nuevo1
-        Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox4.Location = New System.Drawing.Point(50, 672)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(49, 51)
-        Me.PictureBox4.TabIndex = 190
-        Me.PictureBox4.TabStop = False
+        Me.BtnNuevo.BackColor = System.Drawing.Color.Transparent
+        Me.BtnNuevo.BackgroundImage = Global.Misión.My.Resources.Resources.nuevo1
+        Me.BtnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnNuevo.Location = New System.Drawing.Point(50, 672)
+        Me.BtnNuevo.Name = "BtnNuevo"
+        Me.BtnNuevo.Size = New System.Drawing.Size(49, 51)
+        Me.BtnNuevo.TabIndex = 190
+        Me.BtnNuevo.TabStop = False
         '
         'PictureBox3
         '
@@ -710,27 +583,27 @@ Partial Class FrmBeneficiado
         Me.PictureBox3.TabIndex = 189
         Me.PictureBox3.TabStop = False
         '
-        'PictureBox2
+        'BtnActualizar
         '
-        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.BackgroundImage = Global.Misión.My.Resources.Resources.editar1
-        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox2.Location = New System.Drawing.Point(206, 672)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(49, 51)
-        Me.PictureBox2.TabIndex = 188
-        Me.PictureBox2.TabStop = False
+        Me.BtnActualizar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnActualizar.BackgroundImage = Global.Misión.My.Resources.Resources.editar1
+        Me.BtnActualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnActualizar.Location = New System.Drawing.Point(206, 672)
+        Me.BtnActualizar.Name = "BtnActualizar"
+        Me.BtnActualizar.Size = New System.Drawing.Size(49, 51)
+        Me.BtnActualizar.TabIndex = 188
+        Me.BtnActualizar.TabStop = False
         '
-        'PictureBox1
+        'BtnGuardar
         '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.BackgroundImage = Global.Misión.My.Resources.Resources.nuevito1
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(127, 672)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(49, 51)
-        Me.PictureBox1.TabIndex = 187
-        Me.PictureBox1.TabStop = False
+        Me.BtnGuardar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnGuardar.BackgroundImage = Global.Misión.My.Resources.Resources.nuevito1
+        Me.BtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnGuardar.Location = New System.Drawing.Point(127, 672)
+        Me.BtnGuardar.Name = "BtnGuardar"
+        Me.BtnGuardar.Size = New System.Drawing.Size(49, 51)
+        Me.BtnGuardar.TabIndex = 187
+        Me.BtnGuardar.TabStop = False
         '
         'PictureBox5
         '
@@ -798,16 +671,6 @@ Partial Class FrmBeneficiado
         Me.PictureBox7.TabIndex = 235
         Me.PictureBox7.TabStop = False
         '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("Cambria", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(551, 11)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(37, 23)
-        Me.Button1.TabIndex = 213
-        Me.Button1.Text = ". . . "
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'FrmBeneficiado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -815,19 +678,18 @@ Partial Class FrmBeneficiado
         Me.BackColor = System.Drawing.Color.LightSkyBlue
         Me.BackgroundImage = Global.Misión.My.Resources.Resources.fondo7
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1378, 780)
+        Me.ClientSize = New System.Drawing.Size(649, 780)
         Me.Controls.Add(Me.PictureBox7)
         Me.Controls.Add(Me.Label21)
         Me.Controls.Add(Me.PictureBox8)
         Me.Controls.Add(Me.Label22)
         Me.Controls.Add(Me.PictureBox6)
-        Me.Controls.Add(Me.PictureBox4)
+        Me.Controls.Add(Me.BtnNuevo)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.BtnActualizar)
+        Me.Controls.Add(Me.BtnGuardar)
         Me.Controls.Add(Me.PictureBox5)
-        Me.Controls.Add(Me.DgvDetallesBeneficiado)
         Me.Controls.Add(Me.Panel1)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -837,12 +699,10 @@ Partial Class FrmBeneficiado
         Me.Text = "Beneficiado"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.DgvDetallesBeneficiado, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ContextMenuStrip1.ResumeLayout(False)
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BtnNuevo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BtnActualizar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BtnGuardar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
@@ -852,32 +712,18 @@ Partial Class FrmBeneficiado
 
     End Sub
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents TxtIdInterno As TextBox
-    Friend WithEvents CboInterno As ComboBox
-    Friend WithEvents TxtIdAsistencia As TextBox
-    Friend WithEvents CboAsistenciaClaseDominical As ComboBox
-    Friend WithEvents TxtEncuestaRealizada As TextBox
-    Friend WithEvents Label23 As Label
     Friend WithEvents Label24 As Label
     Friend WithEvents TxtFechaHistoEnviada As DateTimePicker
-    Friend WithEvents TxtIdInstitucion As TextBox
-    Friend WithEvents TxtEnfermedadPadecimiento As TextBox
-    Friend WithEvents TxtIdEstadoBeneficiado As TextBox
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label14 As Label
-    Friend WithEvents TxtIdLugar As TextBox
-    Friend WithEvents TxtIglesia As TextBox
-    Friend WithEvents TxtIdSexo As TextBox
-    Friend WithEvents TxtIdGradoCursado As TextBox
     Friend WithEvents CboInstitucion As ComboBox
     Friend WithEvents CboGradoCursado As ComboBox
     Friend WithEvents CboEstadoBeneficiado As ComboBox
     Friend WithEvents CboLugar As ComboBox
     Friend WithEvents CboIglesia As ComboBox
     Friend WithEvents CboSexo As ComboBox
-    Friend WithEvents TxtNacionalidad As TextBox
-    Friend WithEvents TxtFechaNacBeneficiado As DateTimePicker
+    Friend WithEvents TxtFechaNac As DateTimePicker
     Friend WithEvents TxtColorPelo As TextBox
     Friend WithEvents TxtColorOjos As TextBox
     Friend WithEvents TxtCantidadHermanas As TextBox
@@ -885,7 +731,7 @@ Partial Class FrmBeneficiado
     Friend WithEvents TxtDireccionBeneficiado As TextBox
     Friend WithEvents TxtApellidoBeneficiado As TextBox
     Friend WithEvents TxtNombreBeneficiado As TextBox
-    Friend WithEvents TxtIdBeneficiado As TextBox
+    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label19 As Label
     Friend WithEvents Label20 As Label
     Friend WithEvents Label17 As Label
@@ -902,19 +748,20 @@ Partial Class FrmBeneficiado
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents DgvDetallesBeneficiado As DataGridView
-    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
-    Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label3 As Label
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents BtnActualizar As PictureBox
+    Friend WithEvents BtnGuardar As PictureBox
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents BtnNuevo As PictureBox
     Friend WithEvents Label21 As Label
     Friend WithEvents PictureBox8 As PictureBox
     Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents Label22 As Label
     Friend WithEvents PictureBox7 As PictureBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents ckInterno As CheckBox
+    Friend WithEvents ckAsistencia As CheckBox
+    Friend WithEvents CboEnfermedad As ComboBox
+    Friend WithEvents CboNacionalidad As ComboBox
 End Class

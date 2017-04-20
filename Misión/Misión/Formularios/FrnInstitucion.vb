@@ -43,4 +43,23 @@
         Me.Close()
 
     End Sub
+
+    Private Sub FrmInstitucion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+    Private Function validar() As Boolean
+        Dim estado As Boolean
+        If TextBox3.Text = Nothing And TextBox2.Text = Nothing And ComboBox1.SelectedIndex = -1 Then
+            MessageBox.Show("ingrese los datos solicitados")
+            TextBox3.Focus()
+            estado = False
+        ElseIf TextBox2.Text = Nothing Then
+            MessageBox.Show("ingrese el nombre")
+            TextBox2.Focus()
+            estado = False
+        Else
+            estado = True
+        End If
+        Return estado
+    End Function
 End Class

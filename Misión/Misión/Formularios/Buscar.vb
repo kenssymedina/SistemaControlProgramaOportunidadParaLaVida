@@ -1,7 +1,8 @@
-﻿Public Class FrmBuscar
+﻿Public Class Buscar
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-        FrmBuscarAdopcion.Show()
+        BuscarAdopcion.Show()
     End Sub
+
 
 
 
@@ -22,7 +23,7 @@
     End Sub
 
     Private Sub PictureBox7_MouseMove(sender As Object, e As MouseEventArgs) Handles PictureBox7.MouseMove
-        PictureBox7.Size = New Size(90, 82)
+        PictureBox2.Size = New Size(90, 82)
     End Sub
 
     Private Sub PictureBox7_MouseLeave(sender As Object, e As EventArgs) Handles PictureBox7.MouseLeave
@@ -70,44 +71,39 @@
     End Sub
 
     Private Sub PictureBox5_MouseMove(sender As Object, e As MouseEventArgs) Handles PictureBox5.MouseMove
-        PictureBox5.Size = New Size(58, 59)
+
     End Sub
 
     Private Sub PictureBox5_MouseLeave(sender As Object, e As EventArgs) Handles PictureBox5.MouseLeave
-        PictureBox5.Size = New Size(49, 51)
+
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
-        FrmBuscarBeneficiado.Show()
+        BuscarBeneficiados.Show()
     End Sub
 
     Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox7.Click
-        FrmBuscarSponsor.Show()
+        BusqueSponsor.Show()
 
     End Sub
 
     Private Sub PictureBox9_Click(sender As Object, e As EventArgs) Handles PictureBox9.Click
-        FrmBuscarIglesia.Show()
+        BuscarIglesia.Show()
 
     End Sub
 
     Private Sub PictureBox10_Click(sender As Object, e As EventArgs) Handles PictureBox10.Click
-        FrmBuscarCartas.Show()
+        BuscarCartas.Show()
 
     End Sub
 
     Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
-        FrmBuscarTutor.Show()
-
-    End Sub
-
-    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
-        FrmBuscarUsuario.Show()
+        BuscTutor.Show()
 
     End Sub
 
     Private Sub PictureBox8_Click(sender As Object, e As EventArgs) Handles PictureBox8.Click
-        FrmBuscarOfrenda.Show()
+        BuscarOfrenda.Show()
 
     End Sub
 
@@ -116,7 +112,4 @@
 
     End Sub
 
-    Private Sub FrmBuscar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class

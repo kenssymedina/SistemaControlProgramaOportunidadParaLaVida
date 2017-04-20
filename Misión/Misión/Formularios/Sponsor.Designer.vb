@@ -22,42 +22,35 @@ Partial Class FrmSponsor
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.CboTipoSponsor = New System.Windows.Forms.ComboBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.CboPais = New System.Windows.Forms.ComboBox()
         Me.CboSexo = New System.Windows.Forms.ComboBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.TxtCorreoE = New System.Windows.Forms.TextBox()
+        Me.TxtCorreoElectronico = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TxtNombreSponsor = New System.Windows.Forms.TextBox()
+        Me.TxtNombre = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TxtDireccion = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TxtIdPais = New System.Windows.Forms.TextBox()
-        Me.TxtIdTipoSponsor = New System.Windows.Forms.TextBox()
-        Me.TxtIdSexo = New System.Windows.Forms.TextBox()
-        Me.TxtId = New System.Windows.Forms.TextBox()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.BtnActualizar = New System.Windows.Forms.PictureBox()
+        Me.BtnGuardar = New System.Windows.Forms.PictureBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
+        Me.BtnNuevo = New System.Windows.Forms.PictureBox()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ContextMenuStrip1.SuspendLayout()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BtnActualizar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BtnGuardar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BtnNuevo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -65,28 +58,49 @@ Partial Class FrmSponsor
         '
         Me.Panel2.BackColor = System.Drawing.Color.Transparent
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.TextBox4)
+        Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.CboTipoSponsor)
         Me.Panel2.Controls.Add(Me.Label13)
         Me.Panel2.Controls.Add(Me.Label12)
         Me.Panel2.Controls.Add(Me.CboPais)
         Me.Panel2.Controls.Add(Me.CboSexo)
         Me.Panel2.Controls.Add(Me.Label11)
-        Me.Panel2.Controls.Add(Me.TxtCorreoE)
+        Me.Panel2.Controls.Add(Me.TxtCorreoElectronico)
         Me.Panel2.Controls.Add(Me.Label4)
-        Me.Panel2.Controls.Add(Me.TxtNombreSponsor)
+        Me.Panel2.Controls.Add(Me.TxtNombre)
         Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Controls.Add(Me.TxtDireccion)
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Location = New System.Drawing.Point(29, 149)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(427, 186)
+        Me.Panel2.Size = New System.Drawing.Size(427, 236)
         Me.Panel2.TabIndex = 1
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox4.Location = New System.Drawing.Point(159, 29)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(254, 23)
+        Me.TextBox4.TabIndex = 165
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(83, 33)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(62, 18)
+        Me.Label1.TabIndex = 164
+        Me.Label1.Text = "Numero"
         '
         'CboTipoSponsor
         '
         Me.CboTipoSponsor.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CboTipoSponsor.FormattingEnabled = True
-        Me.CboTipoSponsor.Location = New System.Drawing.Point(159, 143)
+        Me.CboTipoSponsor.Location = New System.Drawing.Point(159, 190)
         Me.CboTipoSponsor.Name = "CboTipoSponsor"
         Me.CboTipoSponsor.Size = New System.Drawing.Size(254, 23)
         Me.CboTipoSponsor.TabIndex = 161
@@ -95,7 +109,7 @@ Partial Class FrmSponsor
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(36, 148)
+        Me.Label13.Location = New System.Drawing.Point(36, 195)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(117, 18)
         Me.Label13.TabIndex = 160
@@ -105,7 +119,7 @@ Partial Class FrmSponsor
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(117, 122)
+        Me.Label12.Location = New System.Drawing.Point(117, 169)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(36, 18)
         Me.Label12.TabIndex = 159
@@ -115,7 +129,7 @@ Partial Class FrmSponsor
         '
         Me.CboPais.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CboPais.FormattingEnabled = True
-        Me.CboPais.Location = New System.Drawing.Point(159, 117)
+        Me.CboPais.Location = New System.Drawing.Point(159, 164)
         Me.CboPais.Name = "CboPais"
         Me.CboPais.Size = New System.Drawing.Size(254, 23)
         Me.CboPais.TabIndex = 158
@@ -124,7 +138,7 @@ Partial Class FrmSponsor
         '
         Me.CboSexo.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CboSexo.FormattingEnabled = True
-        Me.CboSexo.Location = New System.Drawing.Point(159, 91)
+        Me.CboSexo.Location = New System.Drawing.Point(159, 138)
         Me.CboSexo.Name = "CboSexo"
         Me.CboSexo.Size = New System.Drawing.Size(254, 23)
         Me.CboSexo.TabIndex = 157
@@ -133,44 +147,44 @@ Partial Class FrmSponsor
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(113, 96)
+        Me.Label11.Location = New System.Drawing.Point(113, 143)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(40, 18)
         Me.Label11.TabIndex = 156
         Me.Label11.Text = "Sexo"
         '
-        'TxtCorreoE
+        'TxtCorreoElectronico
         '
-        Me.TxtCorreoE.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCorreoE.Location = New System.Drawing.Point(159, 65)
-        Me.TxtCorreoE.Name = "TxtCorreoE"
-        Me.TxtCorreoE.Size = New System.Drawing.Size(254, 23)
-        Me.TxtCorreoE.TabIndex = 140
+        Me.TxtCorreoElectronico.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCorreoElectronico.Location = New System.Drawing.Point(159, 112)
+        Me.TxtCorreoElectronico.Name = "TxtCorreoElectronico"
+        Me.TxtCorreoElectronico.Size = New System.Drawing.Size(254, 23)
+        Me.TxtCorreoElectronico.TabIndex = 140
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(17, 70)
+        Me.Label4.Location = New System.Drawing.Point(17, 117)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(136, 18)
         Me.Label4.TabIndex = 141
         Me.Label4.Text = "Correo Eléctronico"
         '
-        'TxtNombreSponsor
+        'TxtNombre
         '
-        Me.TxtNombreSponsor.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtNombreSponsor.Location = New System.Drawing.Point(159, 13)
-        Me.TxtNombreSponsor.Name = "TxtNombreSponsor"
-        Me.TxtNombreSponsor.Size = New System.Drawing.Size(254, 23)
-        Me.TxtNombreSponsor.TabIndex = 138
+        Me.TxtNombre.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtNombre.Location = New System.Drawing.Point(159, 60)
+        Me.TxtNombre.Name = "TxtNombre"
+        Me.TxtNombre.Size = New System.Drawing.Size(254, 23)
+        Me.TxtNombre.TabIndex = 138
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(87, 18)
+        Me.Label5.Location = New System.Drawing.Point(87, 63)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(66, 18)
         Me.Label5.TabIndex = 134
@@ -179,7 +193,7 @@ Partial Class FrmSponsor
         'TxtDireccion
         '
         Me.TxtDireccion.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtDireccion.Location = New System.Drawing.Point(159, 39)
+        Me.TxtDireccion.Location = New System.Drawing.Point(159, 86)
         Me.TxtDireccion.Name = "TxtDireccion"
         Me.TxtDireccion.Size = New System.Drawing.Size(254, 23)
         Me.TxtDireccion.TabIndex = 136
@@ -188,7 +202,7 @@ Partial Class FrmSponsor
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(81, 44)
+        Me.Label2.Location = New System.Drawing.Point(81, 90)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(72, 18)
         Me.Label2.TabIndex = 137
@@ -205,60 +219,6 @@ Partial Class FrmSponsor
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Sponsor"
         '
-        'DataGridView1
-        '
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.ContextMenuStrip = Me.ContextMenuStrip1
-        Me.DataGridView1.Location = New System.Drawing.Point(476, 130)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(870, 287)
-        Me.DataGridView1.TabIndex = 139
-        '
-        'ContextMenuStrip1
-        '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem})
-        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(105, 26)
-        '
-        'EditarToolStripMenuItem
-        '
-        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
-        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(104, 22)
-        Me.EditarToolStripMenuItem.Text = "Editar"
-        '
-        'TxtIdPais
-        '
-        Me.TxtIdPais.Location = New System.Drawing.Point(59, 341)
-        Me.TxtIdPais.Name = "TxtIdPais"
-        Me.TxtIdPais.Size = New System.Drawing.Size(34, 20)
-        Me.TxtIdPais.TabIndex = 146
-        Me.TxtIdPais.Visible = False
-        '
-        'TxtIdTipoSponsor
-        '
-        Me.TxtIdTipoSponsor.Location = New System.Drawing.Point(29, 341)
-        Me.TxtIdTipoSponsor.Name = "TxtIdTipoSponsor"
-        Me.TxtIdTipoSponsor.Size = New System.Drawing.Size(27, 20)
-        Me.TxtIdTipoSponsor.TabIndex = 145
-        Me.TxtIdTipoSponsor.Visible = False
-        '
-        'TxtIdSexo
-        '
-        Me.TxtIdSexo.Location = New System.Drawing.Point(99, 341)
-        Me.TxtIdSexo.Name = "TxtIdSexo"
-        Me.TxtIdSexo.Size = New System.Drawing.Size(34, 20)
-        Me.TxtIdSexo.TabIndex = 144
-        Me.TxtIdSexo.Visible = False
-        '
-        'TxtId
-        '
-        Me.TxtId.Location = New System.Drawing.Point(139, 341)
-        Me.TxtId.Name = "TxtId"
-        Me.TxtId.Size = New System.Drawing.Size(27, 20)
-        Me.TxtId.TabIndex = 143
-        Me.TxtId.Visible = False
-        '
         'PictureBox7
         '
         Me.PictureBox7.BackColor = System.Drawing.Color.Transparent
@@ -270,27 +230,27 @@ Partial Class FrmSponsor
         Me.PictureBox7.TabIndex = 162
         Me.PictureBox7.TabStop = False
         '
-        'PictureBox2
+        'BtnActualizar
         '
-        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.BackgroundImage = Global.Misión.My.Resources.Resources.editar2
-        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox2.Location = New System.Drawing.Point(221, 413)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(49, 51)
-        Me.PictureBox2.TabIndex = 165
-        Me.PictureBox2.TabStop = False
+        Me.BtnActualizar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnActualizar.BackgroundImage = Global.Misión.My.Resources.Resources.editar2
+        Me.BtnActualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnActualizar.Location = New System.Drawing.Point(221, 413)
+        Me.BtnActualizar.Name = "BtnActualizar"
+        Me.BtnActualizar.Size = New System.Drawing.Size(49, 51)
+        Me.BtnActualizar.TabIndex = 165
+        Me.BtnActualizar.TabStop = False
         '
-        'PictureBox1
+        'BtnGuardar
         '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.BackgroundImage = Global.Misión.My.Resources.Resources.nuevito2
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(146, 413)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(49, 51)
-        Me.PictureBox1.TabIndex = 164
-        Me.PictureBox1.TabStop = False
+        Me.BtnGuardar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnGuardar.BackgroundImage = Global.Misión.My.Resources.Resources.nuevito2
+        Me.BtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnGuardar.Location = New System.Drawing.Point(146, 413)
+        Me.BtnGuardar.Name = "BtnGuardar"
+        Me.BtnGuardar.Size = New System.Drawing.Size(49, 51)
+        Me.BtnGuardar.TabIndex = 164
+        Me.BtnGuardar.TabStop = False
         '
         'PictureBox5
         '
@@ -303,16 +263,16 @@ Partial Class FrmSponsor
         Me.PictureBox5.TabIndex = 163
         Me.PictureBox5.TabStop = False
         '
-        'PictureBox9
+        'BtnNuevo
         '
-        Me.PictureBox9.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox9.BackgroundImage = Global.Misión.My.Resources.Resources.nuevo2
-        Me.PictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox9.Location = New System.Drawing.Point(69, 413)
-        Me.PictureBox9.Name = "PictureBox9"
-        Me.PictureBox9.Size = New System.Drawing.Size(49, 51)
-        Me.PictureBox9.TabIndex = 170
-        Me.PictureBox9.TabStop = False
+        Me.BtnNuevo.BackColor = System.Drawing.Color.Transparent
+        Me.BtnNuevo.BackgroundImage = Global.Misión.My.Resources.Resources.nuevo2
+        Me.BtnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnNuevo.Location = New System.Drawing.Point(69, 413)
+        Me.BtnNuevo.Name = "BtnNuevo"
+        Me.BtnNuevo.Size = New System.Drawing.Size(49, 51)
+        Me.BtnNuevo.TabIndex = 170
+        Me.BtnNuevo.TabStop = False
         '
         'PictureBox6
         '
@@ -325,6 +285,16 @@ Partial Class FrmSponsor
         Me.PictureBox6.TabIndex = 235
         Me.PictureBox6.TabStop = False
         '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(461, 176)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(45, 31)
+        Me.Button1.TabIndex = 236
+        Me.Button1.Text = "..."
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'FrmSponsor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -332,19 +302,15 @@ Partial Class FrmSponsor
         Me.BackColor = System.Drawing.Color.LightSkyBlue
         Me.BackgroundImage = Global.Misión.My.Resources.Resources.fondo
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1378, 570)
+        Me.ClientSize = New System.Drawing.Size(512, 570)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox6)
-        Me.Controls.Add(Me.PictureBox9)
-        Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.BtnNuevo)
+        Me.Controls.Add(Me.BtnActualizar)
+        Me.Controls.Add(Me.BtnGuardar)
         Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.PictureBox7)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TxtIdPais)
-        Me.Controls.Add(Me.TxtIdTipoSponsor)
-        Me.Controls.Add(Me.TxtIdSexo)
-        Me.Controls.Add(Me.TxtId)
-        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Panel2)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -354,22 +320,20 @@ Partial Class FrmSponsor
         Me.Text = "Sponsor"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ContextMenuStrip1.ResumeLayout(False)
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BtnActualizar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BtnGuardar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BtnNuevo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents TxtCorreoE As TextBox
+    Friend WithEvents TxtCorreoElectronico As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents TxtNombreSponsor As TextBox
+    Friend WithEvents TxtNombre As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents TxtDireccion As TextBox
     Friend WithEvents Label2 As Label
@@ -380,17 +344,13 @@ Partial Class FrmSponsor
     Friend WithEvents CboSexo As ComboBox
     Friend WithEvents Label11 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents TxtIdPais As TextBox
-    Friend WithEvents TxtIdTipoSponsor As TextBox
-    Friend WithEvents TxtIdSexo As TextBox
-    Friend WithEvents TxtId As TextBox
-    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
-    Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PictureBox7 As PictureBox
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents BtnActualizar As PictureBox
+    Friend WithEvents BtnGuardar As PictureBox
     Friend WithEvents PictureBox5 As PictureBox
-    Friend WithEvents PictureBox9 As PictureBox
+    Friend WithEvents BtnNuevo As PictureBox
     Friend WithEvents PictureBox6 As PictureBox
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Button1 As Button
 End Class

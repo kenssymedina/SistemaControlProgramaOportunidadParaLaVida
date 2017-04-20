@@ -47,6 +47,23 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Charts.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v15.2.UI, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v15.2.Extensions, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Linq" />
@@ -74,6 +91,25 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="accesodatos.vb" />
+    <Compile Include="BuscarBeneficiados.Designer.vb">
+      <DependentUpon>BuscarBeneficiados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarBeneficiados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscTutor.Designer.vb">
+      <DependentUpon>BuscTutor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BuscTutor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BusqueSponsor.Designer.vb">
+      <DependentUpon>BusqueSponsor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusqueSponsor.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\Adopción.Designer.vb">
       <DependentUpon>Adopción.vb</DependentUpon>
     </Compile>
@@ -98,16 +134,22 @@
     <Compile Include="Formularios\BuscarAdopcion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\BuscarBeneficiado.Designer.vb">
-      <DependentUpon>BuscarBeneficiado.vb</DependentUpon>
+    <Compile Include="Formularios\BuscarBenefiasiado.Designer.vb">
+      <DependentUpon>BuscarBenefiasiado.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\BuscarBeneficiado.vb">
+    <Compile Include="Formularios\BuscarBenefiasiado.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\BuscarCartas.Designer.vb">
       <DependentUpon>BuscarCartas.vb</DependentUpon>
     </Compile>
     <Compile Include="Formularios\BuscarCartas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\BuscarIglesia.Designer.vb">
+      <DependentUpon>BuscarIglesia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\BuscarIglesia.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\BuscarOfrenda.Designer.vb">
@@ -128,12 +170,6 @@
     <Compile Include="Formularios\BuscarTutor.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\BuscarUsuario.Designer.vb">
-      <DependentUpon>BuscarUsuario.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\BuscarUsuario.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Formularios\Cargando.Designer.vb">
       <DependentUpon>Cargando.vb</DependentUpon>
     </Compile>
@@ -144,12 +180,6 @@
       <DependentUpon>FrmCartas.vb</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FrmCartas.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\FrmEnfermedades.Designer.vb">
-      <DependentUpon>FrmEnfermedades.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\FrmEnfermedades.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\FrmGradoCursado.Designer.vb">
@@ -182,34 +212,10 @@
     <Compile Include="Formularios\FrmMenuPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\BuscarIglesia.Designer.vb">
-      <DependentUpon>BuscarIglesia.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\BuscarIglesia.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Formularios\FrmNacionalidad.Designer.vb">
       <DependentUpon>FrmNacionalidad.vb</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FrmNacionalidad.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\FrmOficioProfesion.Designer.vb">
-      <DependentUpon>FrmOficioProfesion.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\FrmOficioProfesion.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\FrmPais.Designer.vb">
-      <DependentUpon>FrmPais.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\FrmPais.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\FrmParentesco.Designer.vb">
-      <DependentUpon>FrmParentesco.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\FrmParentesco.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\FrmRegistrarUsuario.Designer.vb">
@@ -255,11 +261,19 @@
     <Compile Include="Formularios\Tutor.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmBuscar.Designer.vb">
+      <DependentUpon>FrmBuscar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBuscar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IForm.vb" />
     <Compile Include="MBBS.designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MBBS.dbml</DependentUpon>
     </Compile>
+    <Compile Include="modulos\connection.vb" />
     <Compile Include="modulos\Iniciar Sesión.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -276,9 +290,24 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ReporteBeneficiado.Designer.vb">
+      <DependentUpon>ReporteBeneficiado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteBeneficiado.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Variable.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="BuscarBeneficiados.resx">
+      <DependentUpon>BuscarBeneficiados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscTutor.resx">
+      <DependentUpon>BuscTutor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusqueSponsor.resx">
+      <DependentUpon>BusqueSponsor.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Adopción.resx">
       <DependentUpon>Adopción.vb</DependentUpon>
     </EmbeddedResource>
@@ -291,11 +320,14 @@
     <EmbeddedResource Include="Formularios\BuscarAdopcion.resx">
       <DependentUpon>BuscarAdopcion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\BuscarBeneficiado.resx">
-      <DependentUpon>BuscarBeneficiado.vb</DependentUpon>
+    <EmbeddedResource Include="Formularios\BuscarBenefiasiado.resx">
+      <DependentUpon>BuscarBenefiasiado.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\BuscarCartas.resx">
       <DependentUpon>BuscarCartas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\BuscarIglesia.resx">
+      <DependentUpon>BuscarIglesia.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\BuscarOfrenda.resx">
       <DependentUpon>BuscarOfrenda.vb</DependentUpon>
@@ -306,17 +338,11 @@
     <EmbeddedResource Include="Formularios\BuscarTutor.resx">
       <DependentUpon>BuscarTutor.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\BuscarUsuario.resx">
-      <DependentUpon>BuscarUsuario.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Cargando.resx">
       <DependentUpon>Cargando.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmCartas.resx">
       <DependentUpon>FrmCartas.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmEnfermedades.resx">
-      <DependentUpon>FrmEnfermedades.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmGradoCursado.resx">
       <DependentUpon>FrmGradoCursado.vb</DependentUpon>
@@ -333,20 +359,8 @@
     <EmbeddedResource Include="Formularios\FrmMenuPrincipal.resx">
       <DependentUpon>FrmMenuPrincipal.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\BuscarIglesia.resx">
-      <DependentUpon>BuscarIglesia.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmNacionalidad.resx">
       <DependentUpon>FrmNacionalidad.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmOficioProfesion.resx">
-      <DependentUpon>FrmOficioProfesion.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmPais.resx">
-      <DependentUpon>FrmPais.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmParentesco.resx">
-      <DependentUpon>FrmParentesco.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmRegistrarUsuario.resx">
       <DependentUpon>FrmRegistrarUsuario.vb</DependentUpon>
@@ -369,9 +383,16 @@
     <EmbeddedResource Include="Formularios\Tutor.resx">
       <DependentUpon>Tutor.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmBuscar.resx">
+      <DependentUpon>FrmBuscar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteBeneficiado.resx">
+      <DependentUpon>ReporteBeneficiado.vb</DependentUpon>
+    </EmbeddedResource>
     <None Include="MBBS.dbml.layout">
       <DependentUpon>MBBS.dbml</DependentUpon>
     </None>
+    <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>

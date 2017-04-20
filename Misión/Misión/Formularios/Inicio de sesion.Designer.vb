@@ -27,17 +27,17 @@ Partial Class FrmIniciarSesion
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TxtContraseña = New System.Windows.Forms.TextBox()
-        Me.TxtNombreUsuario = New System.Windows.Forms.TextBox()
+        Me.txtContra = New System.Windows.Forms.TextBox()
+        Me.txtUsuario = New System.Windows.Forms.TextBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.btnEntrar = New System.Windows.Forms.PictureBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnEntrar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -49,8 +49,8 @@ Partial Class FrmIniciarSesion
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.PictureBox2)
         Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Controls.Add(Me.TxtContraseña)
-        Me.Panel2.Controls.Add(Me.TxtNombreUsuario)
+        Me.Panel2.Controls.Add(Me.txtContra)
+        Me.Panel2.Controls.Add(Me.txtUsuario)
         Me.Panel2.ForeColor = System.Drawing.Color.Black
         Me.Panel2.Location = New System.Drawing.Point(33, 58)
         Me.Panel2.Name = "Panel2"
@@ -97,22 +97,22 @@ Partial Class FrmIniciarSesion
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Contraseña"
         '
-        'TxtContraseña
+        'txtContra
         '
-        Me.TxtContraseña.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtContraseña.Location = New System.Drawing.Point(104, 106)
-        Me.TxtContraseña.Name = "TxtContraseña"
-        Me.TxtContraseña.Size = New System.Drawing.Size(221, 23)
-        Me.TxtContraseña.TabIndex = 5
-        Me.TxtContraseña.UseSystemPasswordChar = True
+        Me.txtContra.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtContra.Location = New System.Drawing.Point(104, 106)
+        Me.txtContra.Name = "txtContra"
+        Me.txtContra.Size = New System.Drawing.Size(221, 23)
+        Me.txtContra.TabIndex = 5
+        Me.txtContra.UseSystemPasswordChar = True
         '
-        'TxtNombreUsuario
+        'txtUsuario
         '
-        Me.TxtNombreUsuario.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtNombreUsuario.Location = New System.Drawing.Point(104, 23)
-        Me.TxtNombreUsuario.Name = "TxtNombreUsuario"
-        Me.TxtNombreUsuario.Size = New System.Drawing.Size(221, 23)
-        Me.TxtNombreUsuario.TabIndex = 4
+        Me.txtUsuario.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUsuario.Location = New System.Drawing.Point(104, 23)
+        Me.txtUsuario.Name = "txtUsuario"
+        Me.txtUsuario.Size = New System.Drawing.Size(221, 23)
+        Me.txtUsuario.TabIndex = 4
         '
         'PictureBox5
         '
@@ -125,16 +125,16 @@ Partial Class FrmIniciarSesion
         Me.PictureBox5.TabIndex = 13
         Me.PictureBox5.TabStop = False
         '
-        'PictureBox4
+        'btnEntrar
         '
-        Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox4.BackgroundImage = Global.Misión.My.Resources.Resources.entrarsistema
-        Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox4.Location = New System.Drawing.Point(272, 236)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(49, 51)
-        Me.PictureBox4.TabIndex = 12
-        Me.PictureBox4.TabStop = False
+        Me.btnEntrar.BackColor = System.Drawing.Color.Transparent
+        Me.btnEntrar.BackgroundImage = Global.Misión.My.Resources.Resources.entrarsistema
+        Me.btnEntrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnEntrar.Location = New System.Drawing.Point(272, 236)
+        Me.btnEntrar.Name = "btnEntrar"
+        Me.btnEntrar.Size = New System.Drawing.Size(49, 51)
+        Me.btnEntrar.TabIndex = 12
+        Me.btnEntrar.TabStop = False
         '
         'Label3
         '
@@ -164,10 +164,9 @@ Partial Class FrmIniciarSesion
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSkyBlue
         Me.BackgroundImage = Global.Misión.My.Resources.Resources.fondo
-
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(420, 294)
-        Me.Controls.Add(Me.PictureBox4)
+        Me.Controls.Add(Me.btnEntrar)
         Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Label3)
@@ -182,7 +181,7 @@ Partial Class FrmIniciarSesion
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnEntrar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -192,12 +191,12 @@ Partial Class FrmIniciarSesion
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents TxtNombreUsuario As TextBox
-    Friend WithEvents TxtContraseña As TextBox
+    Friend WithEvents txtUsuario As TextBox
+    Friend WithEvents txtContra As TextBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents btnEntrar As PictureBox
     Friend WithEvents PictureBox5 As PictureBox
 End Class

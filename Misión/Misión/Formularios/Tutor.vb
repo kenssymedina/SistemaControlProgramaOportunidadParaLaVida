@@ -2,17 +2,39 @@
 Imports System.Data.SqlClient
 Public Class FrmTutor
 
-
-    Private Sub FrmEncargado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Call LlenarCombobox()
-        Call LlenarOficio()
-        Call LlenarSexo()
-        Call LlenarIglesia()
-        Call LlenarParentesco()
-        Call CargarDatos()
-
+    ' importa la interfax llamada IForm que contiene el constructor
+    Implements IForm
+    'crea una subproceso que no importa el nombre pero puede escribir uno que identifique que va obtener , si un id, una cuenta,  una serie o lo que sea
+    'esto que sta IForm.ObtenerId es el constructor que esta en el archivo IForm este lo puede reutilizar y solo cambia el nombre del subproceso
+    Public Sub ObtenerId(id As String) Implements IForm.ObtenerId
+        TextBox1.Text = id
     End Sub
-    Public Sub LlenarCombobox()
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        'aqui muestra el formulario de busqueda
+        Dim frm As New BuscTutor()
+        frm.Show(Me)
+    End Sub
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+        'esto de aqui es lo que permite obtener los datos desde el gridview solo llama a la clase AccederDatos.CargarDatosTutor(y manda los textbox y combobox)
+        If TextBox1.Text <> "" Then
+            accesodatos.CargarDatosTutor(TextBox1.Text, TxtNombre, TxtApellido, TxtNumeroT, TxtFechaNac,
+                                         TxtSalario, TxtNumeroC, TxtDireccion, CboOficio, CboSexo,
+                                         CboIglesia, CboLugar, CboParentesco)
+        End If
+    End Sub
+
+    Public Sub Combobox()
+        'cambiar combobox por llenarlos desde la tabla en sql'
+        Dim dt = (From o In cnn.OficioProfesions
+                  Select o.IdOficioProfesion, o.OficioProfesion).ToList
+        Me.CboOficio.DataSource = dt
+        Me.CboOficio.DisplayMember = "OficioProfesion"
+        Me.CboOficio.ValueMember = "IdOficioProfesion"
+        Me.CboOficio.SelectedIndex = -1
+        Me.CboOficio.Text = "--Seleccione--"
+    End Sub
+
+    Public Sub LlenarComboboxLugar()
 
         Dim datos = (From p In cnn.Lugars
                      Select p.IdLugar, p.Lugar).ToList
@@ -23,15 +45,6 @@ Public Class FrmTutor
         Me.CboLugar.SelectedIndex = -1
         Me.CboLugar.Text = "--seleccione--"
 
-    End Sub
-    Public Sub LlenarOficio()
-        Dim datos = (From a In cnn.OficioProfesions
-                     Select a.IdOficioProfesion, a.OficioProfesion).ToList
-        Me.CboOficio.DataSource = datos
-        Me.CboOficio.ValueMember = "IdOficioProfesion"
-        Me.CboOficio.DisplayMember = "OficioProfesion"
-        Me.CboOficio.SelectedIndex = -1
-        Me.CboOficio.Text = "--seleccione--"
     End Sub
     Public Sub LlenarSexo()
         Dim datos = (From a In cnn.Sexos
@@ -45,11 +58,11 @@ Public Class FrmTutor
     End Sub
     Public Sub LlenarIglesia()
         Dim datos = (From a In cnn.Iglesias
-                     Select a.IdIglesia, a.NombreIglesia).ToList
+                     Select a.IdIglesia, a.Iglesia).ToList
         Me.CboIglesia.DataSource = datos
 
         Me.CboIglesia.ValueMember = "IdIglesia"
-        Me.CboIglesia.DisplayMember = "NombreIglesia"
+        Me.CboIglesia.DisplayMember = "Iglesia"
         Me.CboIglesia.SelectedIndex = -1
         Me.CboIglesia.Text = "--seleccione--"
     End Sub
@@ -63,125 +76,91 @@ Public Class FrmTutor
         Me.CboParentesco.SelectedIndex = -1
         Me.CboParentesco.Text = "--seleccione--"
     End Sub
+    Private Sub frmTutor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Call Combobox()
+        Call LlenarComboboxLugar()
+        Call LlenarSexo()
+        Call LlenarIglesia()
+        Call LlenarParentesco()
+    End Sub
     Public Sub GuardarN()
         Dim t As New Tutor With
             {.NombreTutor = TxtNombre.Text,
             .ApellidoTutor = TxtApellido.Text,
             .Telefono = TxtNumeroT.Text,
-            .Celular = TxtNumeroC.Text,
-            .Direccion = TxtDireccion.Text,
-            .FechaNac = CDate(TxtFechaNac.Text),
+             .Direccion = TxtDireccion.Text,
+              .FechaNac = CDate(TxtFechaNac.Text),
             .SalarioDia = CDbl(TxtSalario.Text),
-            .IdLugar = CInt(Me.CboLugar.SelectedValue),
+             .Celular = TxtNumeroC.Text,
             .IdOficioProfesion = CInt(Me.CboOficio.SelectedValue),
             .IdSexo = CInt(Me.CboSexo.SelectedValue),
             .IdIglesia = CInt(Me.CboIglesia.SelectedValue),
-            .IdParentesco = CInt(Me.CboParentesco.SelectedValue)
+            .IdLugar = CInt(Me.CboLugar.SelectedValue),
+            .IdParentesco = CInt(Me.CboParentesco.SelectedValue),
+            .IdUsuario = IdUsuarioSistemaActual
            }
 
         Try
             cnn.Tutors.InsertOnSubmit(t)
             cnn.SubmitChanges()
-
             MsgBox("correcto")
-            CargarDatos()
         Catch ex As Exception
-            MsgBox("error")
+            MsgBox(String.Format("Error: {0}", ex))
         End Try
     End Sub
 
-    Private Sub ActualizarDatos(id As Integer)
-        Dim datos As Tutor = (From t In cnn.Tutors
-                              Where t.IdTutor = id
-                              Select t).ToList()(0)
 
 
+    Public Sub Nuevo()
+        TextBox1.Text = ""
+        TxtNombre.Text = ""
+        TxtApellido.Text = ""
+        TxtNumeroT.Text = ""
+        TxtNumeroC.Text = ""
+        TxtFechaNac.Text = ""
+        TxtDireccion.Text = ""
+        TxtSalario.Text = ""
+        CboOficio.Text = ""
+        CboSexo.Text = ""
+        CboLugar.Text = ""
+        CboIglesia.Text = ""
+        CboParentesco.Text = ""
+    End Sub
+
+    Public Sub ActualizarDatos(id As Integer)
+
+        Dim datos As Tutor = (From g In cnn.Tutors
+                              Where g.IdTutor = id
+                              Select g).ToList()(0)
         datos.NombreTutor = TxtNombre.Text
         datos.ApellidoTutor = TxtApellido.Text
         datos.Telefono = TxtNumeroT.Text
         datos.Celular = TxtNumeroC.Text
+        datos.FechaNac = CDate(TxtFechaNac.Text)
         datos.Direccion = TxtDireccion.Text
-        datos.FechaNac = TxtFechaNac.Text
         datos.SalarioDia = TxtSalario.Text
+        datos.IdOficioProfesion = CInt(CboOficio.SelectedValue)
         datos.IdSexo = CInt(CboSexo.SelectedValue)
         datos.IdLugar = CInt(CboLugar.SelectedValue)
-        datos.IdOficioProfesion = CInt(CboOficio.SelectedValue)
         datos.IdIglesia = CInt(CboIglesia.SelectedValue)
         datos.IdParentesco = CInt(CboParentesco.SelectedValue)
+
         Try
             cnn.SubmitChanges()
             MsgBox("correcto")
-            Call CargarDatos()
+
         Catch ex As Exception
             MsgBox("error")
         End Try
     End Sub
-    Public Sub CargarDatos()
 
 
-        Dim datos = (From t In cnn.Tutors
-                     Join ofi In cnn.OficioProfesions On t.IdOficioProfesion Equals ofi.IdOficioProfesion
-                     Join s In cnn.Sexos On s.IdSexo Equals t.IdSexo
-                     Join i In cnn.Iglesias On t.IdIglesia Equals i.IdIglesia
-                     Join l In cnn.Lugars On t.IdLugar Equals l.IdLugar
-                     Join p In cnn.Parentescos On p.IdParentesco Equals t.IdParentesco
-                     Select t.IdTutor, t.NombreTutor, t.ApellidoTutor, t.Telefono, t.Direccion, t.FechaNac, t.SalarioDia, t.Celular,
-                        ofi.IdOficioProfesion, ofi.OficioProfesion, s.IdSexo, s.Sexo, i.IdIglesia, i.NombreIglesia, l.IdLugar, l.Lugar, p.IdParentesco, p.Parentesco
-                   ).ToList()
-        Me.DataGridView1.DataSource = datos
-
-    End Sub
-
-
-    Public Sub PasarDatos()
-        Dim fila As DataGridViewRow = DataGridView1.CurrentRow
-        Me.TxtId.Text = fila.Cells(0).Value
-        Me.TxtNombre.Text = fila.Cells(1).Value
-        Me.TxtApellido.Text = fila.Cells(2).Value
-        Me.TxtNumeroT.Text = fila.Cells(3).Value
-        Me.TxtDireccion.Text = fila.Cells(4).Value
-        Me.TxtFechaNac.Text = CDate(fila.Cells(5).Value)
-        Me.TxtSalario.Text = fila.Cells(6).Value
-        Me.TxtNumeroC.Text = fila.Cells(7).Value
-        Me.txtidof.Text = fila.Cells(8).Value
-        Me.CboOficio.SelectedValue = (fila.Cells(9).Value)
-        Me.txtids.Text = fila.Cells(10).Value
-        Me.CboSexo.SelectedValue = (fila.Cells(11).Value)
-        Me.txtidiglesia.Text = fila.Cells(12).Value
-        Me.CboIglesia.SelectedValue = (fila.Cells(13).Value)
-        Me.txtidlu.Text = fila.Cells(14).Value
-        Me.CboLugar.SelectedValue = (fila.Cells(15).Value)
-        Me.txtidparen.Text = fila.Cells(16).Value
-        Me.CboParentesco.SelectedValue = (fila.Cells(17).Value)
-
-
-
-
-    End Sub
-    Private Sub EditarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditarToolStripMenuItem.Click
-        Call PasarDatos()
-    End Sub
-
-
-
-    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
-
-    End Sub
-
-    Private Sub txtids_TextChanged(sender As Object, e As EventArgs) Handles txtids.TextChanged
-
-    End Sub
-
-    Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
-
-    End Sub
-
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
         GuardarN()
     End Sub
 
-    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
-        Call ActualizarDatos(CInt(TxtId.Text))
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles BtnActualizar.Click
+        Call ActualizarDatos(CInt(TextBox1.Text))
     End Sub
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
@@ -204,29 +183,33 @@ Public Class FrmTutor
         PictureBox5.Size = New Size(49, 51)
     End Sub
 
-    Private Sub PictureBox2_MouseMove(sender As Object, e As MouseEventArgs) Handles PictureBox2.MouseMove
-        PictureBox2.Size = New Size(58, 59)
+    Private Sub PictureBox2_MouseMove(sender As Object, e As MouseEventArgs) Handles BtnActualizar.MouseMove
+        BtnActualizar.Size = New Size(58, 59)
     End Sub
 
-    Private Sub PictureBox2_MouseLeave(sender As Object, e As EventArgs) Handles PictureBox2.MouseLeave
-        PictureBox2.Size = New Size(49, 51)
+    Private Sub PictureBox2_MouseLeave(sender As Object, e As EventArgs) Handles BtnActualizar.MouseLeave
+        BtnActualizar.Size = New Size(49, 51)
     End Sub
 
-    Private Sub PictureBox1_MouseLeave(sender As Object, e As EventArgs) Handles PictureBox1.MouseLeave
-        PictureBox1.Size = New Size(49, 51)
+    Private Sub PictureBox1_MouseLeave(sender As Object, e As EventArgs) Handles BtnGuardar.MouseLeave
+        BtnGuardar.Size = New Size(49, 51)
     End Sub
 
 
 
-    Private Sub PictureBox4_MouseMove(sender As Object, e As MouseEventArgs) Handles PictureBox4.MouseMove
-        PictureBox4.Size = New Size(58, 59)
+    Private Sub PictureBox4_MouseMove(sender As Object, e As MouseEventArgs) Handles Btnuevo.MouseMove
+        Btnuevo.Size = New Size(58, 59)
     End Sub
 
-    Private Sub PictureBox4_MouseLeave(sender As Object, e As EventArgs) Handles PictureBox4.MouseLeave
-        PictureBox4.Size = New Size(49, 51)
+    Private Sub PictureBox4_MouseLeave(sender As Object, e As EventArgs) Handles Btnuevo.MouseLeave
+        Btnuevo.Size = New Size(49, 51)
     End Sub
 
-    Private Sub PictureBox1_MouseMove(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseMove
-        PictureBox1.Size = New Size(58, 59)
+    Private Sub PictureBox1_MouseMove(sender As Object, e As MouseEventArgs) Handles BtnGuardar.MouseMove
+        BtnGuardar.Size = New Size(58, 59)
+    End Sub
+
+    Private Sub Btnuevo_Click(sender As Object, e As EventArgs) Handles Btnuevo.Click
+        Call Nuevo()
     End Sub
 End Class

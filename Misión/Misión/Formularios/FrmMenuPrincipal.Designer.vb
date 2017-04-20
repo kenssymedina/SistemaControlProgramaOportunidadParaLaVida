@@ -233,6 +233,7 @@ Partial Class FrmMenuPrincipal
         Me.Label6.BackColor = System.Drawing.Color.White
         Me.Label6.Enabled = False
         Me.Label6.Font = New System.Drawing.Font("Calisto MT", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.Transparent
         Me.Label6.Location = New System.Drawing.Point(1246, 735)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(0, 24)
@@ -247,6 +248,7 @@ Partial Class FrmMenuPrincipal
         '
         Me.txtfecha.Enabled = False
         Me.txtfecha.Font = New System.Drawing.Font("Calisto MT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtfecha.ForeColor = System.Drawing.Color.Transparent
         Me.txtfecha.Location = New System.Drawing.Point(1128, 734)
         Me.txtfecha.Name = "txtfecha"
         Me.txtfecha.Size = New System.Drawing.Size(100, 26)

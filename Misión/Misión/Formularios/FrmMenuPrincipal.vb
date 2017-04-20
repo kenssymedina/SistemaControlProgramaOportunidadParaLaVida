@@ -1,7 +1,8 @@
-﻿Public Class FrmMenuPrincipal
-    Private Sub FrmMenuPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+﻿
 
-    End Sub
+Public Class FrmMenuPrincipal
+
+
     Private Sub PictureBox1_MouseHover(sender As Object, e As EventArgs) Handles PictureBox1.MouseHover
         PictureBox1.Size = New Size(90, 82)
     End Sub
@@ -39,7 +40,8 @@
 
     End Sub
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        txtFecha.Text = DateTime.Now.ToString("dd/MM/yyyy")
+        txtfecha.Text = DateTime.Now.ToString("dd/MM/yyyy")
+
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
@@ -65,7 +67,7 @@
     End Sub
 
     Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
-        FrmBuscar.Show()
+        Buscar.Show()
     End Sub
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
@@ -80,5 +82,9 @@
     Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox7.Click
         FrmRegistrarUsuario.Show()
 
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        BuscarBeneficiados.Show()
     End Sub
 End Class
