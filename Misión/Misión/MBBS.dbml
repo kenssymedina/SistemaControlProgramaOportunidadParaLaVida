@@ -62,7 +62,10 @@
       <Column Name="IdEnfermedadPadecimiento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="IdUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="FechaHistotiaEnviada" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="foto" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
       <Association Name="Beneficiado_Adopcion" Member="Adopcions" ThisKey="IdBeneficiado" OtherKey="IdBeneficiado" Type="Adopcion" />
+      <Association Name="Beneficiado_BeneficiadoHermano" Member="BeneficiadoHermanos" ThisKey="IdBeneficiado" OtherKey="IdBeneficiado" Type="BeneficiadoHermano" />
+      <Association Name="Beneficiado_BeneficiadoTutor" Member="BeneficiadoTutors" ThisKey="IdBeneficiado" OtherKey="IdBeneficiado" Type="BeneficiadoTutor" />
       <Association Name="Beneficiado_CasaBeneficiado" Member="CasaBeneficiados" ThisKey="IdBeneficiado" OtherKey="IdBeneficiado" Type="CasaBeneficiado" />
       <Association Name="Beneficiado_InteresesBeneficiado" Member="InteresesBeneficiados" ThisKey="IdBeneficiado" OtherKey="IdBeneficiado" Type="InteresesBeneficiado" />
       <Association Name="EnfermedadPadecimiento_Beneficiado" Member="EnfermedadPadecimiento" ThisKey="IdEnfermedadPadecimiento" OtherKey="IdEnfermedadPadecimiento" Type="EnfermedadPadecimiento" IsForeignKey="true" />
@@ -80,12 +83,16 @@
     <Type Name="BeneficiadoHermano">
       <Column Name="IdBeneficiado" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="IdHermano" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Beneficiado_BeneficiadoHermano" Member="Beneficiado" ThisKey="IdBeneficiado" OtherKey="IdBeneficiado" Type="Beneficiado" IsForeignKey="true" />
+      <Association Name="Hermano_BeneficiadoHermano" Member="Hermano" ThisKey="IdHermano" OtherKey="IdHermano" Type="Hermano" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.BeneficiadoTutor" Member="BeneficiadoTutors">
     <Type Name="BeneficiadoTutor">
       <Column Name="IdBeneficiado" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="IdTutor" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Beneficiado_BeneficiadoTutor" Member="Beneficiado" ThisKey="IdBeneficiado" OtherKey="IdBeneficiado" Type="Beneficiado" IsForeignKey="true" />
+      <Association Name="Tutor_BeneficiadoTutor" Member="Tutor" ThisKey="IdTutor" OtherKey="IdTutor" Type="Tutor" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Cartas" Member="Cartas">
@@ -108,12 +115,12 @@
   <Table Name="dbo.CasaBeneficiado" Member="CasaBeneficiados">
     <Type Name="CasaBeneficiado">
       <Column Name="IdCasaBeneficiado" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="CantidadDormitorios" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="CantidadCamas" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="CantidadHamacas" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="CantidadRopaCama" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="CantidadMesas" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="CantidadSillas" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CantidadDormitorios" Type="System.String" DbType="NVarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="CantidadCamas" Type="System.String" DbType="NVarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="CantidadHamacas" Type="System.String" DbType="NVarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="CantidadRopaCama" Type="System.String" DbType="NVarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="CantidadMesas" Type="System.String" DbType="NVarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="CantidadSillas" Type="System.String" DbType="NVarChar(2) NOT NULL" CanBeNull="false" />
       <Column Name="Piso" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
       <Column Name="IdTipoCasa" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="IdBeneficiado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
@@ -166,6 +173,7 @@
       <Column Name="SponsorHermano" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="IdGradoCursado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="IdSexo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Hermano_BeneficiadoHermano" Member="BeneficiadoHermanos" ThisKey="IdHermano" OtherKey="IdHermano" Type="BeneficiadoHermano" />
       <Association Name="GradoCursado_Hermano" Member="GradoCursado" ThisKey="IdGradoCursado" OtherKey="IdGradoCursado" Type="GradoCursado" IsForeignKey="true" />
       <Association Name="Sexo_Hermano" Member="Sexo" ThisKey="IdSexo" OtherKey="IdSexo" Type="Sexo" IsForeignKey="true" />
     </Type>
@@ -344,6 +352,7 @@
       <Column Name="IdLugar" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="IdParentesco" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="IdUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Tutor_BeneficiadoTutor" Member="BeneficiadoTutors" ThisKey="IdTutor" OtherKey="IdTutor" Type="BeneficiadoTutor" />
       <Association Name="Iglesia_Tutor" Member="Iglesia" ThisKey="IdIglesia" OtherKey="IdIglesia" Type="Iglesia" IsForeignKey="true" />
       <Association Name="Lugar_Tutor" Member="Lugar" ThisKey="IdLugar" OtherKey="IdLugar" Type="Lugar" IsForeignKey="true" />
       <Association Name="OficioProfesion_Tutor" Member="OficioProfesion" ThisKey="IdOficioProfesion" OtherKey="IdOficioProfesion" Type="OficioProfesion" IsForeignKey="true" />

@@ -112,7 +112,7 @@ Public Class FrmTutor
 
 
     Public Sub Nuevo()
-        TextBox1.Text = ""
+        ' TextBox1.Text = ""
         TxtNombre.Text = ""
         TxtApellido.Text = ""
         TxtNumeroT.Text = ""
@@ -120,11 +120,11 @@ Public Class FrmTutor
         TxtFechaNac.Text = ""
         TxtDireccion.Text = ""
         TxtSalario.Text = ""
-        CboOficio.Text = ""
-        CboSexo.Text = ""
-        CboLugar.Text = ""
-        CboIglesia.Text = ""
-        CboParentesco.Text = ""
+        CboOficio.SelectedIndex = -1
+        CboSexo.SelectedIndex = -1
+        CboLugar.SelectedIndex = -1
+        CboIglesia.SelectedIndex = -1
+        CboParentesco.SelectedIndex = -1
     End Sub
 
     Public Sub ActualizarDatos(id As Integer)
@@ -210,6 +210,29 @@ Public Class FrmTutor
     End Sub
 
     Private Sub Btnuevo_Click(sender As Object, e As EventArgs) Handles Btnuevo.Click
+        Call InvestigarCorrelativo()
         Call Nuevo()
+
+    End Sub
+    Sub InvestigarCorrelativo()
+        If cn.State = ConnectionState.Open Then
+            cn.Close()
+        End If
+        Try
+            Dim Listarnacionalidad As New SqlCommand("Sp_TutorIdentity", cn)
+            Listarnacionalidad.CommandType = CommandType.StoredProcedure
+            Dim Listarnacionalidades As SqlDataReader
+            cn.Open()
+            Listarnacionalidades = Listarnacionalidad.ExecuteReader()
+            If Listarnacionalidades.Read = True Then
+                If Listarnacionalidades("Id") Is DBNull.Value Then
+                    TextBox1.Text = 1
+                Else
+                    TextBox1.Text = Listarnacionalidades("Id").ToString
+                End If
+            End If
+        Catch ex As Exception
+        End Try
+        TextBox1.Focus()
     End Sub
 End Class

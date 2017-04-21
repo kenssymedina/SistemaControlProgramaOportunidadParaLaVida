@@ -157,7 +157,7 @@ Public Class FrmOficioProfesion
             cn.Close()
         End If
         Try
-            Dim ListarOficio As New SqlCommand("sp_identityhermano", cn)
+            Dim ListarOficio As New SqlCommand("Sp_OficioProfesionIdentity", cn)
             ListarOficio.CommandType = CommandType.StoredProcedure
             Dim ListarOficios As SqlDataReader
             cn.Open()

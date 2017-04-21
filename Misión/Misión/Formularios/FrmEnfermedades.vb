@@ -144,7 +144,7 @@ Public Class FrmEnfermedades
             cn.Close()
         End If
         Try
-            Dim ListarEnfermedad As New SqlCommand("sp_identityhermano", cn)
+            Dim ListarEnfermedad As New SqlCommand("sp_EnfermedadIdentity", cn)
             ListarEnfermedad.CommandType = CommandType.StoredProcedure
             Dim Listarenfermedades As SqlDataReader
             cn.Open()
@@ -167,6 +167,7 @@ Public Class FrmEnfermedades
 
 
     Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
+
         Call limpiar()
         Call InvestigarCorrelativo()
     End Sub

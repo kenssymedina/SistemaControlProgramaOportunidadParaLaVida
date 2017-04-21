@@ -120,4 +120,14 @@
     Private Sub PictureBox9_Click(sender As Object, e As EventArgs) Handles PictureBox9.Click
         Me.Close()
     End Sub
+
+    Private Sub FrmCatalogo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+
+
+    Private Sub PictureBox11_MouseLeave(sender As Object, e As EventArgs)
+        PictureBox11.Size = New Size(58, 59)
+    End Sub
 End Class

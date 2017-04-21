@@ -1338,7 +1338,13 @@ Partial Public Class Beneficiado
 	
 	Private _FechaHistotiaEnviada As Date
 	
+	Private _foto As String
+	
 	Private _Adopcions As EntitySet(Of Adopcion)
+	
+	Private _BeneficiadoHermanos As EntitySet(Of BeneficiadoHermano)
+	
+	Private _BeneficiadoTutors As EntitySet(Of BeneficiadoTutor)
 	
 	Private _CasaBeneficiados As EntitySet(Of CasaBeneficiado)
 	
@@ -1453,11 +1459,17 @@ Partial Public Class Beneficiado
     End Sub
     Partial Private Sub OnFechaHistotiaEnviadaChanged()
     End Sub
+    Partial Private Sub OnfotoChanging(value As String)
+    End Sub
+    Partial Private Sub OnfotoChanged()
+    End Sub
     #End Region
 	
 	Public Sub New()
 		MyBase.New
 		Me._Adopcions = New EntitySet(Of Adopcion)(AddressOf Me.attach_Adopcions, AddressOf Me.detach_Adopcions)
+		Me._BeneficiadoHermanos = New EntitySet(Of BeneficiadoHermano)(AddressOf Me.attach_BeneficiadoHermanos, AddressOf Me.detach_BeneficiadoHermanos)
+		Me._BeneficiadoTutors = New EntitySet(Of BeneficiadoTutor)(AddressOf Me.attach_BeneficiadoTutors, AddressOf Me.detach_BeneficiadoTutors)
 		Me._CasaBeneficiados = New EntitySet(Of CasaBeneficiado)(AddressOf Me.attach_CasaBeneficiados, AddressOf Me.detach_CasaBeneficiados)
 		Me._InteresesBeneficiados = New EntitySet(Of InteresesBeneficiado)(AddressOf Me.attach_InteresesBeneficiados, AddressOf Me.detach_InteresesBeneficiados)
 		Me._EnfermedadPadecimiento = CType(Nothing, EntityRef(Of EnfermedadPadecimiento))
@@ -1849,6 +1861,22 @@ Partial Public Class Beneficiado
 		End Set
 	End Property
 	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_foto", DbType:="NVarChar(200)")>  _
+	Public Property foto() As String
+		Get
+			Return Me._foto
+		End Get
+		Set
+			If (String.Equals(Me._foto, value) = false) Then
+				Me.OnfotoChanging(value)
+				Me.SendPropertyChanging
+				Me._foto = value
+				Me.SendPropertyChanged("foto")
+				Me.OnfotoChanged
+			End If
+		End Set
+	End Property
+	
 	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Beneficiado_Adopcion", Storage:="_Adopcions", ThisKey:="IdBeneficiado", OtherKey:="IdBeneficiado")>  _
 	Public Property Adopcions() As EntitySet(Of Adopcion)
 		Get
@@ -1856,6 +1884,26 @@ Partial Public Class Beneficiado
 		End Get
 		Set
 			Me._Adopcions.Assign(value)
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Beneficiado_BeneficiadoHermano", Storage:="_BeneficiadoHermanos", ThisKey:="IdBeneficiado", OtherKey:="IdBeneficiado")>  _
+	Public Property BeneficiadoHermanos() As EntitySet(Of BeneficiadoHermano)
+		Get
+			Return Me._BeneficiadoHermanos
+		End Get
+		Set
+			Me._BeneficiadoHermanos.Assign(value)
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Beneficiado_BeneficiadoTutor", Storage:="_BeneficiadoTutors", ThisKey:="IdBeneficiado", OtherKey:="IdBeneficiado")>  _
+	Public Property BeneficiadoTutors() As EntitySet(Of BeneficiadoTutor)
+		Get
+			Return Me._BeneficiadoTutors
+		End Get
+		Set
+			Me._BeneficiadoTutors.Assign(value)
 		End Set
 	End Property
 	
@@ -2159,6 +2207,26 @@ Partial Public Class Beneficiado
 		entity.Beneficiado = Nothing
 	End Sub
 	
+	Private Sub attach_BeneficiadoHermanos(ByVal entity As BeneficiadoHermano)
+		Me.SendPropertyChanging
+		entity.Beneficiado = Me
+	End Sub
+	
+	Private Sub detach_BeneficiadoHermanos(ByVal entity As BeneficiadoHermano)
+		Me.SendPropertyChanging
+		entity.Beneficiado = Nothing
+	End Sub
+	
+	Private Sub attach_BeneficiadoTutors(ByVal entity As BeneficiadoTutor)
+		Me.SendPropertyChanging
+		entity.Beneficiado = Me
+	End Sub
+	
+	Private Sub detach_BeneficiadoTutors(ByVal entity As BeneficiadoTutor)
+		Me.SendPropertyChanging
+		entity.Beneficiado = Nothing
+	End Sub
+	
 	Private Sub attach_CasaBeneficiados(ByVal entity As CasaBeneficiado)
 		Me.SendPropertyChanging
 		entity.Beneficiado = Me
@@ -2190,6 +2258,10 @@ Partial Public Class BeneficiadoHermano
 	
 	Private _IdHermano As Integer
 	
+	Private _Beneficiado As EntityRef(Of Beneficiado)
+	
+	Private _Hermano As EntityRef(Of Hermano)
+	
     #Region "Extensibility Method Definitions"
     Partial Private Sub OnLoaded()
     End Sub
@@ -2209,6 +2281,8 @@ Partial Public Class BeneficiadoHermano
 	
 	Public Sub New()
 		MyBase.New
+		Me._Beneficiado = CType(Nothing, EntityRef(Of Beneficiado))
+		Me._Hermano = CType(Nothing, EntityRef(Of Hermano))
 		OnCreated
 	End Sub
 	
@@ -2220,6 +2294,9 @@ Partial Public Class BeneficiadoHermano
 		Set
 			If ((Me._IdBeneficiado = value)  _
 						= false) Then
+				If Me._Beneficiado.HasLoadedOrAssignedValue Then
+					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
+				End If
 				Me.OnIdBeneficiadoChanging(value)
 				Me.SendPropertyChanging
 				Me._IdBeneficiado = value
@@ -2237,11 +2314,70 @@ Partial Public Class BeneficiadoHermano
 		Set
 			If ((Me._IdHermano = value)  _
 						= false) Then
+				If Me._Hermano.HasLoadedOrAssignedValue Then
+					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
+				End If
 				Me.OnIdHermanoChanging(value)
 				Me.SendPropertyChanging
 				Me._IdHermano = value
 				Me.SendPropertyChanged("IdHermano")
 				Me.OnIdHermanoChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Beneficiado_BeneficiadoHermano", Storage:="_Beneficiado", ThisKey:="IdBeneficiado", OtherKey:="IdBeneficiado", IsForeignKey:=true)>  _
+	Public Property Beneficiado() As Beneficiado
+		Get
+			Return Me._Beneficiado.Entity
+		End Get
+		Set
+			Dim previousValue As Beneficiado = Me._Beneficiado.Entity
+			If ((Object.Equals(previousValue, value) = false)  _
+						OrElse (Me._Beneficiado.HasLoadedOrAssignedValue = false)) Then
+				Me.SendPropertyChanging
+				If ((previousValue Is Nothing)  _
+							= false) Then
+					Me._Beneficiado.Entity = Nothing
+					previousValue.BeneficiadoHermanos.Remove(Me)
+				End If
+				Me._Beneficiado.Entity = value
+				If ((value Is Nothing)  _
+							= false) Then
+					value.BeneficiadoHermanos.Add(Me)
+					Me._IdBeneficiado = value.IdBeneficiado
+				Else
+					Me._IdBeneficiado = CType(Nothing, Integer)
+				End If
+				Me.SendPropertyChanged("Beneficiado")
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Hermano_BeneficiadoHermano", Storage:="_Hermano", ThisKey:="IdHermano", OtherKey:="IdHermano", IsForeignKey:=true)>  _
+	Public Property Hermano() As Hermano
+		Get
+			Return Me._Hermano.Entity
+		End Get
+		Set
+			Dim previousValue As Hermano = Me._Hermano.Entity
+			If ((Object.Equals(previousValue, value) = false)  _
+						OrElse (Me._Hermano.HasLoadedOrAssignedValue = false)) Then
+				Me.SendPropertyChanging
+				If ((previousValue Is Nothing)  _
+							= false) Then
+					Me._Hermano.Entity = Nothing
+					previousValue.BeneficiadoHermanos.Remove(Me)
+				End If
+				Me._Hermano.Entity = value
+				If ((value Is Nothing)  _
+							= false) Then
+					value.BeneficiadoHermanos.Add(Me)
+					Me._IdHermano = value.IdHermano
+				Else
+					Me._IdHermano = CType(Nothing, Integer)
+				End If
+				Me.SendPropertyChanged("Hermano")
 			End If
 		End Set
 	End Property
@@ -2275,6 +2411,10 @@ Partial Public Class BeneficiadoTutor
 	
 	Private _IdTutor As Integer
 	
+	Private _Beneficiado As EntityRef(Of Beneficiado)
+	
+	Private _Tutor As EntityRef(Of Tutor)
+	
     #Region "Extensibility Method Definitions"
     Partial Private Sub OnLoaded()
     End Sub
@@ -2294,6 +2434,8 @@ Partial Public Class BeneficiadoTutor
 	
 	Public Sub New()
 		MyBase.New
+		Me._Beneficiado = CType(Nothing, EntityRef(Of Beneficiado))
+		Me._Tutor = CType(Nothing, EntityRef(Of Tutor))
 		OnCreated
 	End Sub
 	
@@ -2305,6 +2447,9 @@ Partial Public Class BeneficiadoTutor
 		Set
 			If ((Me._IdBeneficiado = value)  _
 						= false) Then
+				If Me._Beneficiado.HasLoadedOrAssignedValue Then
+					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
+				End If
 				Me.OnIdBeneficiadoChanging(value)
 				Me.SendPropertyChanging
 				Me._IdBeneficiado = value
@@ -2322,11 +2467,70 @@ Partial Public Class BeneficiadoTutor
 		Set
 			If ((Me._IdTutor = value)  _
 						= false) Then
+				If Me._Tutor.HasLoadedOrAssignedValue Then
+					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
+				End If
 				Me.OnIdTutorChanging(value)
 				Me.SendPropertyChanging
 				Me._IdTutor = value
 				Me.SendPropertyChanged("IdTutor")
 				Me.OnIdTutorChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Beneficiado_BeneficiadoTutor", Storage:="_Beneficiado", ThisKey:="IdBeneficiado", OtherKey:="IdBeneficiado", IsForeignKey:=true)>  _
+	Public Property Beneficiado() As Beneficiado
+		Get
+			Return Me._Beneficiado.Entity
+		End Get
+		Set
+			Dim previousValue As Beneficiado = Me._Beneficiado.Entity
+			If ((Object.Equals(previousValue, value) = false)  _
+						OrElse (Me._Beneficiado.HasLoadedOrAssignedValue = false)) Then
+				Me.SendPropertyChanging
+				If ((previousValue Is Nothing)  _
+							= false) Then
+					Me._Beneficiado.Entity = Nothing
+					previousValue.BeneficiadoTutors.Remove(Me)
+				End If
+				Me._Beneficiado.Entity = value
+				If ((value Is Nothing)  _
+							= false) Then
+					value.BeneficiadoTutors.Add(Me)
+					Me._IdBeneficiado = value.IdBeneficiado
+				Else
+					Me._IdBeneficiado = CType(Nothing, Integer)
+				End If
+				Me.SendPropertyChanged("Beneficiado")
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Tutor_BeneficiadoTutor", Storage:="_Tutor", ThisKey:="IdTutor", OtherKey:="IdTutor", IsForeignKey:=true)>  _
+	Public Property Tutor() As Tutor
+		Get
+			Return Me._Tutor.Entity
+		End Get
+		Set
+			Dim previousValue As Tutor = Me._Tutor.Entity
+			If ((Object.Equals(previousValue, value) = false)  _
+						OrElse (Me._Tutor.HasLoadedOrAssignedValue = false)) Then
+				Me.SendPropertyChanging
+				If ((previousValue Is Nothing)  _
+							= false) Then
+					Me._Tutor.Entity = Nothing
+					previousValue.BeneficiadoTutors.Remove(Me)
+				End If
+				Me._Tutor.Entity = value
+				If ((value Is Nothing)  _
+							= false) Then
+					value.BeneficiadoTutors.Add(Me)
+					Me._IdTutor = value.IdTutor
+				Else
+					Me._IdTutor = CType(Nothing, Integer)
+				End If
+				Me.SendPropertyChanged("Tutor")
 			End If
 		End Set
 	End Property
@@ -2750,17 +2954,17 @@ Partial Public Class CasaBeneficiado
 	
 	Private _IdCasaBeneficiado As Integer
 	
-	Private _CantidadDormitorios As Integer
+	Private _CantidadDormitorios As String
 	
-	Private _CantidadCamas As Integer
+	Private _CantidadCamas As String
 	
-	Private _CantidadHamacas As Integer
+	Private _CantidadHamacas As String
 	
-	Private _CantidadRopaCama As Integer
+	Private _CantidadRopaCama As String
 	
-	Private _CantidadMesas As Integer
+	Private _CantidadMesas As String
 	
-	Private _CantidadSillas As Integer
+	Private _CantidadSillas As String
 	
 	Private _Piso As String
 	
@@ -2783,27 +2987,27 @@ Partial Public Class CasaBeneficiado
     End Sub
     Partial Private Sub OnIdCasaBeneficiadoChanged()
     End Sub
-    Partial Private Sub OnCantidadDormitoriosChanging(value As Integer)
+    Partial Private Sub OnCantidadDormitoriosChanging(value As String)
     End Sub
     Partial Private Sub OnCantidadDormitoriosChanged()
     End Sub
-    Partial Private Sub OnCantidadCamasChanging(value As Integer)
+    Partial Private Sub OnCantidadCamasChanging(value As String)
     End Sub
     Partial Private Sub OnCantidadCamasChanged()
     End Sub
-    Partial Private Sub OnCantidadHamacasChanging(value As Integer)
+    Partial Private Sub OnCantidadHamacasChanging(value As String)
     End Sub
     Partial Private Sub OnCantidadHamacasChanged()
     End Sub
-    Partial Private Sub OnCantidadRopaCamaChanging(value As Integer)
+    Partial Private Sub OnCantidadRopaCamaChanging(value As String)
     End Sub
     Partial Private Sub OnCantidadRopaCamaChanged()
     End Sub
-    Partial Private Sub OnCantidadMesasChanging(value As Integer)
+    Partial Private Sub OnCantidadMesasChanging(value As String)
     End Sub
     Partial Private Sub OnCantidadMesasChanged()
     End Sub
-    Partial Private Sub OnCantidadSillasChanging(value As Integer)
+    Partial Private Sub OnCantidadSillasChanging(value As String)
     End Sub
     Partial Private Sub OnCantidadSillasChanged()
     End Sub
@@ -2845,14 +3049,13 @@ Partial Public Class CasaBeneficiado
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CantidadDormitorios", DbType:="Int NOT NULL")>  _
-	Public Property CantidadDormitorios() As Integer
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CantidadDormitorios", DbType:="NVarChar(2) NOT NULL", CanBeNull:=false)>  _
+	Public Property CantidadDormitorios() As String
 		Get
 			Return Me._CantidadDormitorios
 		End Get
 		Set
-			If ((Me._CantidadDormitorios = value)  _
-						= false) Then
+			If (String.Equals(Me._CantidadDormitorios, value) = false) Then
 				Me.OnCantidadDormitoriosChanging(value)
 				Me.SendPropertyChanging
 				Me._CantidadDormitorios = value
@@ -2862,14 +3065,13 @@ Partial Public Class CasaBeneficiado
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CantidadCamas", DbType:="Int NOT NULL")>  _
-	Public Property CantidadCamas() As Integer
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CantidadCamas", DbType:="NVarChar(2) NOT NULL", CanBeNull:=false)>  _
+	Public Property CantidadCamas() As String
 		Get
 			Return Me._CantidadCamas
 		End Get
 		Set
-			If ((Me._CantidadCamas = value)  _
-						= false) Then
+			If (String.Equals(Me._CantidadCamas, value) = false) Then
 				Me.OnCantidadCamasChanging(value)
 				Me.SendPropertyChanging
 				Me._CantidadCamas = value
@@ -2879,14 +3081,13 @@ Partial Public Class CasaBeneficiado
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CantidadHamacas", DbType:="Int NOT NULL")>  _
-	Public Property CantidadHamacas() As Integer
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CantidadHamacas", DbType:="NVarChar(2) NOT NULL", CanBeNull:=false)>  _
+	Public Property CantidadHamacas() As String
 		Get
 			Return Me._CantidadHamacas
 		End Get
 		Set
-			If ((Me._CantidadHamacas = value)  _
-						= false) Then
+			If (String.Equals(Me._CantidadHamacas, value) = false) Then
 				Me.OnCantidadHamacasChanging(value)
 				Me.SendPropertyChanging
 				Me._CantidadHamacas = value
@@ -2896,14 +3097,13 @@ Partial Public Class CasaBeneficiado
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CantidadRopaCama", DbType:="Int NOT NULL")>  _
-	Public Property CantidadRopaCama() As Integer
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CantidadRopaCama", DbType:="NVarChar(2) NOT NULL", CanBeNull:=false)>  _
+	Public Property CantidadRopaCama() As String
 		Get
 			Return Me._CantidadRopaCama
 		End Get
 		Set
-			If ((Me._CantidadRopaCama = value)  _
-						= false) Then
+			If (String.Equals(Me._CantidadRopaCama, value) = false) Then
 				Me.OnCantidadRopaCamaChanging(value)
 				Me.SendPropertyChanging
 				Me._CantidadRopaCama = value
@@ -2913,14 +3113,13 @@ Partial Public Class CasaBeneficiado
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CantidadMesas", DbType:="Int NOT NULL")>  _
-	Public Property CantidadMesas() As Integer
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CantidadMesas", DbType:="NVarChar(2) NOT NULL", CanBeNull:=false)>  _
+	Public Property CantidadMesas() As String
 		Get
 			Return Me._CantidadMesas
 		End Get
 		Set
-			If ((Me._CantidadMesas = value)  _
-						= false) Then
+			If (String.Equals(Me._CantidadMesas, value) = false) Then
 				Me.OnCantidadMesasChanging(value)
 				Me.SendPropertyChanging
 				Me._CantidadMesas = value
@@ -2930,14 +3129,13 @@ Partial Public Class CasaBeneficiado
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CantidadSillas", DbType:="Int NOT NULL")>  _
-	Public Property CantidadSillas() As Integer
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CantidadSillas", DbType:="NVarChar(2) NOT NULL", CanBeNull:=false)>  _
+	Public Property CantidadSillas() As String
 		Get
 			Return Me._CantidadSillas
 		End Get
 		Set
-			If ((Me._CantidadSillas = value)  _
-						= false) Then
+			If (String.Equals(Me._CantidadSillas, value) = false) Then
 				Me.OnCantidadSillasChanging(value)
 				Me.SendPropertyChanging
 				Me._CantidadSillas = value
@@ -3656,6 +3854,8 @@ Partial Public Class Hermano
 	
 	Private _IdSexo As Integer
 	
+	Private _BeneficiadoHermanos As EntitySet(Of BeneficiadoHermano)
+	
 	Private _GradoCursado As EntityRef(Of GradoCursado)
 	
 	Private _Sexo As EntityRef(Of Sexo)
@@ -3699,6 +3899,7 @@ Partial Public Class Hermano
 	
 	Public Sub New()
 		MyBase.New
+		Me._BeneficiadoHermanos = New EntitySet(Of BeneficiadoHermano)(AddressOf Me.attach_BeneficiadoHermanos, AddressOf Me.detach_BeneficiadoHermanos)
 		Me._GradoCursado = CType(Nothing, EntityRef(Of GradoCursado))
 		Me._Sexo = CType(Nothing, EntityRef(Of Sexo))
 		OnCreated
@@ -3827,6 +4028,16 @@ Partial Public Class Hermano
 		End Set
 	End Property
 	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Hermano_BeneficiadoHermano", Storage:="_BeneficiadoHermanos", ThisKey:="IdHermano", OtherKey:="IdHermano")>  _
+	Public Property BeneficiadoHermanos() As EntitySet(Of BeneficiadoHermano)
+		Get
+			Return Me._BeneficiadoHermanos
+		End Get
+		Set
+			Me._BeneficiadoHermanos.Assign(value)
+		End Set
+	End Property
+	
 	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="GradoCursado_Hermano", Storage:="_GradoCursado", ThisKey:="IdGradoCursado", OtherKey:="IdGradoCursado", IsForeignKey:=true)>  _
 	Public Property GradoCursado() As GradoCursado
 		Get
@@ -3899,6 +4110,16 @@ Partial Public Class Hermano
 					= false) Then
 			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
 		End If
+	End Sub
+	
+	Private Sub attach_BeneficiadoHermanos(ByVal entity As BeneficiadoHermano)
+		Me.SendPropertyChanging
+		entity.Hermano = Me
+	End Sub
+	
+	Private Sub detach_BeneficiadoHermanos(ByVal entity As BeneficiadoHermano)
+		Me.SendPropertyChanging
+		entity.Hermano = Nothing
 	End Sub
 End Class
 
@@ -6702,6 +6923,8 @@ Partial Public Class Tutor
 	
 	Private _IdUsuario As Integer
 	
+	Private _BeneficiadoTutors As EntitySet(Of BeneficiadoTutor)
+	
 	Private _Iglesia As EntityRef(Of Iglesia)
 	
 	Private _Lugar As EntityRef(Of Lugar)
@@ -6781,6 +7004,7 @@ Partial Public Class Tutor
 	
 	Public Sub New()
 		MyBase.New
+		Me._BeneficiadoTutors = New EntitySet(Of BeneficiadoTutor)(AddressOf Me.attach_BeneficiadoTutors, AddressOf Me.detach_BeneficiadoTutors)
 		Me._Iglesia = CType(Nothing, EntityRef(Of Iglesia))
 		Me._Lugar = CType(Nothing, EntityRef(Of Lugar))
 		Me._OficioProfesion = CType(Nothing, EntityRef(Of OficioProfesion))
@@ -7040,6 +7264,16 @@ Partial Public Class Tutor
 		End Set
 	End Property
 	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Tutor_BeneficiadoTutor", Storage:="_BeneficiadoTutors", ThisKey:="IdTutor", OtherKey:="IdTutor")>  _
+	Public Property BeneficiadoTutors() As EntitySet(Of BeneficiadoTutor)
+		Get
+			Return Me._BeneficiadoTutors
+		End Get
+		Set
+			Me._BeneficiadoTutors.Assign(value)
+		End Set
+	End Property
+	
 	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Iglesia_Tutor", Storage:="_Iglesia", ThisKey:="IdIglesia", OtherKey:="IdIglesia", IsForeignKey:=true)>  _
 	Public Property Iglesia() As Iglesia
 		Get
@@ -7224,6 +7458,16 @@ Partial Public Class Tutor
 					= false) Then
 			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
 		End If
+	End Sub
+	
+	Private Sub attach_BeneficiadoTutors(ByVal entity As BeneficiadoTutor)
+		Me.SendPropertyChanging
+		entity.Tutor = Me
+	End Sub
+	
+	Private Sub detach_BeneficiadoTutors(ByVal entity As BeneficiadoTutor)
+		Me.SendPropertyChanging
+		entity.Tutor = Nothing
 	End Sub
 End Class
 

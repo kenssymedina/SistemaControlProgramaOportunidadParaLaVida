@@ -176,6 +176,12 @@
     <Compile Include="Formularios\Cargando.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formularios\FrmAdopcionPago.Designer.vb">
+      <DependentUpon>FrmAdopcionPago.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmAdopcionPago.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\FrmCartas.Designer.vb">
       <DependentUpon>FrmCartas.vb</DependentUpon>
     </Compile>
@@ -285,13 +291,39 @@
     <Compile Include="Formularios\Tutor.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmAdopcionCatalagos.Designer.vb">
+      <DependentUpon>FrmAdopcionCatalagos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAdopcionCatalagos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmBuscar.Designer.vb">
       <DependentUpon>FrmBuscar.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmBuscar.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmBusquedaAdopcio.Designer.vb">
+      <DependentUpon>FrmBusquedaAdopcio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBusquedaAdopcio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBusquedaBeneficiadoAdopcion.Designer.vb">
+      <DependentUpon>FrmBusquedaBeneficiadoAdopcion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBusquedaBeneficiadoAdopcion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBusquedaSponsorAdopcionvb.Designer.vb">
+      <DependentUpon>FrmBusquedaSponsorAdopcionvb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBusquedaSponsorAdopcionvb.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="IForm.vb" />
+    <Compile Include="IForm2.vb" />
+    <Compile Include="IForm3.vb" />
     <Compile Include="MBBS.designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -365,6 +397,9 @@
     <EmbeddedResource Include="Formularios\Cargando.resx">
       <DependentUpon>Cargando.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmAdopcionPago.resx">
+      <DependentUpon>FrmAdopcionPago.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmCartas.resx">
       <DependentUpon>FrmCartas.vb</DependentUpon>
     </EmbeddedResource>
@@ -419,8 +454,20 @@
     <EmbeddedResource Include="Formularios\Tutor.resx">
       <DependentUpon>Tutor.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmAdopcionCatalagos.resx">
+      <DependentUpon>FrmAdopcionCatalagos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmBuscar.resx">
       <DependentUpon>FrmBuscar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBusquedaAdopcio.resx">
+      <DependentUpon>FrmBusquedaAdopcio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBusquedaBeneficiadoAdopcion.resx">
+      <DependentUpon>FrmBusquedaBeneficiadoAdopcion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBusquedaSponsorAdopcionvb.resx">
+      <DependentUpon>FrmBusquedaSponsorAdopcionvb.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteBeneficiado.resx">
       <DependentUpon>ReporteBeneficiado.vb</DependentUpon>

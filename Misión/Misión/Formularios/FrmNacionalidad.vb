@@ -149,7 +149,7 @@ Public Class FrmNacionalidad
             cn.Close()
         End If
         Try
-            Dim Listarnacionalidad As New SqlCommand("sp_identityhermano", cn)
+            Dim Listarnacionalidad As New SqlCommand("Sp_NacionalidadIdentity", cn)
             Listarnacionalidad.CommandType = CommandType.StoredProcedure
             Dim Listarnacionalidades As SqlDataReader
             cn.Open()

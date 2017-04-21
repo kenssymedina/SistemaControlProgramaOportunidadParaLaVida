@@ -24,25 +24,29 @@ Partial Class FrmAdopción
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.CboEstado = New System.Windows.Forms.ComboBox()
-        Me.CboIdSponsor = New System.Windows.Forms.ComboBox()
+        Me.BtnBeneficiado = New System.Windows.Forms.Button()
+        Me.BtnBuscarSponsor = New System.Windows.Forms.Button()
+        Me.BtnBuscarAdopcion = New System.Windows.Forms.Button()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.CboEstadoAdopcion = New System.Windows.Forms.ComboBox()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.CboTipoPago = New System.Windows.Forms.ComboBox()
-        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.TxtValor = New System.Windows.Forms.TextBox()
-        Me.DtpFechaPerdidaAdopcion = New System.Windows.Forms.DateTimePicker()
-        Me.TxtObservaciones = New System.Windows.Forms.TextBox()
-        Me.DtpFechaAdopcion = New System.Windows.Forms.DateTimePicker()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.TxtObservacion = New System.Windows.Forms.TextBox()
+        Me.DTpFechaAdopcion = New System.Windows.Forms.DateTimePicker()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.TxtIdAdopcion = New System.Windows.Forms.TextBox()
-        Me.CboIdBeneficiado = New System.Windows.Forms.ComboBox()
-        Me.DgvInformacion = New System.Windows.Forms.DataGridView()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TxtNumeroSponsor = New System.Windows.Forms.TextBox()
+        Me.TxtNombreSponsor = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.TxtNumeroBeneficiado = New System.Windows.Forms.TextBox()
+        Me.TxtNombreBeneficiado = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -53,7 +57,6 @@ Partial Class FrmAdopción
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
-        CType(Me.DgvInformacion, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -67,210 +70,251 @@ Partial Class FrmAdopción
         '
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.Label15)
-        Me.Panel1.Controls.Add(Me.Label17)
-        Me.Panel1.Controls.Add(Me.Label16)
-        Me.Panel1.Controls.Add(Me.Label14)
-        Me.Panel1.Controls.Add(Me.Label13)
-        Me.Panel1.Controls.Add(Me.Label11)
-        Me.Panel1.Controls.Add(Me.Label20)
-        Me.Panel1.Controls.Add(Me.Label21)
-        Me.Panel1.Controls.Add(Me.CboEstado)
-        Me.Panel1.Controls.Add(Me.CboIdSponsor)
+        Me.Panel1.Controls.Add(Me.BtnBeneficiado)
+        Me.Panel1.Controls.Add(Me.BtnBuscarSponsor)
+        Me.Panel1.Controls.Add(Me.BtnBuscarAdopcion)
+        Me.Panel1.Controls.Add(Me.Label7)
+        Me.Panel1.Controls.Add(Me.CboEstadoAdopcion)
+        Me.Panel1.Controls.Add(Me.Label10)
         Me.Panel1.Controls.Add(Me.CboTipoPago)
-        Me.Panel1.Controls.Add(Me.Label12)
+        Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.TxtValor)
-        Me.Panel1.Controls.Add(Me.DtpFechaPerdidaAdopcion)
-        Me.Panel1.Controls.Add(Me.TxtObservaciones)
-        Me.Panel1.Controls.Add(Me.DtpFechaAdopcion)
+        Me.Panel1.Controls.Add(Me.Label5)
+        Me.Panel1.Controls.Add(Me.TxtObservacion)
+        Me.Panel1.Controls.Add(Me.DTpFechaAdopcion)
+        Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.TxtIdAdopcion)
-        Me.Panel1.Controls.Add(Me.CboIdBeneficiado)
-        Me.Panel1.Location = New System.Drawing.Point(12, 122)
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.TxtNumeroSponsor)
+        Me.Panel1.Controls.Add(Me.TxtNombreSponsor)
+        Me.Panel1.Controls.Add(Me.Label8)
+        Me.Panel1.Controls.Add(Me.Label9)
+        Me.Panel1.Controls.Add(Me.TxtNumeroBeneficiado)
+        Me.Panel1.Controls.Add(Me.TxtNombreBeneficiado)
+        Me.Panel1.Controls.Add(Me.Label11)
+        Me.Panel1.Location = New System.Drawing.Point(12, 70)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(510, 273)
+        Me.Panel1.Size = New System.Drawing.Size(549, 381)
         Me.Panel1.TabIndex = 147
         '
-        'Label15
+        'BtnBeneficiado
         '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.ForeColor = System.Drawing.Color.Black
-        Me.Label15.Location = New System.Drawing.Point(97, 234)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(121, 18)
-        Me.Label15.TabIndex = 132
-        Me.Label15.Text = "Fecha de Perdida" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.BtnBeneficiado.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnBeneficiado.Location = New System.Drawing.Point(466, 63)
+        Me.BtnBeneficiado.Name = "BtnBeneficiado"
+        Me.BtnBeneficiado.Size = New System.Drawing.Size(75, 23)
+        Me.BtnBeneficiado.TabIndex = 119
+        Me.BtnBeneficiado.Text = "..."
+        Me.BtnBeneficiado.UseVisualStyleBackColor = True
         '
-        'Label17
+        'BtnBuscarSponsor
         '
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(160, 209)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(58, 18)
-        Me.Label17.TabIndex = 131
-        Me.Label17.Text = "Estado "
+        Me.BtnBuscarSponsor.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnBuscarSponsor.Location = New System.Drawing.Point(468, 124)
+        Me.BtnBuscarSponsor.Name = "BtnBuscarSponsor"
+        Me.BtnBuscarSponsor.Size = New System.Drawing.Size(75, 23)
+        Me.BtnBuscarSponsor.TabIndex = 118
+        Me.BtnBuscarSponsor.Text = "..."
+        Me.BtnBuscarSponsor.UseVisualStyleBackColor = True
         '
-        'Label16
+        'BtnBuscarAdopcion
         '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Cambria", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.ForeColor = System.Drawing.Color.Black
-        Me.Label16.Location = New System.Drawing.Point(172, 184)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(46, 17)
-        Me.Label16.TabIndex = 130
-        Me.Label16.Text = "Valor"
+        Me.BtnBuscarAdopcion.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnBuscarAdopcion.Location = New System.Drawing.Point(467, 32)
+        Me.BtnBuscarAdopcion.Name = "BtnBuscarAdopcion"
+        Me.BtnBuscarAdopcion.Size = New System.Drawing.Size(75, 23)
+        Me.BtnBuscarAdopcion.TabIndex = 117
+        Me.BtnBuscarAdopcion.Text = "..."
+        Me.BtnBuscarAdopcion.UseVisualStyleBackColor = True
         '
-        'Label14
+        'Label7
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.Color.Black
-        Me.Label14.Location = New System.Drawing.Point(120, 156)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(98, 18)
-        Me.Label14.TabIndex = 129
-        Me.Label14.Text = "Tipo de Pagó"
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(103, 330)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(123, 18)
+        Me.Label7.TabIndex = 116
+        Me.Label7.Text = "Estado Adopcion"
         '
-        'Label13
+        'CboEstadoAdopcion
         '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.Black
-        Me.Label13.Location = New System.Drawing.Point(83, 102)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(135, 18)
-        Me.Label13.TabIndex = 128
-        Me.Label13.Text = "Fecha de Adopción"
+        Me.CboEstadoAdopcion.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CboEstadoAdopcion.FormattingEnabled = True
+        Me.CboEstadoAdopcion.Location = New System.Drawing.Point(233, 327)
+        Me.CboEstadoAdopcion.Name = "CboEstadoAdopcion"
+        Me.CboEstadoAdopcion.Size = New System.Drawing.Size(216, 26)
+        Me.CboEstadoAdopcion.TabIndex = 115
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(128, 298)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(98, 18)
+        Me.Label10.TabIndex = 114
+        Me.Label10.Text = "Tipo de Pago"
+        '
+        'CboTipoPago
+        '
+        Me.CboTipoPago.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CboTipoPago.FormattingEnabled = True
+        Me.CboTipoPago.Location = New System.Drawing.Point(233, 295)
+        Me.CboTipoPago.Name = "CboTipoPago"
+        Me.CboTipoPago.Size = New System.Drawing.Size(216, 26)
+        Me.CboTipoPago.TabIndex = 113
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(176, 267)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(46, 18)
+        Me.Label6.TabIndex = 112
+        Me.Label6.Text = "Valor"
+        '
+        'TxtValor
+        '
+        Me.TxtValor.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtValor.Location = New System.Drawing.Point(233, 266)
+        Me.TxtValor.Name = "TxtValor"
+        Me.TxtValor.Size = New System.Drawing.Size(119, 25)
+        Me.TxtValor.TabIndex = 111
+        Me.TxtValor.Text = "0"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(138, 229)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(92, 18)
+        Me.Label5.TabIndex = 110
+        Me.Label5.Text = "Observacion"
+        '
+        'TxtObservacion
+        '
+        Me.TxtObservacion.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtObservacion.Location = New System.Drawing.Point(233, 229)
+        Me.TxtObservacion.Name = "TxtObservacion"
+        Me.TxtObservacion.Size = New System.Drawing.Size(216, 25)
+        Me.TxtObservacion.TabIndex = 109
+        '
+        'DTpFechaAdopcion
+        '
+        Me.DTpFechaAdopcion.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DTpFechaAdopcion.Location = New System.Drawing.Point(233, 188)
+        Me.DTpFechaAdopcion.Name = "DTpFechaAdopcion"
+        Me.DTpFechaAdopcion.Size = New System.Drawing.Size(216, 25)
+        Me.DTpFechaAdopcion.TabIndex = 108
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(111, 188)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(116, 18)
+        Me.Label4.TabIndex = 107
+        Me.Label4.Text = "Fecha Adopcion"
+        '
+        'TxtIdAdopcion
+        '
+        Me.TxtIdAdopcion.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtIdAdopcion.Location = New System.Drawing.Point(233, 34)
+        Me.TxtIdAdopcion.Name = "TxtIdAdopcion"
+        Me.TxtIdAdopcion.ReadOnly = True
+        Me.TxtIdAdopcion.Size = New System.Drawing.Size(216, 25)
+        Me.TxtIdAdopcion.TabIndex = 106
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(153, 30)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(73, 18)
+        Me.Label3.TabIndex = 105
+        Me.Label3.Text = "Adopcion"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(103, 162)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(124, 18)
+        Me.Label2.TabIndex = 104
+        Me.Label2.Text = "Nombre  Sponsor"
+        '
+        'TxtNumeroSponsor
+        '
+        Me.TxtNumeroSponsor.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtNumeroSponsor.Location = New System.Drawing.Point(233, 126)
+        Me.TxtNumeroSponsor.Name = "TxtNumeroSponsor"
+        Me.TxtNumeroSponsor.ReadOnly = True
+        Me.TxtNumeroSponsor.Size = New System.Drawing.Size(216, 25)
+        Me.TxtNumeroSponsor.TabIndex = 103
+        '
+        'TxtNombreSponsor
+        '
+        Me.TxtNombreSponsor.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtNombreSponsor.Location = New System.Drawing.Point(233, 155)
+        Me.TxtNombreSponsor.Name = "TxtNombreSponsor"
+        Me.TxtNombreSponsor.ReadOnly = True
+        Me.TxtNombreSponsor.Size = New System.Drawing.Size(216, 25)
+        Me.TxtNombreSponsor.TabIndex = 102
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(158, 129)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(62, 18)
+        Me.Label8.TabIndex = 101
+        Me.Label8.Text = "Sponsor"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(83, 92)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(143, 18)
+        Me.Label9.TabIndex = 100
+        Me.Label9.Text = "Nombre Beneficiado"
+        '
+        'TxtNumeroBeneficiado
+        '
+        Me.TxtNumeroBeneficiado.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtNumeroBeneficiado.Location = New System.Drawing.Point(233, 60)
+        Me.TxtNumeroBeneficiado.Name = "TxtNumeroBeneficiado"
+        Me.TxtNumeroBeneficiado.ReadOnly = True
+        Me.TxtNumeroBeneficiado.Size = New System.Drawing.Size(216, 25)
+        Me.TxtNumeroBeneficiado.TabIndex = 99
+        '
+        'TxtNombreBeneficiado
+        '
+        Me.TxtNombreBeneficiado.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtNombreBeneficiado.Location = New System.Drawing.Point(233, 89)
+        Me.TxtNombreBeneficiado.Name = "TxtNombreBeneficiado"
+        Me.TxtNombreBeneficiado.ReadOnly = True
+        Me.TxtNombreBeneficiado.Size = New System.Drawing.Size(216, 25)
+        Me.TxtNombreBeneficiado.TabIndex = 98
         '
         'Label11
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.Black
-        Me.Label11.Location = New System.Drawing.Point(126, 130)
+        Me.Label11.Location = New System.Drawing.Point(142, 60)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(92, 18)
-        Me.Label11.TabIndex = 127
-        Me.Label11.Text = "Observación"
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(75, 77)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(143, 18)
-        Me.Label20.TabIndex = 126
-        Me.Label20.Text = "Número del Sponsor"
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.ForeColor = System.Drawing.Color.Black
-        Me.Label21.Location = New System.Drawing.Point(52, 50)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(166, 18)
-        Me.Label21.TabIndex = 125
-        Me.Label21.Text = "Número del Beneficiado"
-        '
-        'CboEstado
-        '
-        Me.CboEstado.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CboEstado.FormattingEnabled = True
-        Me.CboEstado.Location = New System.Drawing.Point(225, 204)
-        Me.CboEstado.Name = "CboEstado"
-        Me.CboEstado.Size = New System.Drawing.Size(254, 23)
-        Me.CboEstado.TabIndex = 17
-        '
-        'CboIdSponsor
-        '
-        Me.CboIdSponsor.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CboIdSponsor.FormattingEnabled = True
-        Me.CboIdSponsor.Location = New System.Drawing.Point(225, 72)
-        Me.CboIdSponsor.Name = "CboIdSponsor"
-        Me.CboIdSponsor.Size = New System.Drawing.Size(254, 23)
-        Me.CboIdSponsor.TabIndex = 0
-        '
-        'CboTipoPago
-        '
-        Me.CboTipoPago.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CboTipoPago.FormattingEnabled = True
-        Me.CboTipoPago.Location = New System.Drawing.Point(225, 151)
-        Me.CboTipoPago.Name = "CboTipoPago"
-        Me.CboTipoPago.Size = New System.Drawing.Size(254, 23)
-        Me.CboTipoPago.TabIndex = 1
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(152, 24)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(66, 18)
-        Me.Label12.TabIndex = 2
-        Me.Label12.Text = "Número "
-        '
-        'TxtValor
-        '
-        Me.TxtValor.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtValor.Location = New System.Drawing.Point(225, 178)
-        Me.TxtValor.Name = "TxtValor"
-        Me.TxtValor.Size = New System.Drawing.Size(254, 23)
-        Me.TxtValor.TabIndex = 16
-        '
-        'DtpFechaPerdidaAdopcion
-        '
-        Me.DtpFechaPerdidaAdopcion.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DtpFechaPerdidaAdopcion.Location = New System.Drawing.Point(225, 231)
-        Me.DtpFechaPerdidaAdopcion.Name = "DtpFechaPerdidaAdopcion"
-        Me.DtpFechaPerdidaAdopcion.Size = New System.Drawing.Size(254, 23)
-        Me.DtpFechaPerdidaAdopcion.TabIndex = 15
-        '
-        'TxtObservaciones
-        '
-        Me.TxtObservaciones.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtObservaciones.Location = New System.Drawing.Point(225, 125)
-        Me.TxtObservaciones.Name = "TxtObservaciones"
-        Me.TxtObservaciones.Size = New System.Drawing.Size(254, 23)
-        Me.TxtObservaciones.TabIndex = 14
-        '
-        'DtpFechaAdopcion
-        '
-        Me.DtpFechaAdopcion.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DtpFechaAdopcion.Location = New System.Drawing.Point(225, 99)
-        Me.DtpFechaAdopcion.Name = "DtpFechaAdopcion"
-        Me.DtpFechaAdopcion.Size = New System.Drawing.Size(254, 23)
-        Me.DtpFechaAdopcion.TabIndex = 13
-        '
-        'TxtIdAdopcion
-        '
-        Me.TxtIdAdopcion.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtIdAdopcion.Location = New System.Drawing.Point(225, 19)
-        Me.TxtIdAdopcion.Name = "TxtIdAdopcion"
-        Me.TxtIdAdopcion.Size = New System.Drawing.Size(254, 23)
-        Me.TxtIdAdopcion.TabIndex = 12
-        '
-        'CboIdBeneficiado
-        '
-        Me.CboIdBeneficiado.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CboIdBeneficiado.FormattingEnabled = True
-        Me.CboIdBeneficiado.Location = New System.Drawing.Point(225, 45)
-        Me.CboIdBeneficiado.Name = "CboIdBeneficiado"
-        Me.CboIdBeneficiado.Size = New System.Drawing.Size(254, 23)
-        Me.CboIdBeneficiado.TabIndex = 11
-        '
-        'DgvInformacion
-        '
-        Me.DgvInformacion.BackgroundColor = System.Drawing.Color.White
-        Me.DgvInformacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvInformacion.ContextMenuStrip = Me.ContextMenuStrip1
-        Me.DgvInformacion.Location = New System.Drawing.Point(557, 115)
-        Me.DgvInformacion.Name = "DgvInformacion"
-        Me.DgvInformacion.Size = New System.Drawing.Size(793, 337)
-        Me.DgvInformacion.TabIndex = 146
+        Me.Label11.Size = New System.Drawing.Size(85, 18)
+        Me.Label11.TabIndex = 97
+        Me.Label11.Text = "Beneficiado"
         '
         'ContextMenuStrip1
         '
@@ -368,7 +412,7 @@ Partial Class FrmAdopción
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImage = Global.Misión.My.Resources.Resources.fondo4
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1378, 570)
+        Me.ClientSize = New System.Drawing.Size(592, 570)
         Me.Controls.Add(Me.PictureBox6)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.PictureBox2)
@@ -377,7 +421,6 @@ Partial Class FrmAdopción
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.DgvInformacion)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
@@ -385,7 +428,6 @@ Partial Class FrmAdopción
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.DgvInformacion, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ContextMenuStrip1.ResumeLayout(False)
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -398,25 +440,6 @@ Partial Class FrmAdopción
 
     End Sub
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label15 As Label
-    Friend WithEvents Label17 As Label
-    Friend WithEvents Label16 As Label
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Label13 As Label
-    Friend WithEvents Label11 As Label
-    Friend WithEvents Label20 As Label
-    Friend WithEvents Label21 As Label
-    Friend WithEvents CboEstado As ComboBox
-    Friend WithEvents CboIdSponsor As ComboBox
-    Friend WithEvents CboTipoPago As ComboBox
-    Friend WithEvents Label12 As Label
-    Friend WithEvents TxtValor As TextBox
-    Friend WithEvents DtpFechaPerdidaAdopcion As DateTimePicker
-    Friend WithEvents TxtObservaciones As TextBox
-    Friend WithEvents DtpFechaAdopcion As DateTimePicker
-    Friend WithEvents TxtIdAdopcion As TextBox
-    Friend WithEvents CboIdBeneficiado As ComboBox
-    Friend WithEvents DgvInformacion As DataGridView
     Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
     Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PictureBox3 As PictureBox
@@ -426,4 +449,27 @@ Partial Class FrmAdopción
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents PictureBox6 As PictureBox
+    Friend WithEvents BtnBeneficiado As Button
+    Friend WithEvents BtnBuscarSponsor As Button
+    Friend WithEvents BtnBuscarAdopcion As Button
+    Friend WithEvents Label7 As Label
+    Friend WithEvents CboEstadoAdopcion As ComboBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents CboTipoPago As ComboBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents TxtValor As TextBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents TxtObservacion As TextBox
+    Friend WithEvents DTpFechaAdopcion As DateTimePicker
+    Friend WithEvents Label4 As Label
+    Friend WithEvents TxtIdAdopcion As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents TxtNumeroSponsor As TextBox
+    Friend WithEvents TxtNombreSponsor As TextBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents TxtNumeroBeneficiado As TextBox
+    Friend WithEvents TxtNombreBeneficiado As TextBox
+    Friend WithEvents Label11 As Label
 End Class

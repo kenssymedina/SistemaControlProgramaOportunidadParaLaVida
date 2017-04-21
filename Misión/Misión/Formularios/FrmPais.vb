@@ -150,7 +150,7 @@ Public Class FrmPais
             cn.Close()
         End If
         Try
-            Dim Listarpais As New SqlCommand("sp_identityhermano", cn)
+            Dim Listarpais As New SqlCommand("Sp_PaisIdentity", cn)
             Listarpais.CommandType = CommandType.StoredProcedure
             Dim ListarPaises As SqlDataReader
             cn.Open()

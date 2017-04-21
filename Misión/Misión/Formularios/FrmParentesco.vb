@@ -125,7 +125,9 @@ Public Class FrmParentesco
         'txtIdparentesco.Text = ""
         txtParentesco.Text = ""
     End Sub
+
     Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
+
         Call limpiar()
         Call InvestigarCorrelativo()
     End Sub
@@ -151,20 +153,21 @@ Public Class FrmParentesco
             cn.Close()
         End If
         Try
-            Dim Listarparentesco As New SqlCommand("sp_identityhermano", cn)
-            Listarparentesco.CommandType = CommandType.StoredProcedure
-            Dim ListarParentescos As SqlDataReader
+            Dim Listarpais As New SqlCommand("Sp_ParentescoIdentity", cn)
+            Listarpais.CommandType = CommandType.StoredProcedure
+            Dim ListarPaises As SqlDataReader
             cn.Open()
-            ListarParentescos = Listarparentesco.ExecuteReader()
-            If ListarParentescos.Read = True Then
-                If ListarParentescos("Id") Is DBNull.Value Then
+            ListarPaises = Listarpais.ExecuteReader()
+            If ListarPaises.Read = True Then
+                If ListarPaises("Id") Is DBNull.Value Then
                     txtIdparentesco.Text = 1
                 Else
-                    txtIdparentesco.Text = ListarParentescos("Id").ToString
+                    txtIdparentesco.Text = ListarPaises("Id").ToString
                 End If
             End If
         Catch ex As Exception
         End Try
         txtParentesco.Focus()
     End Sub
+
 End Class

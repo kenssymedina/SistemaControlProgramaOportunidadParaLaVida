@@ -1,6 +1,13 @@
-﻿Public Class FrmIglesia
+﻿Imports System.Data.SqlClient
+Imports System.Data
 
+Public Class FrmIglesia
 
+    Implements IForm
+
+    Public Sub ObtenerId(id As String) Implements IForm.ObtenerId
+        txtIdIglesia.Text = id
+    End Sub
 
 
     Private Sub PictureBox4_MouseMove(sender As Object, e As MouseEventArgs) Handles PictureBox4.MouseMove
