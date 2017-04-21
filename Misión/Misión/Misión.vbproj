@@ -182,6 +182,12 @@
     <Compile Include="Formularios\FrmCartas.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formularios\FrmEnfermedades.Designer.vb">
+      <DependentUpon>FrmEnfermedades.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmEnfermedades.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\FrmGradoCursado.Designer.vb">
       <DependentUpon>FrmGradoCursado.vb</DependentUpon>
     </Compile>
@@ -216,6 +222,24 @@
       <DependentUpon>FrmNacionalidad.vb</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FrmNacionalidad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmOficioProfesion.Designer.vb">
+      <DependentUpon>FrmOficioProfesion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmOficioProfesion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmPais.Designer.vb">
+      <DependentUpon>FrmPais.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmPais.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmParentesco.Designer.vb">
+      <DependentUpon>FrmParentesco.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmParentesco.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\FrmRegistrarUsuario.Designer.vb">
@@ -344,6 +368,9 @@
     <EmbeddedResource Include="Formularios\FrmCartas.resx">
       <DependentUpon>FrmCartas.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmEnfermedades.resx">
+      <DependentUpon>FrmEnfermedades.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmGradoCursado.resx">
       <DependentUpon>FrmGradoCursado.vb</DependentUpon>
     </EmbeddedResource>
@@ -361,6 +388,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmNacionalidad.resx">
       <DependentUpon>FrmNacionalidad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmOficioProfesion.resx">
+      <DependentUpon>FrmOficioProfesion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmPais.resx">
+      <DependentUpon>FrmPais.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmParentesco.resx">
+      <DependentUpon>FrmParentesco.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmRegistrarUsuario.resx">
       <DependentUpon>FrmRegistrarUsuario.vb</DependentUpon>

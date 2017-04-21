@@ -208,6 +208,33 @@
 
     End Sub
 
+    ' PARENTESCO
+    Shared Sub cargarParentescos(grid As DataGridView)
+        grid.DataSource = (From p In cnn.Parentescos
+                           Order By p.Parentesco Ascending
+                           Select p.IdParentesco, p.Parentesco).ToList
+        grid.Columns(0).Visible = False
+    End Sub
+    Shared Sub CargarDatosParentesco(id As String, nombre As TextBox)
+        Dim datos = (From p In cnn.Parentescos
+                     Where p.IdParentesco = id
+                     Select p.IdParentesco, p.Parentesco).SingleOrDefault
+        nombre.Text = datos.Parentesco
+    End Sub
+
+    'OFICIO PROFESION 
+    Shared Sub cargaroficios(grid As DataGridView)
+        grid.DataSource = (From p In cnn.OficioProfesions
+                           Order By p.IdOficioProfesion Ascending
+                           Select p.IdOficioProfesion, p.OficioProfesion).ToList
+        grid.Columns(0).Visible = True
+    End Sub
+    Shared Sub CargarDatosTipoOficio(id As String, nombre As TextBox)
+        Dim datos = (From sp In cnn.OficioProfesions
+                     Where sp.IdOficioProfesion = id
+                     Select sp).SingleOrDefault
+        nombre.Text = datos.OficioProfesion
+    End Sub
     'NACIONALIDAD
     Shared Sub cargarNacionalidades(grid As DataGridView)
         grid.DataSource = (From p In cnn.Nacionalidads
@@ -222,4 +249,32 @@
         nombre.Text = datos.Nacionalidad
     End Sub
 
+    'enfermedad
+    Shared Sub cargarEnfermedades(grid As DataGridView)
+        grid.DataSource = (From p In cnn.EnfermedadPadecimientos
+                           Order By p.EnfermedadPadecimiento Ascending
+                           Select p.IdEnfermedadPadecimiento, p.EnfermedadPadecimiento).ToList
+        grid.Columns(0).Visible = False
+    End Sub
+    Shared Sub CargarDatosEnfermedad(id As String, nombre As TextBox)
+        Dim datos = (From p In cnn.EnfermedadPadecimientos
+                     Where p.IdEnfermedadPadecimiento = id
+                     Select p.IdEnfermedadPadecimiento, p.EnfermedadPadecimiento).SingleOrDefault
+        nombre.Text = datos.EnfermedadPadecimiento
+    End Sub
+
+    ' PAIS
+
+    Shared Sub cargarPaises(grid As DataGridView)
+        grid.DataSource = (From p In cnn.Pais
+                           Order By p.Pais Ascending
+                           Select p.IdPais, p.Pais).ToList
+        grid.Columns(0).Visible = False
+    End Sub
+    Shared Sub CargarDatosPaises(id As String, nombre As TextBox)
+        Dim datos = (From p In cnn.Pais
+                     Where p.IdPais = id
+                     Select p.IdPais, p.Pais).SingleOrDefault
+        nombre.Text = datos.Pais
+    End Sub
 End Class
