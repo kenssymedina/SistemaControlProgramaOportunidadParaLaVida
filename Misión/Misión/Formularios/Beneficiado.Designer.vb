@@ -678,7 +678,7 @@ Partial Class FrmBeneficiado
         Me.BackColor = System.Drawing.Color.LightSkyBlue
         Me.BackgroundImage = Global.Misión.My.Resources.Resources.fondo7
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(649, 780)
+        Me.ClientSize = New System.Drawing.Size(649, 772)
         Me.Controls.Add(Me.PictureBox7)
         Me.Controls.Add(Me.Label21)
         Me.Controls.Add(Me.PictureBox8)

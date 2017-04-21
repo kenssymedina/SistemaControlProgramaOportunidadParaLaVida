@@ -27,17 +27,24 @@ Partial Class FrmIglesia
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.TxtNombrePastor = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtIglesia = New System.Windows.Forms.TextBox()
+        Me.txtIdIglesia = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.btnNuevo = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnGuardar = New System.Windows.Forms.PictureBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        CType(Me.btnNuevo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnGuardar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -60,21 +67,82 @@ Partial Class FrmIglesia
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Location = New System.Drawing.Point(79, 83)
+        Me.Panel1.Controls.Add(Me.TxtNombrePastor)
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.txtIglesia)
+        Me.Panel1.Controls.Add(Me.txtIdIglesia)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.Label4)
+        Me.Panel1.Location = New System.Drawing.Point(79, 59)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(529, 124)
+        Me.Panel1.Size = New System.Drawing.Size(529, 176)
         Me.Panel1.TabIndex = 199
         '
-        'PictureBox4
+        'TxtNombrePastor
         '
-        Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox4.BackgroundImage = Global.Misión.My.Resources.Resources.nuevo
-        Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox4.Location = New System.Drawing.Point(169, 248)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(49, 51)
-        Me.PictureBox4.TabIndex = 203
-        Me.PictureBox4.TabStop = False
+        Me.TxtNombrePastor.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtNombrePastor.Location = New System.Drawing.Point(230, 100)
+        Me.TxtNombrePastor.Name = "TxtNombrePastor"
+        Me.TxtNombrePastor.Size = New System.Drawing.Size(189, 25)
+        Me.TxtNombrePastor.TabIndex = 27
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(82, 107)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(133, 18)
+        Me.Label1.TabIndex = 26
+        Me.Label1.Text = "Nombre del Pastor"
+        '
+        'txtIglesia
+        '
+        Me.txtIglesia.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtIglesia.Location = New System.Drawing.Point(230, 54)
+        Me.txtIglesia.Name = "txtIglesia"
+        Me.txtIglesia.Size = New System.Drawing.Size(189, 25)
+        Me.txtIglesia.TabIndex = 25
+        '
+        'txtIdIglesia
+        '
+        Me.txtIdIglesia.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtIdIglesia.Location = New System.Drawing.Point(230, 5)
+        Me.txtIdIglesia.Name = "txtIdIglesia"
+        Me.txtIdIglesia.ReadOnly = True
+        Me.txtIdIglesia.Size = New System.Drawing.Size(127, 25)
+        Me.txtIdIglesia.TabIndex = 24
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(160, 61)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(55, 18)
+        Me.Label2.TabIndex = 23
+        Me.Label2.Text = "Iglesia "
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(146, 8)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(69, 18)
+        Me.Label4.TabIndex = 22
+        Me.Label4.Text = "Id Iglesia"
+        '
+        'btnNuevo
+        '
+        Me.btnNuevo.BackColor = System.Drawing.Color.Transparent
+        Me.btnNuevo.BackgroundImage = Global.Misión.My.Resources.Resources.nuevo
+        Me.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnNuevo.Location = New System.Drawing.Point(169, 248)
+        Me.btnNuevo.Name = "btnNuevo"
+        Me.btnNuevo.Size = New System.Drawing.Size(49, 51)
+        Me.btnNuevo.TabIndex = 203
+        Me.btnNuevo.TabStop = False
         '
         'PictureBox2
         '
@@ -87,16 +155,16 @@ Partial Class FrmIglesia
         Me.PictureBox2.TabIndex = 202
         Me.PictureBox2.TabStop = False
         '
-        'PictureBox1
+        'btnGuardar
         '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.BackgroundImage = Global.Misión.My.Resources.Resources.nuevito
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(246, 248)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(49, 51)
-        Me.PictureBox1.TabIndex = 201
-        Me.PictureBox1.TabStop = False
+        Me.btnGuardar.BackColor = System.Drawing.Color.Transparent
+        Me.btnGuardar.BackgroundImage = Global.Misión.My.Resources.Resources.nuevito
+        Me.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnGuardar.Location = New System.Drawing.Point(246, 248)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(49, 51)
+        Me.btnGuardar.TabIndex = 201
+        Me.btnGuardar.TabStop = False
         '
         'PictureBox5
         '
@@ -114,7 +182,7 @@ Partial Class FrmIglesia
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.BackColor = System.Drawing.Color.Transparent
         Me.CheckBox1.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox1.Location = New System.Drawing.Point(513, 213)
+        Me.CheckBox1.Location = New System.Drawing.Point(531, 241)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(95, 22)
         Me.CheckBox1.TabIndex = 204
@@ -142,7 +210,7 @@ Partial Class FrmIglesia
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.GridColor = System.Drawing.Color.White
-        Me.DataGridView1.Location = New System.Drawing.Point(30, 331)
+        Me.DataGridView1.Location = New System.Drawing.Point(128, 338)
         Me.DataGridView1.Name = "DataGridView1"
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
@@ -152,7 +220,7 @@ Partial Class FrmIglesia
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
-        Me.DataGridView1.Size = New System.Drawing.Size(649, 203)
+        Me.DataGridView1.Size = New System.Drawing.Size(452, 203)
         Me.DataGridView1.TabIndex = 205
         '
         'PictureBox3
@@ -188,9 +256,9 @@ Partial Class FrmIglesia
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.CheckBox1)
-        Me.Controls.Add(Me.PictureBox4)
+        Me.Controls.Add(Me.btnNuevo)
         Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label3)
@@ -198,9 +266,11 @@ Partial Class FrmIglesia
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmIglesia"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.btnNuevo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnGuardar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
@@ -212,12 +282,18 @@ Partial Class FrmIglesia
 
     Friend WithEvents Label3 As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents btnNuevo As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btnGuardar As PictureBox
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox6 As PictureBox
+    Friend WithEvents TxtNombrePastor As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents txtIglesia As TextBox
+    Friend WithEvents txtIdIglesia As TextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label4 As Label
 End Class

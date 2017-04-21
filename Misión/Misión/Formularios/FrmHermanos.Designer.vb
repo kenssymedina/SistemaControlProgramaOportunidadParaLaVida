@@ -22,6 +22,7 @@ Partial Class FrmHermanos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmHermanos))
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -30,21 +31,38 @@ Partial Class FrmHermanos
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.CboEstado = New System.Windows.Forms.ComboBox()
-        Me.CboTipoPago = New System.Windows.Forms.ComboBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.TxtValor = New System.Windows.Forms.TextBox()
-        Me.TxtObservaciones = New System.Windows.Forms.TextBox()
-        Me.DtpFechaAdopcion = New System.Windows.Forms.DateTimePicker()
-        Me.TxtIdAdopcion = New System.Windows.Forms.TextBox()
-        Me.DgvInformacion = New System.Windows.Forms.DataGridView()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.BtnBusqueHer = New System.Windows.Forms.Button()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.TxtNumeroBeneficiado = New System.Windows.Forms.TextBox()
+        Me.TxtNombreBeneficiado = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.BtnData = New System.Windows.Forms.Button()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.DTpFechaNacimiento = New System.Windows.Forms.DateTimePicker()
+        Me.ChkTieneSponsor = New System.Windows.Forms.CheckBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.CboSexo = New System.Windows.Forms.ComboBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.TxtApellidoHermano = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.CboGradoCursado = New System.Windows.Forms.ComboBox()
+        Me.TxtNombreHermano = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.txtIdHermano = New System.Windows.Forms.TextBox()
+        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.ChIdHer = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChNombreHer = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChApellido = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChFecha = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChTieneSponsor = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChIdGra = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChGrado = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChIdSexo = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChSexo = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -52,13 +70,12 @@ Partial Class FrmHermanos
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
-        CType(Me.DgvInformacion, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox6
         '
         Me.PictureBox6.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox6.BackgroundImage = Global.Misión.My.Resources.Resources.cerrarsesion
+        Me.PictureBox6.BackgroundImage = CType(resources.GetObject("PictureBox6.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox6.Location = New System.Drawing.Point(410, 450)
         Me.PictureBox6.Name = "PictureBox6"
@@ -69,7 +86,7 @@ Partial Class FrmHermanos
         'PictureBox4
         '
         Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox4.BackgroundImage = Global.Misión.My.Resources.Resources.nuevo
+        Me.PictureBox4.BackgroundImage = CType(resources.GetObject("PictureBox4.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox4.Location = New System.Drawing.Point(99, 450)
         Me.PictureBox4.Name = "PictureBox4"
@@ -80,7 +97,7 @@ Partial Class FrmHermanos
         'PictureBox2
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.BackgroundImage = Global.Misión.My.Resources.Resources.editar
+        Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox2.Location = New System.Drawing.Point(255, 450)
         Me.PictureBox2.Name = "PictureBox2"
@@ -91,7 +108,7 @@ Partial Class FrmHermanos
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.BackgroundImage = Global.Misión.My.Resources.Resources.nuevito
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox1.Location = New System.Drawing.Point(176, 450)
         Me.PictureBox1.Name = "PictureBox1"
@@ -102,7 +119,7 @@ Partial Class FrmHermanos
         'PictureBox5
         '
         Me.PictureBox5.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox5.BackgroundImage = Global.Misión.My.Resources.Resources.volververde
+        Me.PictureBox5.BackgroundImage = CType(resources.GetObject("PictureBox5.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox5.Location = New System.Drawing.Point(333, 450)
         Me.PictureBox5.Name = "PictureBox5"
@@ -136,167 +153,277 @@ Partial Class FrmHermanos
         '
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.CheckBox1)
-        Me.Panel1.Controls.Add(Me.Label15)
-        Me.Panel1.Controls.Add(Me.Label17)
-        Me.Panel1.Controls.Add(Me.Label16)
-        Me.Panel1.Controls.Add(Me.Label14)
-        Me.Panel1.Controls.Add(Me.Label13)
         Me.Panel1.Controls.Add(Me.Label11)
-        Me.Panel1.Controls.Add(Me.CboEstado)
-        Me.Panel1.Controls.Add(Me.CboTipoPago)
-        Me.Panel1.Controls.Add(Me.Label12)
-        Me.Panel1.Controls.Add(Me.TxtValor)
-        Me.Panel1.Controls.Add(Me.TxtObservaciones)
-        Me.Panel1.Controls.Add(Me.DtpFechaAdopcion)
-        Me.Panel1.Controls.Add(Me.TxtIdAdopcion)
-        Me.Panel1.Location = New System.Drawing.Point(20, 123)
+        Me.Panel1.Controls.Add(Me.BtnBusqueHer)
+        Me.Panel1.Controls.Add(Me.Label9)
+        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.TxtNumeroBeneficiado)
+        Me.Panel1.Controls.Add(Me.TxtNombreBeneficiado)
+        Me.Panel1.Controls.Add(Me.Label8)
+        Me.Panel1.Controls.Add(Me.BtnData)
+        Me.Panel1.Controls.Add(Me.Label7)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.DTpFechaNacimiento)
+        Me.Panel1.Controls.Add(Me.ChkTieneSponsor)
+        Me.Panel1.Controls.Add(Me.Label6)
+        Me.Panel1.Controls.Add(Me.CboSexo)
+        Me.Panel1.Controls.Add(Me.Label5)
+        Me.Panel1.Controls.Add(Me.Label4)
+        Me.Panel1.Controls.Add(Me.TxtApellidoHermano)
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.CboGradoCursado)
+        Me.Panel1.Controls.Add(Me.TxtNombreHermano)
+        Me.Panel1.Controls.Add(Me.Label10)
+        Me.Panel1.Controls.Add(Me.txtIdHermano)
+        Me.Panel1.Location = New System.Drawing.Point(96, 88)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(510, 244)
+        Me.Panel1.Size = New System.Drawing.Size(510, 335)
         Me.Panel1.TabIndex = 236
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.ForeColor = System.Drawing.Color.Black
-        Me.Label15.Location = New System.Drawing.Point(156, 198)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(62, 18)
-        Me.Label15.TabIndex = 132
-        Me.Label15.Text = "Sponsor"
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(106, 169)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(112, 18)
-        Me.Label17.TabIndex = 131
-        Me.Label17.Text = "Grado Cursado"
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Cambria", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.ForeColor = System.Drawing.Color.Black
-        Me.Label16.Location = New System.Drawing.Point(150, 83)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(68, 17)
-        Me.Label16.TabIndex = 130
-        Me.Label16.Text = "Apellido"
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.Color.Black
-        Me.Label14.Location = New System.Drawing.Point(177, 140)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(40, 18)
-        Me.Label14.TabIndex = 129
-        Me.Label14.Text = "Sexo"
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.Black
-        Me.Label13.Location = New System.Drawing.Point(72, 111)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(146, 18)
-        Me.Label13.TabIndex = 128
-        Me.Label13.Text = "Fecha de Nacimiento"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.Black
-        Me.Label11.Location = New System.Drawing.Point(156, 53)
+        Me.Label11.Location = New System.Drawing.Point(552, 154)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(62, 18)
-        Me.Label11.TabIndex = 127
-        Me.Label11.Text = "Nombre"
+        Me.Label11.Size = New System.Drawing.Size(13, 13)
+        Me.Label11.TabIndex = 101
+        Me.Label11.Text = "0"
+        Me.Label11.Visible = False
         '
-        'CboEstado
+        'BtnBusqueHer
         '
-        Me.CboEstado.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CboEstado.FormattingEnabled = True
-        Me.CboEstado.Location = New System.Drawing.Point(224, 164)
-        Me.CboEstado.Name = "CboEstado"
-        Me.CboEstado.Size = New System.Drawing.Size(254, 23)
-        Me.CboEstado.TabIndex = 17
+        Me.BtnBusqueHer.Location = New System.Drawing.Point(397, 34)
+        Me.BtnBusqueHer.Name = "BtnBusqueHer"
+        Me.BtnBusqueHer.Size = New System.Drawing.Size(75, 23)
+        Me.BtnBusqueHer.TabIndex = 100
+        Me.BtnBusqueHer.Text = "..."
+        Me.BtnBusqueHer.UseVisualStyleBackColor = True
         '
-        'CboTipoPago
+        'Label9
         '
-        Me.CboTipoPago.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CboTipoPago.FormattingEnabled = True
-        Me.CboTipoPago.Location = New System.Drawing.Point(224, 135)
-        Me.CboTipoPago.Name = "CboTipoPago"
-        Me.CboTipoPago.Size = New System.Drawing.Size(254, 23)
-        Me.CboTipoPago.TabIndex = 1
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(-1, 99)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(150, 13)
+        Me.Label9.TabIndex = 99
+        Me.Label9.Text = "Nombre Completo Beneficiado"
         '
-        'Label12
+        'Button1
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(152, 24)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(66, 18)
-        Me.Label12.TabIndex = 2
-        Me.Label12.Text = "Número "
+        Me.Button1.Location = New System.Drawing.Point(344, 284)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(49, 23)
+        Me.Button1.TabIndex = 98
+        Me.Button1.Text = "+"
+        Me.Button1.UseVisualStyleBackColor = True
         '
-        'TxtValor
+        'TxtNumeroBeneficiado
         '
-        Me.TxtValor.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtValor.Location = New System.Drawing.Point(224, 77)
-        Me.TxtValor.Name = "TxtValor"
-        Me.TxtValor.Size = New System.Drawing.Size(255, 23)
-        Me.TxtValor.TabIndex = 16
+        Me.TxtNumeroBeneficiado.Location = New System.Drawing.Point(172, 67)
+        Me.TxtNumeroBeneficiado.Name = "TxtNumeroBeneficiado"
+        Me.TxtNumeroBeneficiado.ReadOnly = True
+        Me.TxtNumeroBeneficiado.Size = New System.Drawing.Size(216, 20)
+        Me.TxtNumeroBeneficiado.TabIndex = 97
         '
-        'TxtObservaciones
+        'TxtNombreBeneficiado
         '
-        Me.TxtObservaciones.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtObservaciones.Location = New System.Drawing.Point(225, 48)
-        Me.TxtObservaciones.Name = "TxtObservaciones"
-        Me.TxtObservaciones.Size = New System.Drawing.Size(254, 23)
-        Me.TxtObservaciones.TabIndex = 14
+        Me.TxtNombreBeneficiado.Location = New System.Drawing.Point(172, 96)
+        Me.TxtNombreBeneficiado.Name = "TxtNombreBeneficiado"
+        Me.TxtNombreBeneficiado.ReadOnly = True
+        Me.TxtNombreBeneficiado.Size = New System.Drawing.Size(216, 20)
+        Me.TxtNombreBeneficiado.TabIndex = 96
         '
-        'DtpFechaAdopcion
+        'Label8
         '
-        Me.DtpFechaAdopcion.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DtpFechaAdopcion.Location = New System.Drawing.Point(224, 106)
-        Me.DtpFechaAdopcion.Name = "DtpFechaAdopcion"
-        Me.DtpFechaAdopcion.Size = New System.Drawing.Size(254, 23)
-        Me.DtpFechaAdopcion.TabIndex = 13
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(86, 70)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(63, 13)
+        Me.Label8.TabIndex = 95
+        Me.Label8.Text = "Beneficiado"
         '
-        'TxtIdAdopcion
+        'BtnData
         '
-        Me.TxtIdAdopcion.Font = New System.Drawing.Font("Calisto MT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtIdAdopcion.Location = New System.Drawing.Point(225, 19)
-        Me.TxtIdAdopcion.Name = "TxtIdAdopcion"
-        Me.TxtIdAdopcion.Size = New System.Drawing.Size(254, 23)
-        Me.TxtIdAdopcion.TabIndex = 12
+        Me.BtnData.Location = New System.Drawing.Point(397, 63)
+        Me.BtnData.Name = "BtnData"
+        Me.BtnData.Size = New System.Drawing.Size(75, 23)
+        Me.BtnData.TabIndex = 94
+        Me.BtnData.Text = "..."
+        Me.BtnData.UseVisualStyleBackColor = True
         '
-        'DgvInformacion
+        'Label7
         '
-        Me.DgvInformacion.BackgroundColor = System.Drawing.Color.White
-        Me.DgvInformacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvInformacion.Location = New System.Drawing.Point(565, 108)
-        Me.DgvInformacion.Name = "DgvInformacion"
-        Me.DgvInformacion.Size = New System.Drawing.Size(793, 337)
-        Me.DgvInformacion.TabIndex = 235
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(47, 44)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(102, 13)
+        Me.Label7.TabIndex = 93
+        Me.Label7.Text = "Numero Hermano(a)"
         '
-        'CheckBox1
+        'Label2
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(225, 202)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox1.TabIndex = 133
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(73, 267)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(76, 13)
+        Me.Label2.TabIndex = 92
+        Me.Label2.Text = "Tiene Sponsor"
+        '
+        'DTpFechaNacimiento
+        '
+        Me.DTpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DTpFechaNacimiento.Location = New System.Drawing.Point(172, 183)
+        Me.DTpFechaNacimiento.Name = "DTpFechaNacimiento"
+        Me.DTpFechaNacimiento.Size = New System.Drawing.Size(107, 20)
+        Me.DTpFechaNacimiento.TabIndex = 91
+        '
+        'ChkTieneSponsor
+        '
+        Me.ChkTieneSponsor.AutoSize = True
+        Me.ChkTieneSponsor.Location = New System.Drawing.Point(172, 272)
+        Me.ChkTieneSponsor.Name = "ChkTieneSponsor"
+        Me.ChkTieneSponsor.Size = New System.Drawing.Size(15, 14)
+        Me.ChkTieneSponsor.TabIndex = 90
+        Me.ChkTieneSponsor.UseVisualStyleBackColor = True
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(118, 244)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(31, 13)
+        Me.Label6.TabIndex = 89
+        Me.Label6.Text = "Sexo"
+        '
+        'CboSexo
+        '
+        Me.CboSexo.FormattingEnabled = True
+        Me.CboSexo.Location = New System.Drawing.Point(172, 236)
+        Me.CboSexo.Name = "CboSexo"
+        Me.CboSexo.Size = New System.Drawing.Size(216, 21)
+        Me.CboSexo.TabIndex = 88
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(71, 217)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(78, 13)
+        Me.Label5.TabIndex = 87
+        Me.Label5.Text = "Grado Cursado"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(56, 189)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(93, 13)
+        Me.Label4.TabIndex = 86
+        Me.Label4.Text = "Fecha Nacimiento"
+        '
+        'TxtApellidoHermano
+        '
+        Me.TxtApellidoHermano.Location = New System.Drawing.Point(172, 151)
+        Me.TxtApellidoHermano.Name = "TxtApellidoHermano"
+        Me.TxtApellidoHermano.Size = New System.Drawing.Size(216, 20)
+        Me.TxtApellidoHermano.TabIndex = 85
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(47, 158)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(102, 13)
+        Me.Label3.TabIndex = 84
+        Me.Label3.Text = "Apellido Hermano(a)"
+        '
+        'CboGradoCursado
+        '
+        Me.CboGradoCursado.FormattingEnabled = True
+        Me.CboGradoCursado.Location = New System.Drawing.Point(172, 209)
+        Me.CboGradoCursado.Name = "CboGradoCursado"
+        Me.CboGradoCursado.Size = New System.Drawing.Size(216, 21)
+        Me.CboGradoCursado.TabIndex = 83
+        '
+        'TxtNombreHermano
+        '
+        Me.TxtNombreHermano.Location = New System.Drawing.Point(172, 125)
+        Me.TxtNombreHermano.Name = "TxtNombreHermano"
+        Me.TxtNombreHermano.Size = New System.Drawing.Size(216, 20)
+        Me.TxtNombreHermano.TabIndex = 82
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(47, 128)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(102, 13)
+        Me.Label10.TabIndex = 81
+        Me.Label10.Text = "Nombre Hermano(a)"
+        '
+        'txtIdHermano
+        '
+        Me.txtIdHermano.Location = New System.Drawing.Point(172, 37)
+        Me.txtIdHermano.Name = "txtIdHermano"
+        Me.txtIdHermano.ReadOnly = True
+        Me.txtIdHermano.Size = New System.Drawing.Size(216, 20)
+        Me.txtIdHermano.TabIndex = 80
+        '
+        'ListView1
+        '
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChIdHer, Me.ChNombreHer, Me.ChApellido, Me.ChFecha, Me.ChTieneSponsor, Me.ChIdGra, Me.ChGrado, Me.ChIdSexo, Me.ChSexo})
+        Me.ListView1.GridLines = True
+        Me.ListView1.LabelEdit = True
+        Me.ListView1.Location = New System.Drawing.Point(20, 536)
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.Size = New System.Drawing.Size(705, 97)
+        Me.ListView1.TabIndex = 244
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ListView1.View = System.Windows.Forms.View.Details
+        '
+        'ChIdHer
+        '
+        Me.ChIdHer.Text = "Numero del Hermano"
+        Me.ChIdHer.Width = 116
+        '
+        'ChNombreHer
+        '
+        Me.ChNombreHer.Text = "Nombre del Hermano"
+        Me.ChNombreHer.Width = 115
+        '
+        'ChApellido
+        '
+        Me.ChApellido.Text = "Apellido Hermano"
+        Me.ChApellido.Width = 109
+        '
+        'ChFecha
+        '
+        Me.ChFecha.Text = "Fecha de Nacimiento"
+        Me.ChFecha.Width = 115
+        '
+        'ChTieneSponsor
+        '
+        Me.ChTieneSponsor.Text = "Tiene Sponsor"
+        Me.ChTieneSponsor.Width = 95
+        '
+        'ChIdGra
+        '
+        Me.ChIdGra.Text = "IDG"
+        Me.ChIdGra.Width = 0
+        '
+        'ChGrado
+        '
+        Me.ChGrado.Text = "Grado Cursado"
+        Me.ChGrado.Width = 90
+        '
+        'ChIdSexo
+        '
+        Me.ChIdSexo.Text = "Ids"
+        Me.ChIdSexo.Width = 0
+        '
+        'ChSexo
+        '
+        Me.ChSexo.Text = "Sexo"
         '
         'FrmHermanos
         '
@@ -304,7 +431,8 @@ Partial Class FrmHermanos
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Misión.My.Resources.Resources.fondo5
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1378, 570)
+        Me.ClientSize = New System.Drawing.Size(753, 645)
+        Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.PictureBox6)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.PictureBox2)
@@ -313,7 +441,6 @@ Partial Class FrmHermanos
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.DgvInformacion)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmHermanos"
@@ -327,7 +454,6 @@ Partial Class FrmHermanos
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.DgvInformacion, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -341,19 +467,36 @@ Partial Class FrmHermanos
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label15 As Label
-    Friend WithEvents Label17 As Label
-    Friend WithEvents Label16 As Label
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Label13 As Label
     Friend WithEvents Label11 As Label
-    Friend WithEvents CboEstado As ComboBox
-    Friend WithEvents CboTipoPago As ComboBox
-    Friend WithEvents Label12 As Label
-    Friend WithEvents TxtValor As TextBox
-    Friend WithEvents TxtObservaciones As TextBox
-    Friend WithEvents DtpFechaAdopcion As DateTimePicker
-    Friend WithEvents TxtIdAdopcion As TextBox
-    Friend WithEvents DgvInformacion As DataGridView
-    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents BtnBusqueHer As Button
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents TxtNumeroBeneficiado As TextBox
+    Friend WithEvents TxtNombreBeneficiado As TextBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents BtnData As Button
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents DTpFechaNacimiento As DateTimePicker
+    Friend WithEvents ChkTieneSponsor As CheckBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents CboSexo As ComboBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents TxtApellidoHermano As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents CboGradoCursado As ComboBox
+    Friend WithEvents TxtNombreHermano As TextBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents txtIdHermano As TextBox
+    Friend WithEvents ListView1 As ListView
+    Friend WithEvents ChIdHer As ColumnHeader
+    Friend WithEvents ChNombreHer As ColumnHeader
+    Friend WithEvents ChApellido As ColumnHeader
+    Friend WithEvents ChFecha As ColumnHeader
+    Friend WithEvents ChTieneSponsor As ColumnHeader
+    Friend WithEvents ChIdGra As ColumnHeader
+    Friend WithEvents ChGrado As ColumnHeader
+    Friend WithEvents ChIdSexo As ColumnHeader
+    Friend WithEvents ChSexo As ColumnHeader
 End Class

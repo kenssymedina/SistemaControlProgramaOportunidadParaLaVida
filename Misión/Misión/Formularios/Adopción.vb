@@ -275,4 +275,8 @@ Public Class FrmAdopción
     Private Sub TxtValor_TextChanged(sender As Object, e As EventArgs) Handles TxtValor.TextChanged
         Me.TxtValor.Text = FormatCurrency(Me.TxtValor.Text, 2)
     End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
 End Class

@@ -36,6 +36,8 @@ Partial Class FrmTransaccionales
         Me.Label9 = New System.Windows.Forms.Label()
         Me.PictureBox10 = New System.Windows.Forms.PictureBox()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -43,6 +45,7 @@ Partial Class FrmTransaccionales
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -105,7 +108,7 @@ Partial Class FrmTransaccionales
         Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox3.BackgroundImage = Global.Misión.My.Resources.Resources.hermanos11
         Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox3.Location = New System.Drawing.Point(215, 407)
+        Me.PictureBox3.Location = New System.Drawing.Point(86, 397)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(80, 72)
         Me.PictureBox3.TabIndex = 17
@@ -116,7 +119,7 @@ Partial Class FrmTransaccionales
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Calisto MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(211, 489)
+        Me.Label3.Location = New System.Drawing.Point(82, 479)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(84, 20)
         Me.Label3.TabIndex = 19
@@ -127,7 +130,7 @@ Partial Class FrmTransaccionales
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Calisto MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(602, 489)
+        Me.Label5.Location = New System.Drawing.Point(697, 479)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(50, 20)
         Me.Label5.TabIndex = 28
@@ -149,7 +152,7 @@ Partial Class FrmTransaccionales
         Me.PictureBox6.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox6.BackgroundImage = Global.Misión.My.Resources.Resources.family_256
         Me.PictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox6.Location = New System.Drawing.Point(584, 407)
+        Me.PictureBox6.Location = New System.Drawing.Point(679, 397)
         Me.PictureBox6.Name = "PictureBox6"
         Me.PictureBox6.Size = New System.Drawing.Size(80, 72)
         Me.PictureBox6.TabIndex = 26
@@ -171,7 +174,7 @@ Partial Class FrmTransaccionales
         Me.Label9.AutoSize = True
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Calisto MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(411, 489)
+        Me.Label9.Location = New System.Drawing.Point(500, 479)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(55, 20)
         Me.Label9.TabIndex = 30
@@ -182,7 +185,7 @@ Partial Class FrmTransaccionales
         Me.PictureBox10.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox10.BackgroundImage = Global.Misión.My.Resources.Resources.cartas1
         Me.PictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox10.Location = New System.Drawing.Point(400, 407)
+        Me.PictureBox10.Location = New System.Drawing.Point(489, 397)
         Me.PictureBox10.Name = "PictureBox10"
         Me.PictureBox10.Size = New System.Drawing.Size(80, 72)
         Me.PictureBox10.TabIndex = 31
@@ -199,6 +202,28 @@ Partial Class FrmTransaccionales
         Me.Label10.TabIndex = 51
         Me.Label10.Text = "Transaccional"
         '
+        'PictureBox4
+        '
+        Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox4.BackgroundImage = Global.Misión.My.Resources.Resources.cartas1
+        Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox4.Location = New System.Drawing.Point(300, 397)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(80, 72)
+        Me.PictureBox4.TabIndex = 53
+        Me.PictureBox4.TabStop = False
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Calisto MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(311, 479)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(68, 20)
+        Me.Label4.TabIndex = 52
+        Me.Label4.Text = "Ofrenda"
+        '
         'FrmTransaccionales
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -207,6 +232,8 @@ Partial Class FrmTransaccionales
         Me.BackgroundImage = Global.Misión.My.Resources.Resources.fondo
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(886, 645)
+        Me.Controls.Add(Me.PictureBox4)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.PictureBox10)
         Me.Controls.Add(Me.Label9)
@@ -233,6 +260,7 @@ Partial Class FrmTransaccionales
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -252,4 +280,6 @@ Partial Class FrmTransaccionales
     Friend WithEvents Label9 As Label
     Friend WithEvents PictureBox10 As PictureBox
     Friend WithEvents Label10 As Label
+    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents Label4 As Label
 End Class

@@ -234,7 +234,7 @@ Partial Class FrmAdopción
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Calisto MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(153, 30)
+        Me.Label3.Location = New System.Drawing.Point(152, 37)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(73, 18)
         Me.Label3.TabIndex = 105

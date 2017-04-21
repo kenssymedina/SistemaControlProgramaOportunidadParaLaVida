@@ -42,8 +42,6 @@ Partial Class FrmCatalogo
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -54,7 +52,6 @@ Partial Class FrmCatalogo
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox10
@@ -194,7 +191,7 @@ Partial Class FrmCatalogo
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Calisto MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(643, 530)
+        Me.Label7.Location = New System.Drawing.Point(571, 541)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(121, 20)
         Me.Label7.TabIndex = 49
@@ -205,7 +202,7 @@ Partial Class FrmCatalogo
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Calisto MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(123, 530)
+        Me.Label8.Location = New System.Drawing.Point(221, 541)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(84, 20)
         Me.Label8.TabIndex = 48
@@ -216,7 +213,7 @@ Partial Class FrmCatalogo
         Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox4.BackgroundImage = Global.Misión.My.Resources.Resources.institución
         Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox4.Location = New System.Drawing.Point(125, 448)
+        Me.PictureBox4.Location = New System.Drawing.Point(223, 459)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(80, 72)
         Me.PictureBox4.TabIndex = 47
@@ -227,7 +224,7 @@ Partial Class FrmCatalogo
         Me.Label9.AutoSize = True
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Calisto MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(297, 530)
+        Me.Label9.Location = New System.Drawing.Point(374, 541)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(140, 20)
         Me.Label9.TabIndex = 46
@@ -238,7 +235,7 @@ Partial Class FrmCatalogo
         Me.PictureBox5.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox5.BackgroundImage = Global.Misión.My.Resources.Resources.gradocursado1
         Me.PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox5.Location = New System.Drawing.Point(666, 448)
+        Me.PictureBox5.Location = New System.Drawing.Point(590, 459)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(80, 72)
         Me.PictureBox5.TabIndex = 45
@@ -249,7 +246,7 @@ Partial Class FrmCatalogo
         Me.PictureBox8.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox8.BackgroundImage = Global.Misión.My.Resources.Resources.oficioprofesion
         Me.PictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox8.Location = New System.Drawing.Point(329, 448)
+        Me.PictureBox8.Location = New System.Drawing.Point(406, 459)
         Me.PictureBox8.Name = "PictureBox8"
         Me.PictureBox8.Size = New System.Drawing.Size(80, 72)
         Me.PictureBox8.TabIndex = 44
@@ -271,33 +268,11 @@ Partial Class FrmCatalogo
         Me.PictureBox9.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox9.BackgroundImage = Global.Misión.My.Resources.Resources.cerrarsesion1
         Me.PictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox9.Location = New System.Drawing.Point(781, 541)
+        Me.PictureBox9.Location = New System.Drawing.Point(719, 510)
         Me.PictureBox9.Name = "PictureBox9"
         Me.PictureBox9.Size = New System.Drawing.Size(49, 51)
         Me.PictureBox9.TabIndex = 51
         Me.PictureBox9.TabStop = False
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.BackColor = System.Drawing.Color.Transparent
-        Me.Label11.Font = New System.Drawing.Font("Calisto MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(484, 530)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(121, 20)
-        Me.Label11.TabIndex = 53
-        Me.Label11.Text = "Grado Cursado"
-        '
-        'PictureBox11
-        '
-        Me.PictureBox11.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox11.BackgroundImage = Global.Misión.My.Resources.Resources.gradocursado1
-        Me.PictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox11.Location = New System.Drawing.Point(507, 448)
-        Me.PictureBox11.Name = "PictureBox11"
-        Me.PictureBox11.Size = New System.Drawing.Size(80, 72)
-        Me.PictureBox11.TabIndex = 52
-        Me.PictureBox11.TabStop = False
         '
         'FrmCatalogo
         '
@@ -306,8 +281,6 @@ Partial Class FrmCatalogo
         Me.BackgroundImage = Global.Misión.My.Resources.Resources.fondo1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(886, 645)
-        Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.PictureBox11)
         Me.Controls.Add(Me.PictureBox9)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label7)
@@ -342,7 +315,6 @@ Partial Class FrmCatalogo
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -368,6 +340,4 @@ Partial Class FrmCatalogo
     Friend WithEvents PictureBox8 As PictureBox
     Friend WithEvents Label10 As Label
     Friend WithEvents PictureBox9 As PictureBox
-    Friend WithEvents Label11 As Label
-    Friend WithEvents PictureBox11 As PictureBox
 End Class

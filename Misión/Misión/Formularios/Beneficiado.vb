@@ -425,4 +425,13 @@
     End Function
 
 
+
+
+    Private Sub PictureBox8_Click(sender As Object, e As EventArgs) Handles PictureBox8.Click
+        FrmInteresesBeneficiado.Show()
+    End Sub
+
+    Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
+        FrmCasaBeneficiado.Show()
+    End Sub
 End Class

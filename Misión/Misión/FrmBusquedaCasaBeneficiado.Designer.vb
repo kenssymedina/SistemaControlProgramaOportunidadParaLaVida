@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FrmBusquedaOfrenda
+Partial Class FrmBusquedaCasaBeneficiado
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -33,7 +33,7 @@ Partial Class FrmBusquedaOfrenda
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(109, 61)
+        Me.DataGridView1.Location = New System.Drawing.Point(124, 92)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -43,7 +43,7 @@ Partial Class FrmBusquedaOfrenda
         'txtBuscar
         '
         Me.txtBuscar.Font = New System.Drawing.Font("Segoe UI Light", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtBuscar.Location = New System.Drawing.Point(158, 23)
+        Me.txtBuscar.Location = New System.Drawing.Point(187, 33)
         Me.txtBuscar.Name = "txtBuscar"
         Me.txtBuscar.Size = New System.Drawing.Size(323, 32)
         Me.txtBuscar.TabIndex = 32
@@ -51,27 +51,27 @@ Partial Class FrmBusquedaOfrenda
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Light", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(90, 26)
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(119, 36)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(62, 25)
         Me.Label1.TabIndex = 33
         Me.Label1.Text = "Buscar"
         '
-        'FrmBusquedaOfrenda
+        'FrmBusquedaCasaBeneficiado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Misión.My.Resources.Resources.fonditooo
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(571, 333)
+        Me.ClientSize = New System.Drawing.Size(628, 362)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.txtBuscar)
         Me.Controls.Add(Me.Label1)
         Me.DoubleBuffered = True
-        Me.Name = "FrmBusquedaOfrenda"
-        Me.Text = "FrmBusquedaOfrenda"
+        Me.Name = "FrmBusquedaCasaBeneficiado"
+        Me.Text = "FrmBusquedaCasaBeneficiado"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

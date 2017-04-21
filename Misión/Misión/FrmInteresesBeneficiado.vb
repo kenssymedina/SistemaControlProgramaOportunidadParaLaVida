@@ -1,20 +1,27 @@
-﻿Public Class InteresesBeneficiado
+﻿Imports System.Data.SqlClient
+Imports System.Data
+
+Public Class FrmInteresesBeneficiado
 
     Implements IForm, IForm2
 
     Public Sub ObtenerId(id As String) Implements IForm.ObtenerId
         TxtNumeroBeneficiado.Text = id
     End Sub
+
     Public Sub ObtenerHermano(id As String) Implements IForm2.ObtenerIdSegundo
         txtIdInteres.Text = id
     End Sub
-    Private Sub InteresesBeneficiado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    Private Sub FrmInteresesBeneficiado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 
     Private Sub txtIdInteres_TextChanged(sender As Object, e As EventArgs) Handles txtIdInteres.TextChanged
+
         If txtIdInteres.Text <> "" Then
             accesodatos.CargarDatosInteresesBeneficiado(txtIdInteres.Text, TxtGustaC, TxtGustaJ, TxtGustaT, TxtNumeroBeneficiado, TxtNombreBeneficiado)
+
         End If
     End Sub
 
@@ -24,15 +31,15 @@
         End If
     End Sub
 
-    Private Sub BtnData_Click(sender As Object, e As EventArgs) Handles BtnData.Click
-        'aqui muestra el formulario de busqueda
-        Dim frm As New FrmBuscarBeneficiadoIntereses()
-        frm.Show(Me)
-    End Sub
-
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         'aqui muestra el formulario de busqueda
         Dim frm As New FrmBuscarInteresesBeneficiado()
+        frm.Show(Me)
+    End Sub
+
+    Private Sub BtnData_Click(sender As Object, e As EventArgs) Handles BtnData.Click
+
+        Dim frm As New FrmBuscarBeneficiadoIntereses()
         frm.Show(Me)
     End Sub
     Private Function Validar() As Boolean
@@ -85,5 +92,76 @@
                 Exit Sub
             End Try
         End If
+    End Sub
+
+    Public Sub ActualizarDatos(id As Integer)
+
+        Dim datos As InteresesBeneficiado = (From g In cnn.InteresesBeneficiados
+                                             Where g.IdIntereseBeneficiado = id
+                                             Select g).ToList()(0)
+        datos.GustaComerBeneficiado = TxtGustaC.Text
+        datos.GustaJugarBeneficiado = TxtGustaJ.Text
+        datos.GustaTenerBeneficiado = TxtGustaT.Text
+        datos.IdBeneficiado = TxtNumeroBeneficiado.Text
+
+        Try
+            cnn.SubmitChanges()
+            MsgBox("Datos Actualizados correctamente", MsgBoxStyle.Information, "Aviso")
+
+        Catch ex As Exception
+            MsgBox("Eror al Actualizar los Datos")
+        End Try
+    End Sub
+
+    Private Sub BtnActualizar_Click(sender As Object, e As EventArgs) Handles BtnActualizar.Click
+        Call ActualizarDatos(CInt(txtIdInteres.Text))
+    End Sub
+
+    Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
+        Call Guardar()
+    End Sub
+    Private Sub Limpiar()
+
+        TxtGustaC.Clear()
+        TxtGustaJ.Clear()
+        TxtGustaT.Clear()
+        TxtNumeroBeneficiado.Clear()
+        TxtNombreBeneficiado.Clear()
+
+    End Sub
+    Sub InvestigarCorrelativo()
+        If cn.State = ConnectionState.Open Then
+            cn.Close()
+        End If
+        Try
+            Dim ListarHermano As New SqlCommand("Sp_IdentityIntereses", cn)
+            ListarHermano.CommandType = CommandType.StoredProcedure
+            Dim ListarHermanos As SqlDataReader
+            cn.Open()
+            ListarHermanos = ListarHermano.ExecuteReader()
+            If ListarHermanos.Read = True Then
+                If ListarHermanos("Id") Is DBNull.Value Then
+                    txtIdInteres.Text = 1
+                Else
+                    txtIdInteres.Text = ListarHermanos("Id").ToString
+                End If
+            End If
+        Catch ex As Exception
+        End Try
+        TxtNumeroBeneficiado.Focus()
+
+    End Sub
+
+    Private Sub BtnNuevo_Click(sender As Object, e As EventArgs) Handles BtnNuevo.Click
+        Call Limpiar()
+        Call InvestigarCorrelativo()
+    End Sub
+
+    Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
+        FrmBeneficiado.Show()
+    End Sub
+
+    Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox7.Click
+        Me.Close()
     End Sub
 End Class
